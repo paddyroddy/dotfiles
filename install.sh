@@ -22,9 +22,6 @@ do
 	fi
 done
 
-# Clone dotfiles
-git clone https://github.com/paddyroddy/dotfiles.git
-
 # Symlink dotfiles to home directory
 cd $HOME/dotfiles && stow -v \
 	bash \
@@ -33,9 +30,9 @@ cd $HOME/dotfiles && stow -v \
 	tmux \
 	vim
 
-# Remove .vim directory if already exists
-if [ -f "$HOME/.vim/bundle" ]; then
-	rm -rf $HOME/.vim/bundle
+# Remove .vim directory
+if [ -d "$HOME/.vim" ]; then
+	rm -rf $HOME/.vim
 fi
 
 # Clone repo for bundle plug-ins installation
