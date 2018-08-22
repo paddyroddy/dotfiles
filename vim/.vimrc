@@ -157,5 +157,8 @@ let g:ctrlp_custom_ignore = {
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
 
-" https://github.com/junegunn/fzf
+" fuzzy find
 set rtp+=/usr/local/opt/fzf
+
+" silver searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
