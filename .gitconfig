@@ -1,0 +1,11 @@
+[user]
+	name = paddyroddy
+	email = patrickjamesroddy@gmail.com
+[alias]
+	logg = log --graph --decorate --oneline --abbrev --all
+	spush = push --recurse-submodules=on-demand
+	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
+[core]
+	editor = vim
+[status]
+	submoduleSummary = true
