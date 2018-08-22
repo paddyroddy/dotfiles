@@ -34,8 +34,8 @@ cd $HOME/dotfiles && stow -v \
 	vim
 
 # Remove .vim directory if already exists
-if [ -f "$HOME/.vim" ]; then
-	rm -rf $HOME/.vim
+if [ -f "$HOME/.vim/bundle" ]; then
+	rm -rf $HOME/.vim/bundle
 fi
 
 # Clone repo for bundle plug-ins installation
