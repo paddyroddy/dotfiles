@@ -18,12 +18,8 @@ alias grep='grep --color'
 # after update
 alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 
-# fuzzy find https://github.com/junegunn/fzf
-if [ `ps aux | grep 'tmux' | awk 'FNR == 2 {print $2}'` > 0 ]; then
-	alias f='fzf-tmux'
-else
-	alias f='fzf'
-fi
+# fuzzy find
+alias f='fzf-tmux'
 
 # jupyter
 alias notebook='jupyter notebook'
