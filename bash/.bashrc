@@ -30,7 +30,11 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # anaconda
-export PATH=/usr/local/anaconda3/bin:$PATH
+if [[ $(uname -s) == Linux ]]; then
+	export PATH=/home/paddy/anaconda3/bin:$PATH
+elif [[ $(uname -s) == Darwin ]]; then
+	export PATH=/usr/local/anaconda3/bin:$PATH
+fi
 source activate py37
 
 # jason
