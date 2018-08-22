@@ -1,3 +1,10 @@
+# detect operating system
+# linux
+if [[ $(uname -s) == Linux ]]; then
+	alias pbcopy='xclip -selection clipboard'
+	alias pbpaste='xclip -selection clipboard -o'
+fi
+
 # remove clang
 alias gcc='gcc-8'
 alias cc='gcc-8'
