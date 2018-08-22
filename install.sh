@@ -22,6 +22,9 @@ do
 	fi
 done
 
+# Clone dotfiles
+git clone https://github.com/paddyroddy/dotfiles.git
+
 # Symlink dotfiles to home directory
 cd $HOME/dotfiles && stow -v \
 	bash \
