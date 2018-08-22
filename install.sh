@@ -26,15 +26,20 @@ done
 git clone https://github.com/paddyroddy/dotfiles.git
 
 # Symlink dotfiles to home directory
-cd dotfiles && stow -v \
+cd $HOME/dotfiles && stow -v \
 	bash \
 	conda \
 	git \
 	tmux \
 	vim
 
+# Remove .vim directory if already exists
+if [ -f "$HOME/.vim" ]; then
+	rm -rf $HOME/.vim
+fi
+
 # Clone repo for bundle plug-ins installation
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 # Install VIM plugins
 vim +PluginInstall! +qall
 
