@@ -20,6 +20,7 @@ alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 
 # fuzzy find
 alias f='fzf-tmux'
+alias vimf='vim `fzf-tmux`'
 
 # jupyter
 alias notebook='jupyter notebook'
