@@ -25,6 +25,9 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 
+" ack the_silver_searcher
+Plugin 'mileszs/ack.vim'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -159,6 +162,9 @@ let g:ctrlp_working_path_mode = 2
 
 " fuzzy find
 set rtp+=/usr/local/opt/fzf
+map <leader>f :FZF<CR>
 
 " silver searcher
 let g:ackprg = 'ag --nogroup --nocolor --column'
+cnoreabbrev Ack Ack!
+nnoremap <leader>a :Ack!<Space>
