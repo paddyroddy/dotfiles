@@ -27,8 +27,5 @@ else
     curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 fi
 
-# anaconda
-source activate py37
-
 # fuzzy find
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
