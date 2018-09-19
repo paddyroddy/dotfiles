@@ -5,6 +5,7 @@
 	logg = log --graph --decorate --oneline --abbrev --all
 	spush = push --recurse-submodules=on-demand
 	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
+	merge = merge --no-ff
 [core]
 	editor = vim
 [status]
