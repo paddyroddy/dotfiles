@@ -43,4 +43,12 @@ git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 # Install VIM plugins
 vim +PluginInstall! +qall
 
+# Remove .vscode directory
+if [ -d "$HOME/.vscode" ]; then
+	rm -rf $HOME/.vscode
+fi
+
+# copy .vscode directory
+cp vscode $HOME/.vscode
+
 source $HOME/.bashrc 2> /dev/null

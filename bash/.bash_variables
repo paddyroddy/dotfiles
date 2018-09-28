@@ -40,8 +40,8 @@ if [[ $(uname -s) == Darwin ]]; then
 elif [[ $(uname -s) == Linux ]]; then
 #
 	# anaconda
-	export PATH=$HOME/anaconda3/bin:$PATH
-	source activate py36
+	. $HOME/anaconda3/etc/profile.d/conda.sh
+	conda activate py36
 #
 fi
 
