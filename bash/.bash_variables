@@ -18,14 +18,10 @@ export SSHT=$HOME/PhD/project/src/ssht
 export SO3=$HOME/PhD/project/src/so3
 export S2LET=$HOME/PhD/project/src/s2let
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # detect operating system
-
 ################### DARWIN  ###################
 if [[ $(uname -s) == Darwin ]]; then
-#
+	
 	# anaconda
 	. /usr/local/anaconda3/etc/profile.d/conda.sh
 	conda activate py36
@@ -33,7 +29,14 @@ if [[ $(uname -s) == Darwin ]]; then
 	# remove clang
 	export CC=/usr/local/bin/gcc-8
 	export CCX=/usr/local/bin/g++-8
-#
+
+	export PATH=/usr/local/opt/sqlite/bin:$PATH
+	# For compilers to find sqlite you may need to set:
+	export LDFLAGS=-L/usr/local/opt/sqlite/lib
+	export CPPFLAGS=-I/usr/local/opt/sqlite/include
+	# For pkg-config to find sqlite you may need to set:
+	export PKG_CONFIG_PATH=/usr/local/opt/sqlite/lib/pkgconfig
+
 elif [[ $(uname -s) == Linux ]]; then
 #
 	# anaconda
@@ -41,3 +44,6 @@ elif [[ $(uname -s) == Linux ]]; then
 	source activate py36
 #
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
