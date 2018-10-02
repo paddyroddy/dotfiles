@@ -1,13 +1,3 @@
-# Environment variables
-if [ -f ~/.bash_variables ]; then
-	. ~/.bash_variables
-fi
-
-# Alias definitions
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
@@ -29,3 +19,13 @@ fi
 
 # fuzzy find
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Environment variables
+if [ -f ~/.bash_variables ]; then
+	. ~/.bash_variables
+fi
+
+# Alias definitions
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
