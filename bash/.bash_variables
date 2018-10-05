@@ -5,10 +5,6 @@
 # terminal name
 export PS1='\[\e[01;30m\]\t`if [ $? = 0 ]; then echo "\[\e[32m\] ✔ "; else echo "\[\e[31m\] ✘ "; fi`\[\e[01;34m\]\w\[\e[00m\] `[[ $(git status 2> /dev/null | head -n5 | tail -n1) == "nothing to commit, working tree clean" ]] && echo "\[\e[01;32m\]"$(__git_ps1 "(%s)") || echo "\[\e[01;31m\]"$(__git_ps1 "(%s)")` \[\e[00m\]::'
 
-# allows Coreutils package to be used without 'g' prefix before each command.
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-
 # jason
 export HEALPIX=$HOME/Healpix_3.40
 export CFITSIO=/usr
@@ -21,9 +17,6 @@ export S2LET=$HOME/PhD/project/src/s2let
 # detect operating system
 ################### DARWIN  ###################
 if [[ $(uname -s) == Darwin ]]; then
-	# anaconda
-	. /usr/local/anaconda3/etc/profile.d/conda.sh
-
 	# remove clang
 	export CC=/usr/local/bin/gcc-8
 	export CCX=/usr/local/bin/g++-8
@@ -35,11 +28,10 @@ if [[ $(uname -s) == Darwin ]]; then
 	# For pkg-config to find sqlite you may need to set:
 	export PKG_CONFIG_PATH=/usr/local/opt/sqlite/lib/pkgconfig
 
-elif [[ $(uname -s) == Linux ]]; then
-	# anaconda
-	. $HOME/anaconda3/etc/profile.d/conda.sh
+	# allows Coreutils package to be used without 'g' prefix before each command.
+	export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+	export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 fi
-conda activate py36
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH=$HOME/.rvm/bin:$PATH
