@@ -22,10 +22,21 @@ fi
 
 # Environment variables
 if [ -f ~/.bash_variables ]; then
-	. ~/.bash_variables
+	source ~/.bash_variables
 fi
 
 # Alias definitions
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+	source ~/.bash_aliases
 fi
+
+# detect operating system
+################### DARWIN  ###################
+if [[ $(uname -s) == Darwin ]]; then
+	# anaconda
+	source /usr/local/anaconda3/etc/profile.d/conda.sh
+elif [[ $(uname -s) == Linux ]]; then
+	# anaconda
+	source $HOME/anaconda3/etc/profile.d/conda.sh
+fi
+conda activate py36
