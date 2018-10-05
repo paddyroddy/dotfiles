@@ -2,13 +2,14 @@
 
 ################### LINUX ###################
 if [[ $(uname -s) == Linux ]]; then
-	#
+	# copy & paste
 	alias pbcopy='xclip -selection clipboard'
 	alias pbpaste='xclip -selection clipboard -o'
-	#
+	
+	# open pdfs
+	alias open='xdg-open'
 ################### DARWIN ###################
 elif [[ $(uname -s) == Darwin ]]; then
-	#
 	# remove clang
 	alias gcc='gcc-8'
 	alias cc='gcc-8'
@@ -17,7 +18,6 @@ elif [[ $(uname -s) == Darwin ]]; then
 
 	# after update
 	alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
-	#
 fi
 
 # colour
