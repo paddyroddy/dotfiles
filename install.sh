@@ -4,7 +4,7 @@ clear
 echo "Installing dotfiles."
 
 # Arrays containing list of dotfiles that will be in use.
-dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig .tmux.conf .vimrc )
+dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig .tmux.conf .tmux.conf.local .vimrc )
 # Check users home directory for existing dotfiles and create a backup version.
 for i in ${dotfile_array[*]}
 do
