@@ -12,18 +12,13 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 " utilities
-Plugin 'kien/ctrlp.vim' " fuzzy find files
 Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
-Plugin 'benmills/vimux'
+Plugin 'benmills/vimux' " vim plugin to interact with tmux
 Plugin 'tpope/vim-fugitive' " the ultimate git helper
 Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 
 " colorschemes
 Plugin 'chriskempson/base16-vim'
-
-" JavaScript plugins
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
 
 " ack the_silver_searcher
 Plugin 'mileszs/ack.vim'
@@ -41,7 +36,6 @@ set backspace=indent,eol,start
 let mapleader = ','
 
 " Tab control
-set noexpandtab " tabs ftw
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
 set tabstop=4 " the visible width of tabs
 set softtabstop=4 " edit as if the tabs are 4 characters wide
@@ -143,22 +137,6 @@ let NERDTreeShowHidden=1
 nmap <silent> <leader>k :NERDTreeToggle<cr>
 " expand to the path of the file in the current buffer
 nmap <silent> <leader>y :NERDTreeFind<cr>
-
-" map fuzzyfinder (CtrlP) plugin
-" nmap <silent> <leader>t :CtrlP<cr>
-nmap <silent> <leader>r :CtrlPBuffer<cr>
-let g:ctrlp_map='<leader>t'
-let g:ctrlp_dotfiles=1
-let g:ctrlp_working_path_mode = 'ra'
-
-" CtrlP ignore patterns
-let g:ctrlp_custom_ignore = {
-            \ 'dir': '\.git$\|node_modules$\|\.hg$\|\.svn$',
-            \ 'file': '\.exe$\|\.so$'
-            \ }
-
-" search the nearest ancestor that contains .git, .hg, .svn
-let g:ctrlp_working_path_mode = 2
 
 " fuzzy find
 set rtp+=/usr/local/opt/fzf
