@@ -139,7 +139,7 @@ nmap <silent> <leader>k :NERDTreeToggle<cr>
 nmap <silent> <leader>y :NERDTreeFind<cr>
 
 " fuzzy find
-set rtp+=/usr/local/opt/fzf
+set rtp+=$HOME/.fzf
 map <leader>f :FZF<CR>
 
 " silver searcher
