@@ -23,7 +23,7 @@ do
 done
 
 # Clone dotfiles
-git clone https://github.com/paddyroddy/dotfiles.git $HOME/dotfiles
+git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/dotfiles
 
 # Symlink dotfiles to home directory
 cd $HOME/dotfiles && stow -v \
