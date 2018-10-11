@@ -23,6 +23,9 @@ Plugin 'chriskempson/base16-vim'
 " ack the_silver_searcher
 Plugin 'mileszs/ack.vim'
 
+" python mode
+Plugin 'python-mode/python-mode', { 'branch': 'develop' }
+
 call vundle#end()
 filetype plugin indent on
 
@@ -146,3 +149,6 @@ map <leader>f :FZF<CR>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 cnoreabbrev Ack Ack!
 nnoremap <leader>a :Ack!<Space>
+
+" python mode
+let g:pymode_python = 'python3'
