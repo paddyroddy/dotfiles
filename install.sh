@@ -43,4 +43,8 @@ git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 # Install VIM plugins
 vim +PluginInstall! +qall
 
+# set chriskempson colorscheme
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+base16_irblack 
+
 source $HOME/.bashrc 2> /dev/null
