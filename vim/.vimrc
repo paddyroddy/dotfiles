@@ -5,32 +5,32 @@
 " set a map leader for more key combos
 let mapleader = ','
 
-" load plugins from vundle
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-
-" let vundle manage vundle
-Plugin 'gmarik/vundle'
+" Specify a directory for plugins
+" - For Vim: ~/.vim/plugged
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
 " utilities
-Plugin 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
-Plugin 'benmills/vimux' " vim plugin to interact with tmux
-Plugin 'tpope/vim-fugitive' " the ultimate git helper
-Plugin 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
+Plug 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
+Plug 'benmills/vimux' " vim plugin to interact with tmux
+Plug 'tpope/vim-fugitive' " the ultimate git helper
+Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 
 " colorschemes
-Plugin 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'
+
+" fuzzy find
+Plug '~/.fzf'
 
 " ack the_silver_searcher
-Plugin 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 
 " python mode
-Plugin 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
-call vundle#end()
-filetype plugin indent on
+" Initialize plugin system
+call plug#end()
 
 set nocompatible " not compatible with vi
 set autoread " detect when a file is changed
@@ -150,7 +150,6 @@ nmap <silent> <leader>k :NERDTreeToggle<cr>
 nmap <silent> <leader>y :NERDTreeFind<cr>
 
 " fuzzy find
-set rtp+=$HOME/.fzf
 map <leader>f :FZF<CR>
 
 " silver searcher
