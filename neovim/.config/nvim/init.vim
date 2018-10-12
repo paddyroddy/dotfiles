@@ -6,10 +6,9 @@
 let mapleader = ','
 
 " Specify a directory for plugins
-" - For Vim: ~/.vim/plugged
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+" ensure vim-plug is installed and then load it
+call functions#PlugLoad()
+call plug#begin('~/.config/nvim/plugged')
 
 " utilities
 Plug 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
