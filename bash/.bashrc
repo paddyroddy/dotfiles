@@ -44,4 +44,4 @@ elif [[ $(uname -s) == Linux ]]; then
 	# anaconda
 	source $HOME/anaconda3/etc/profile.d/conda.sh
 fi
-conda activate py36
+conda activate py37
