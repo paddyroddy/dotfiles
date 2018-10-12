@@ -33,7 +33,7 @@ cd $HOME/dotfiles && stow -v \
 	neovim \
 	tmux
 
-# Remove .vim directory
+# Remove .config/nvim directory
 if [ -d "$HOME/.config/nvim" ]; then
 	rm -rf $HOME/.config/nvim
 fi
@@ -44,8 +44,16 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # Install nvim plugins
 nvim +PlugInstall +qall
 
+# Remove .config/base16-shell directory
+if [ -d "$HOME/.config/base16-shell" ]; then
+	rm -rf $HOME/.config/base16-shell
+fi
+
 # set chriskempson colorscheme
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-base16_irblack 
+if filereadable(expand("~/.vimrc_background"))
+	let base16colorspace=256
+        source ~/.vimrc_background
+fi
 
 source $HOME/.bashrc 2> /dev/null
