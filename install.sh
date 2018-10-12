@@ -22,6 +22,11 @@ do
 	fi
 done
 
+# Remove .config/nvim directory
+if [ -d "$HOME/.config/nvim" ]; then
+	rm -rf $HOME/.config/nvim
+fi
+
 # Clone dotfiles
 git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/dotfiles
 
@@ -33,10 +38,6 @@ cd $HOME/dotfiles && stow -v \
 	neovim \
 	tmux
 
-# Remove .config/nvim directory
-if [ -d "$HOME/.config/nvim" ]; then
-	rm -rf $HOME/.config/nvim
-fi
 
 # install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
