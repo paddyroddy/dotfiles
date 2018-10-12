@@ -31,3 +31,6 @@ alias vimf='vim `fzf-tmux`'
 # jupyter
 alias notebook='jupyter notebook'
 alias lab='jupyter lab'
+
+# neovim
+alias vim='nvim'
