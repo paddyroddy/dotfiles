@@ -4,7 +4,7 @@ clear
 echo "Installing dotfiles."
 
 # Arrays containing list of dotfiles that will be in use.
-dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig .tmux.conf .tmux.conf.local .vimrc )
+dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig init.vim .tmux.conf .tmux.conf.local )
 # Check users home directory for existing dotfiles and create a backup version.
 for i in ${dotfile_array[*]}
 do
@@ -30,18 +30,19 @@ cd $HOME/dotfiles && stow -v \
 	bash \
 	conda \
 	git \
-	tmux \
-	vim
+	neovim \
+	tmux
 
 # Remove .vim directory
-if [ -d "$HOME/.vim" ]; then
-	rm -rf $HOME/.vim
+if [ -d "$HOME/.config/nvim" ]; then
+	rm -rf $HOME/.config/nvim
 fi
 
-# Clone repo for bundle plug-ins installation
-git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-# Install VIM plugins
-vim +PluginInstall! +qall
+# install vim-plug
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# Install nvim plugins
+nvim +PlugInstall +qall
 
 # set chriskempson colorscheme
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
