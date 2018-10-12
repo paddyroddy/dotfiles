@@ -44,13 +44,4 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # Install nvim plugins
 nvim +PlugInstall +qall
 
-# Remove .config/base16-shell directory
-if [ -d "$HOME/.config/base16-shell" ]; then
-	rm -rf $HOME/.config/base16-shell
-fi
-
-# set chriskempson colorscheme
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-source ~/.vimrc_background
-
 source $HOME/.bashrc 2> /dev/null
