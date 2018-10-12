@@ -51,9 +51,6 @@ fi
 
 # set chriskempson colorscheme
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-if filereadable(expand("~/.vimrc_background"))
-	let base16colorspace=256
-        source ~/.vimrc_background
-fi
+source ~/.vimrc_background
 
 source $HOME/.bashrc 2> /dev/null
