@@ -2,6 +2,9 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" set a map leader for more key combos
+let mapleader = ','
+
 " load plugins from vundle
 filetype off
 
@@ -34,9 +37,6 @@ set autoread " detect when a file is changed
 
 " make backspace behave in a sane manner
 set backspace=indent,eol,start
-
-" set a map leader for more key combos
-let mapleader = ','
 
 " Tab control
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
@@ -103,6 +103,8 @@ nnoremap <silent> k gk
 " helpers for dealing with other people's code
 nmap \t :set ts=4 sts=4 sw=4 noet<cr>
 nmap \s :set ts=4 sts=4 sw=4 et<cr>
+
+map <leader>json :%!python -m json.tool
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Functions
