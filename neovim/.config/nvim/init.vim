@@ -1,15 +1,103 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" (N)Vim Configuration File
+" vim  : place in $HOME/.vimrc
+" nvim : place in $HOME/.config/nvim/init.vim
 
-" set a map leader for more key combos
-let mapleader = ','
+" General settings
+" ---------------------------------------------------------------------------
+" drop vi support - kept for vim compatibility but not needed for nvim
+set nocompatible
 
-" Specify a directory for plugins
+" number of lines at the beginning and end of files checked for file-specific vars
+set modelines=0
+
+" reload files changed outside of Vim not currently modified in Vim (needs below)
+set autoread
+
+" http://stackoverflow.com/questions/2490227/how-does-vims-autoread-work#20418591
+au FocusGained,BufEnter * :silent! !
+
+" use Unicode
+set encoding=utf-8
+set fenc=utf-8
+set fencs=iso-2022-jp,euc-jp,cp932
+
+" errors flash screen rather than emit beep
+set visualbell
+
+" make Backspace work like Delete
+set backspace=indent,eol,start
+
+" don't create `filename~` backups
+set nobackup
+
+" don't create temp files
+set noswapfile
+
+" line numbers
+set number 
+
+" number of lines offset when jumping
+set scrolloff=2
+
+" Tab key enters 4 spaces
+" To enter a TAB character when `expandtab` is in effect,
+" CTRL-v-TAB
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4 
+
+" Indent new line the same as the preceding line
+set autoindent
+
+" statusline indicates insert or normal mode
+set showmode showcmd
+
+" make scrolling and painting fast
+" ttyfast kept for vim compatibility but not needed for nvim
+set ttyfast lazyredraw
+
+" highlight matching parens, braces, brackets, etc
+set showmatch
+
+" http://vim.wikia.com/wiki/Searching
+set hlsearch incsearch ignorecase smartcase
+
+" As opposed to `wrap`
+"set nowrap
+
+" http://vim.wikia.com/wiki/Set_working_directory_to_the_current_file
+set autochdir
+
+" open new buffers without saving current modifications (buffer remains open)
+set hidden
+
+" http://stackoverflow.com/questions/9511253/how-to-effectively-use-vim-wildmenu
+set wildmenu wildmode=list:longest,full
+
+" StatusLine always visible, display full path
+" http://learnvimscriptthehardway.stevelosh.com/chapters/17.html
+set laststatus=2 statusline=%F
+
+" Use system clipboard
+" http://vim.wikia.com/wiki/Accessing_the_system_clipboard
+set clipboard=unnamedplus
+
+" Show character column
+highlight ColorColumn ctermbg=DarkBlue
+set colorcolumn=80
+
+" CursorLine - sometimes autocmds are not performant; turn off if so
+" http://vim.wikia.com/wiki/Highlight_current_line
+set cursorline
+" Normal mode
+highlight CursorLine ctermbg=None
+autocmd InsertEnter * highlight  CursorLine ctermbg=17 ctermfg=None
+autocmd InsertLeave * highlight  CursorLine ctermbg=None ctermfg=None
+
+" Plugins
+" ---------------------------------------------------------------------------
+" Specify a idirectory for plugins
 call plug#begin('~/.config/nvim/plugged')
 
 " utilities
-Plug 'scrooloose/nerdtree' " file drawer, open with :NERDTreeToggle
 Plug 'benmills/vimux' " vim plugin to interact with tmux
 Plug 'tpope/vim-fugitive' " the ultimate git helper
 Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
@@ -28,131 +116,38 @@ Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 " Initialize plugin system
 call plug#end()
+" ---------------------------------------------------------------------------
 
-set nocompatible " not compatible with vi
-set autoread " detect when a file is changed
+" Colors
+" ---------------------------------------------------------------------------
+syntax enable
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+" ---------------------------------------------------------------------------
 
-" make backspace behave in a sane manner
-set backspace=indent,eol,start
+" Plugins Settings
+" ---------------------------------------------------------------------------
+" silversearcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+cnoreabbrev Ack Ack!
 
-" Tab control
-set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4 " the visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
-set shiftround " round indent to a multiple of 'shiftwidth'
+" python mode
+let g:pymode_python = 'python3'
+" ---------------------------------------------------------------------------
 
-set clipboard=unnamed
+" Mappings
+" ---------------------------------------------------------------------------
+" set a map leader for more key combos
+let mapleader = ','
 
-" faster redrawing
-set ttyfast
-
-" code folding settings
-set foldmethod=syntax " fold based on indent
-set foldnestmax=10 " deepest fold is 10 levels
-set nofoldenable " don't fold by default
-set foldlevel=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => User Interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Searching
-set ignorecase " case insensitive searching
-set smartcase " case-sensitive if expresson contains a capital letter
-set hlsearch
-set incsearch " set incremental search, like modern browsers
-set nolazyredraw " don't redraw while executing macros
-
-set magic " Set magic on, for regex
-
-set showmatch " show matching braces
-set mat=2 " how many tenths of a second to blink
-
-" switch syntax highlighting on
-syntax on
-
-set encoding=utf8
-let base16colorspace=256  " Access colors present in 256 colorspace"
-set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
-set background=dark
-colorscheme delek
-
-set number
-
-set autoindent " automatically set indent of new line
-set smartindent
-
-set laststatus=2 " show the satus line all the time
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-map <leader>ev :e! ~/.vimrc<cr> " edit ~/.vimrc
-
-map <leader>wc :wincmd q<cr>
-
-" moving up and down work as you would expect
-nnoremap <silent> j gj
-nnoremap <silent> k gk
-
-" helpers for dealing with other people's code
-nmap \t :set ts=4 sts=4 sw=4 noet<cr>
-nmap \s :set ts=4 sts=4 sw=4 et<cr>
-
-map <leader>json :%!python -m json.tool
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-map <C-h> :call WinMove('h')<cr>
-map <C-j> :call WinMove('j')<cr>
-map <C-k> :call WinMove('k')<cr>
-map <C-l> :call WinMove('l')<cr>
-
-" Window movement shortcuts
-" move to the window in the direction shown, or create a new window
-function! WinMove(key)
-    let t:curwin = winnr()
-    exec "wincmd ".a:key
-    if (t:curwin == winnr())
-        if (match(a:key,'[jk]'))
-            wincmd v
-        else
-            wincmd s
-        endif
-        exec "wincmd ".a:key
-    endif
-endfunction
-
-" ================ Turn Off Swap Files ==============
-
-set noswapfile
-set nobackup
-set nowb
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Plugin settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=0
-" show hidden files in NERDTree
-let NERDTreeShowHidden=1
-" Toggle NERDTree
-nmap <silent> <leader>k :NERDTreeToggle<cr>
-" expand to the path of the file in the current buffer
-nmap <silent> <leader>y :NERDTreeFind<cr>
+" reformat JSON
+map <leader>j :%!python -m json.tool
 
 " fuzzy find
 map <leader>f :FZF<CR>
 
 " silver searcher
-let g:ackprg = 'ag --nogroup --nocolor --column'
-cnoreabbrev Ack Ack!
 nnoremap <leader>a :Ack!<Space>
-
-" python mode
-let g:pymode_python = 'python3'
+" ---------------------------------------------------------------------------
