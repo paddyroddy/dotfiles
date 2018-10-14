@@ -84,14 +84,6 @@ set clipboard=unnamedplus
 highlight ColorColumn ctermbg=DarkBlue
 set colorcolumn=80
 
-" CursorLine - sometimes autocmds are not performant; turn off if so
-" http://vim.wikia.com/wiki/Highlight_current_line
-set cursorline
-" Normal mode
-highlight CursorLine ctermbg=None
-autocmd InsertEnter * highlight  CursorLine ctermbg=17 ctermfg=None
-autocmd InsertLeave * highlight  CursorLine ctermbg=None ctermfg=None
-
 " Plugins
 " ---------------------------------------------------------------------------
 " Specify a idirectory for plugins
@@ -141,6 +133,9 @@ let g:pymode_python = 'python3'
 " ---------------------------------------------------------------------------
 " set a map leader for more key combos
 let mapleader = ','
+
+" reload config
+nnoremap <leader>r :source $MYVIMRC<CR>
 
 " reformat JSON
 map <leader>j :%!python -m json.tool
