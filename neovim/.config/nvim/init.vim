@@ -122,6 +122,10 @@ if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
+" system background transparency
+hi Normal ctermbg=NONE guibg=NONE
+" colourful comments
+hi Comment ctermfg=LightBlue
 " ---------------------------------------------------------------------------
 
 " Plugins Settings
