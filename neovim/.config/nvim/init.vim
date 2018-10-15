@@ -118,10 +118,7 @@ call plug#end()
 " Colors
 " ---------------------------------------------------------------------------
 syntax enable
-" system background transparency
-hi Normal ctermbg=NONE guibg=NONE
-" colourful comments
-hi Comment ctermfg=LightBlue
+colorscheme delek
 " ---------------------------------------------------------------------------
 
 " Plugins Settings
