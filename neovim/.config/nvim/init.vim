@@ -84,6 +84,11 @@ set clipboard=unnamedplus
 highlight ColorColumn ctermbg=DarkBlue
 set colorcolumn=80
 
+" specific filetypes
+filetype on           	" Enable filetype detection
+filetype indent on    	" Enable filetype-specific indenting
+filetype plugin on    	" Enable filetype-specific plugins
+
 " Plugins
 " ---------------------------------------------------------------------------
 " Specify a idirectory for plugins
@@ -138,7 +143,7 @@ let mapleader = ','
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 " reformat JSON
-map <leader>j :%!python -m json.tool
+:autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool
 
 " fuzzy find
 map <leader>f :FZF<CR>
