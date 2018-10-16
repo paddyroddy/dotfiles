@@ -20,6 +20,9 @@ fi
 # fuzzy find
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
+# the fuck
+eval $(thefuck --alias)
+
 # Environment variables
 if [[ -f ~/.bash_variables ]]; then
 	source ~/.bash_variables
