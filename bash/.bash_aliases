@@ -37,3 +37,16 @@ alias lab='jupyter lab'
 
 # neovim
 alias vim='nvim'
+
+# safety nets
+alias mkdir='mkdir -pv'
+alias wget='wget -c'
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias ln='ln -iv'
+
+# visualisation
+alias top='htop'
+alias du='ncdu'
+alias df='pydf'
