@@ -8,6 +8,9 @@ if [[ $(uname -s) == Linux ]]; then
 	
 	# open pdfs
 	alias open='xdg-open'
+
+    # update
+    alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"'
 ################### DARWIN ###################
 elif [[ $(uname -s) == Darwin ]]; then
 	# remove clang
