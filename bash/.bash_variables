@@ -26,7 +26,7 @@ if [[ $(uname -s) == Darwin ]]; then
 	export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 elif [[ $(uname -s) == Linux ]]; then
     # test if linuxbrew is installed i.e. cluster
-    if [[ -f ~/.linuxbrew ]]; then
+    if [[ -d ~/.linuxbrew ]]; then
         export PATH=$HOME/.linuxbrew/bin:$PATH
         export MANPATH=$HOME/.linuxbrew/share/man:$MANPATH
         export INFOPATH=$HOME/.linuxbrew/share/info:$INFOPATH
