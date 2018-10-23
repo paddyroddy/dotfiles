@@ -24,6 +24,13 @@ if [[ $(uname -s) == Darwin ]]; then
 	# allows Coreutils package to be used without 'g' prefix before each command.
 	export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 	export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+elif [[ $(uname -s) == Linux ]]; then
+    # test if linuxbrew is installed i.e. cluster
+    if [[ -f ~/.linuxbrew ]]; then
+        export PATH=$HOME/.linuxbrew/bin:$PATH
+        export MANPATH=$HOME/.linuxbrew/share/man:$MANPATH
+        export INFOPATH=$HOME/.linuxbrew/share/info:$INFOPATH
+    fi
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
