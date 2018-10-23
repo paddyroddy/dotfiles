@@ -50,3 +50,6 @@ alias ln='ln -iv'
 alias top='htop'
 alias du='ncdu'
 alias df='pydf'
+
+# the fuck
+eval $(thefuck --alias)
