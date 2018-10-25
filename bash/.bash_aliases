@@ -10,7 +10,11 @@ if [[ $(uname -s) == Linux ]]; then
 	alias open='xdg-open'
 
     # update
-    alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"'
+    if [[ -d ~/.linuxbrew ]]; then
+        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
+    else
+        alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"'
+    fi
 ################### DARWIN ###################
 elif [[ $(uname -s) == Darwin ]]; then
 	# remove clang
@@ -19,7 +23,7 @@ elif [[ $(uname -s) == Darwin ]]; then
 	alias g++='g++-8'
 	alias c++='c++-8'
 
-	# after update
+	# update
 	alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 fi
 
