@@ -89,6 +89,17 @@ filetype on           	" Enable filetype detection
 filetype indent on    	" Enable filetype-specific indenting
 filetype plugin on    	" Enable filetype-specific plugins
 
+" spellcheck
+set spelllang=en
+autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.markdown setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
+autocmd FileType gitcommit setlocal spell
+
+" Set files with extention of .md as markdown type.
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " Plugins
 " ---------------------------------------------------------------------------
 " Specify a idirectory for plugins
@@ -111,6 +122,13 @@ Plug 'mileszs/ack.vim'
 " python mode
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
+" markdown format
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+" markdown preview
+Plug 'shime/vim-livedown'
+
 " Initialize plugin system
 call plug#end()
 " ---------------------------------------------------------------------------
@@ -123,12 +141,21 @@ colorscheme delek
 
 " Plugins Settings
 " ---------------------------------------------------------------------------
-" silversearcher
+" mileszs/ack.vim
 let g:ackprg = 'ag --nogroup --nocolor --column'
 cnoreabbrev Ack Ack!
 
-" python mode
+" python-mode/python-mode
 let g:pymode_python = 'python3'
+
+" plasticboy/vim-markdown
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+
+" shime/vim-livedown
+let g:livedown_autorun = 0
 " ---------------------------------------------------------------------------
 
 " Mappings
@@ -142,9 +169,12 @@ nnoremap <leader>r :source $MYVIMRC<CR>
 " reformat JSON
 :autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool
 
-" fuzzy find
+"junegunn/fzf
 map <leader>f :FZF<CR>
 
-" silver searcher
+" mileszs/ack.vim
 nnoremap <leader>a :Ack!<Space>
+
+" shime/vim-livedown
+:autocmd FileType markdown nnoremap <buffer> <leader>md :LivedownToggle<CR>
 " ---------------------------------------------------------------------------
