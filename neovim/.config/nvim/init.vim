@@ -167,7 +167,7 @@ let mapleader = ','
 nnoremap <leader>r :source $MYVIMRC<CR>
 
 " reformat JSON
-:autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool
+:autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool<CR>
 
 "junegunn/fzf
 map <leader>f :FZF<CR>
