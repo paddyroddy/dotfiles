@@ -33,6 +33,9 @@ set nobackup
 " don't create temp files
 set noswapfile
 
+" don't create history files
+let g:netrw_dirhistmax = 0
+
 " line numbers
 set number 
 
