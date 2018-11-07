@@ -3,27 +3,37 @@ clear
 
 echo "Installing dotfiles."
 
-# install necessary programmes
-echo "Install dependencies"
-if [[ $(uname -s) == Darwin ]]; then
-    echo "Mac detected"
+# check stow & neovim are installed
+if [[ ! command -v stow > /dev/null ]] && [[ ! command -v neovim > /dev/null ]]
+    # install necessary programmes
+    echo "Install dependencies"
 
-    if ! command -v brew > /dev/null; then
-        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    # if mac
+    if [[ $(uname -s) == Darwin ]]; then
+        echo "Mac detected"
+
+        # install homebrew
+        if ! command -v brew > /dev/null; then
+            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        fi
+    # if linux
+    elif [[ $(uname -s) == Linux ]]; then
+        echo "Linux detected"
+
+        # install linuxbrew
+        if ! command -v brew > /dev/null; then
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
+            test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
+            test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
+            test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
+            echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.profile
+        fi
     fi
 
+    # install stow & neovim
     brew install stow
     brew install neovim
-elif [[ $(uname -s) == Linux ]]; then
-    echo "Linux detected"
-    apt-get update
-    apt-get install sudo
-
-    echo "Ubuntu detected"
-    sudo apt-get install stow neovim
-
-    echo "Red Hat detected"
-    sudo yum install stow neovim
 fi
 
 # Arrays containing list of dotfiles that will be in use.
@@ -60,8 +70,6 @@ cd $HOME/dotfiles && stow -v \
 	git \
 	neovim \
 	tmux
-
-
 
 # install vim-plug
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
