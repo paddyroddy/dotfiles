@@ -1,0 +1,13 @@
+language: bash
+
+sudo: required
+
+os:
+    - osx
+    - linux
+
+before_script:
+    - curl -fsSL https://raw.githubusercontent.com/paddyroddy/dotfiles/master/install.sh
+
+script:
+    - bash install.sh
