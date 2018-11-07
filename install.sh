@@ -4,7 +4,7 @@ clear
 echo "Installing dotfiles."
 
 # check stow & neovim are installed
-if [[ ! command -v stow > /dev/null ]] && [[ ! command -v neovim > /dev/null ]]
+if ! command -v stow nvim > /dev/null; then
     # install necessary programmes
     echo "Install dependencies"
 
