@@ -3,7 +3,6 @@ language: bash
 sudo: required
 
 os:
-    - osx
     - linux
 
 before_script:
