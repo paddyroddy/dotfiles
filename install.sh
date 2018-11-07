@@ -75,6 +75,6 @@ cd $HOME/dotfiles && stow -v \
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # Install nvim plugins
-nvim +PlugInstall +qall
+vim +PlugInstall +qall
 
 source $HOME/.bashrc 2> /dev/null

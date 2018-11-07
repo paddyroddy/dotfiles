@@ -123,7 +123,7 @@ Plug '~/.fzf'
 Plug 'mileszs/ack.vim'
 
 " python mode
-" Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 " markdown format
 Plug 'godlygeek/tabular'
