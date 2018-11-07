@@ -72,9 +72,10 @@ cd $HOME/dotfiles && stow -v \
 	tmux
 
 # install vim-plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Install nvim plugins
-vim +PlugInstall +qall
+vim +PlugInstall +qa
 
 source $HOME/.bashrc 2> /dev/null
