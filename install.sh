@@ -3,6 +3,29 @@ clear
 
 echo "Installing dotfiles."
 
+# install necessary programmes
+echo "Install dependencies"
+if [[ $(uname -s) == Darwin ]]; then
+    echo "Mac detected"
+
+    if ! command -v brew > /dev/null; then
+        ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+
+    brew install stow
+    brew install neovim
+elif [[ $(uname -s) == Linux ]]; then
+    echo "Linux detected"
+    apt-get update
+    apt-get install sudo
+
+    echo "Ubuntu detected"
+    sudo apt-get install stow neovim
+
+    echo "Red Hat detected"
+    sudo yum install stow neovim
+fi
+
 # Arrays containing list of dotfiles that will be in use.
 dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig init.vim .tmux.conf .tmux.conf.local )
 # Check users home directory for existing dotfiles and create a backup version.
@@ -37,6 +60,7 @@ cd $HOME/dotfiles && stow -v \
 	git \
 	neovim \
 	tmux
+
 
 
 # install vim-plug
