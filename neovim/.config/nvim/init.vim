@@ -94,14 +94,18 @@ filetype plugin on    	" Enable filetype-specific plugins
 
 " spellcheck
 set spelllang=en
-autocmd BufRead,BufNewFile *.tex setlocal spell
-autocmd BufRead,BufNewFile *.md setlocal spell
-autocmd BufRead,BufNewFile *.markdown setlocal spell
-autocmd BufRead,BufNewFile *.txt setlocal spell
-autocmd FileType gitcommit setlocal spell
-
-" Set files with extention of .md as markdown type.
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+augroup spellCheck
+    autocmd!
+    autocmd BufRead,BufNewFile *.tex setlocal spell
+    autocmd BufRead,BufNewFile *.md setlocal spell
+    autocmd BufRead,BufNewFile *.markdown setlocal spell
+    autocmd BufRead,BufNewFile *.txt setlocal spell
+    autocmd FileType gitcommit setlocal spell
+    " turn off spellcheck for CMakeLists.txt
+    autocmd Filetype cmake setlocal nospell
+    " Set files with extention of .md as markdown type.
+    autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+augroup END
 
 " Plugins
 " ---------------------------------------------------------------------------
@@ -169,15 +173,18 @@ let mapleader = ','
 " reload config
 nnoremap <leader>r :source $MYVIMRC<CR>
 
-" reformat JSON
-:autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool<CR>
-
 "junegunn/fzf
 map <leader>f :FZF<CR>
 
 " mileszs/ack.vim
 nnoremap <leader>a :Ack!<Space>
 
-" shime/vim-livedown
-:autocmd FileType markdown nnoremap <buffer> <leader>md :LivedownToggle<CR>
+augroup mappings
+    autocmd!
+    " reformat JSON
+    :autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool<CR>
+
+    " shime/vim-livedown
+    :autocmd FileType markdown nnoremap <buffer> <leader>md :LivedownToggle<CR>
+augroup END
 " ---------------------------------------------------------------------------
