@@ -76,6 +76,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install nvim plugins
-nvim --headless +PlugInstall +qa &> /dev/null
+nvim --headless +PlugInstall +qa :0cquit
 
 source $HOME/.bashrc 2> /dev/null
