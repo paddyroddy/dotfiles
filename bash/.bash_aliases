@@ -57,3 +57,10 @@ alias df='pydf'
 
 # the fuck
 eval $(thefuck --alias)
+
+# conda environments
+alias py27='conda activate py27'
+alias py37='conda activate py37'
+
+# find chmod code
+alias permissions="stat -c '%a %n'"
