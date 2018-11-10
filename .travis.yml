@@ -9,4 +9,4 @@ before_script:
     - curl -fsSL https://raw.githubusercontent.com/paddyroddy/dotfiles/master/install.sh
 
 script:
-    - install.sh
+    - bash install.sh
