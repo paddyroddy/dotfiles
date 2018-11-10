@@ -31,9 +31,11 @@ if ! command -v stow nvim > /dev/null; then
         fi
     fi
 
-    # install stow & neovim
+    # install stow dependencies
     brew install stow
     brew install neovim
+    brew install thefuck
+    brew cask install anaconda
 fi
 
 # Arrays containing list of dotfiles that will be in use.
