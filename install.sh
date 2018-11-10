@@ -16,6 +16,9 @@ if ! command -v stow nvim > /dev/null; then
         if ! command -v brew > /dev/null; then
             ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         fi
+
+        # anaconda
+        brew cask install anaconda
     # if linux
     elif [[ $(uname -s) == Linux ]]; then
         echo "Linux detected"
@@ -29,13 +32,15 @@ if ! command -v stow nvim > /dev/null; then
             test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
             echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.profile
         fi
+
+        # anaconda
+        bash <(curl -O https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh)
     fi
 
     # install stow dependencies
     brew install stow
     brew install neovim
     brew install thefuck
-    brew cask install anaconda
 fi
 
 # Arrays containing list of dotfiles that will be in use.
