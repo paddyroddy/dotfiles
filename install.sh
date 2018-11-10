@@ -76,6 +76,12 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install nvim plugins
-nvim --headless +PlugInstall +0cquit
+nvim --headless +PlugInstall +qa 2> /dev/null
+
+if [ $? -eq 0 ]; then
+    echo "success"
+else
+    echo >&2
+fi
 
 source $HOME/.bashrc 2> /dev/null
