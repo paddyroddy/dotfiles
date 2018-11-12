@@ -40,7 +40,7 @@ fi
 # anaconda
 if [[ $(uname -s) == Darwin ]]; then
     brew cask install anaconda
-    conda_prefix=/usr/local/anacond3/
+    conda_prefix=/usr/local/anaconda3/
 elif [[ $(uname -s) == Linux ]]; then
     wget https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && bash ~/anaconda.sh -b -p ~/anaconda3 && rm ~/anaconda.sh && bash -c "source ~/anaconda3/etc/profile.d/conda.sh"
     conda_prefix=~/anaconda3/
