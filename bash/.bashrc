@@ -35,11 +35,6 @@ fi
 if [[ $(uname -s) == Darwin ]]; then
 	# anaconda
 	source /usr/local/anaconda3/etc/profile.d/conda.sh
-	
-	# fix tmux conda activate issue
-	if ! [[ -z ${TMUX+x} ]]; then
-		conda deactivate
-	fi
 elif [[ $(uname -s) == Linux ]]; then
 	# anaconda
 	source $HOME/anaconda3/etc/profile.d/conda.sh
