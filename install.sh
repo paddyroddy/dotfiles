@@ -34,7 +34,7 @@ if ! command -v stow nvim > /dev/null; then
         fi
 
         # anaconda
-        bash <(curl -O https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh)
+        sh -c "$(curl -O https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh)"
     fi
 
     # install stow dependencies
