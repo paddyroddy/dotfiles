@@ -34,7 +34,7 @@ if ! command -v stow nvim > /dev/null; then
         fi
 
         # anaconda
-        sh -c "$(curl -O https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh)"
+        wget https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh -O ~/anaconda.sh && bash ~/anaconda.sh -b -p ~/anaconda3 && rm ~/anaconda.sh && bash -c "source ~/anaconda3/etc/profile.d/conda.sh" && ~/anaconda3/bin/conda create -n py37 python=3.7
     fi
 
     # install stow dependencies
