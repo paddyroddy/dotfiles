@@ -46,8 +46,7 @@ elif [[ $(uname -s) == Linux ]]; then
     conda_prefix="$HOME/anaconda3"
 fi
 # create conda env
-bash -c "source ${conda_prefix}/etc/profile.d/conda.sh"
-conda create -n py37 python=3.7 -y
+${conda_prefix}/bin/conda create -n py37 python=3.7 -y
 
 # Arrays containing list of dotfiles that will be in use.
 dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig init.vim .tmux.conf .tmux.conf.local )
