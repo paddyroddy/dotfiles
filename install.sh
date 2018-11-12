@@ -19,6 +19,7 @@ if ! command -v stow nvim > /dev/null; then
 
         # anaconda
         brew cask install anaconda
+        /usr/local/anaconda3/bin/conda create -n py37 python=3.7 -y
     # if linux
     elif [[ $(uname -s) == Linux ]]; then
         echo "Linux detected"
