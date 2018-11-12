@@ -4,6 +4,7 @@ sudo: required
 
 os:
     - linux
+    - osx
 
 before_script:
     - curl -fsSL https://raw.githubusercontent.com/paddyroddy/dotfiles/master/install.sh
