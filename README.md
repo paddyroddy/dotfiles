@@ -1,5 +1,6 @@
 # dotfiles
 
+Tested on Linux & Mac
 [![Build Status](https://travis-ci.com/paddyroddy/dotfiles.svg?branch=master)](https://travis-ci.com/paddyroddy/dotfiles)
 
 To install, run
