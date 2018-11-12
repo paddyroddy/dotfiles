@@ -4,7 +4,7 @@ clear
 echo "Installing dotfiles."
 
 # check stow & neovim are installed
-if ! command -v stow nvim > /dev/null; then
+if ! command -v stow nvim thefuck > /dev/null; then
     # install necessary programmes
     echo "Install dependencies"
 
@@ -16,10 +16,6 @@ if ! command -v stow nvim > /dev/null; then
         if ! command -v brew > /dev/null; then
             ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         fi
-
-        # anaconda
-        brew cask install anaconda
-        /usr/local/anaconda3/bin/conda create -n py37 python=3.7 -y
     # if linux
     elif [[ $(uname -s) == Linux ]]; then
         echo "Linux detected"
@@ -33,9 +29,6 @@ if ! command -v stow nvim > /dev/null; then
             test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
             echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.profile
         fi
-
-        # anaconda
-        wget https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && bash ~/anaconda.sh -b -p ~/anaconda3 && rm ~/anaconda.sh && bash -c "source ~/anaconda3/etc/profile.d/conda.sh" && ~/anaconda3/bin/conda create -n py37 python=3.7 -y
     fi
 
     # install stow dependencies
@@ -43,6 +36,17 @@ if ! command -v stow nvim > /dev/null; then
     brew install neovim
     brew install thefuck
 fi
+
+# anaconda
+if [[ $(uname -s) == Darwin ]]; then
+    brew cask install anaconda
+    conda_prefix=/usr/local/anacond3/
+elif [[ $(uname -s) == Linux ]]; then
+    wget https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && bash ~/anaconda.sh -b -p ~/anaconda3 && rm ~/anaconda.sh && bash -c "source ~/anaconda3/etc/profile.d/conda.sh"
+    conda_prefix=~/anaconda3/
+fi
+# create conda env
+$conda_prefix/bin/conda create -n py37 python=3.7 py37 -y
 
 # Arrays containing list of dotfiles that will be in use.
 dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig init.vim .tmux.conf .tmux.conf.local )
