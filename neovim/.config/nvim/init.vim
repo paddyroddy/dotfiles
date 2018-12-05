@@ -126,9 +126,6 @@ Plug '~/.fzf'
 " ack the_silver_searcher
 Plug 'mileszs/ack.vim'
 
-" python mode
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
-
 " markdown format
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
