@@ -64,3 +64,6 @@ alias py37='conda activate py37'
 
 # find chmod code
 alias permissions="stat -c '%a %n'"
+
+# search history
+alias hs='history | grep'
