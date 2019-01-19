@@ -67,3 +67,6 @@ alias permissions="stat -c '%a %n'"
 
 # search history
 alias hs='history | grep'
+
+# hidden files
+alias la='ls -lah'
