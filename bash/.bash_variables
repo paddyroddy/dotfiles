@@ -17,6 +17,9 @@ export S2LET=$HOME/PhD/project/src/s2let
 # detect operating system
 ################### DARWIN  ###################
 if [[ $(uname -s) == Darwin ]]; then
+    # matlab
+    export PATH=$PATH:/Applications/MATLAB_R2018b.app/bin
+
 	# remove clang
 	export CC=/usr/local/bin/gcc-8
 	export CCX=/usr/local/bin/g++-8
