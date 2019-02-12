@@ -71,3 +71,6 @@ alias hg='history | grep'
 
 # hidden files
 alias la='ls -lah'
+
+# matlab
+alias matlab='matlab -nodesktop'
