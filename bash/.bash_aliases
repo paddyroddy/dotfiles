@@ -66,7 +66,8 @@ alias py37='conda activate py37'
 alias permissions="stat -c '%a %n'"
 
 # search history
-alias hs='history | grep'
+alias hs='history'
+alias hg='history | grep'
 
 # hidden files
 alias la='ls -lah'
