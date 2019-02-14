@@ -20,6 +20,9 @@ fi
 # fuzzy find
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
+# added by travis gem
+[ -f /home/paddy/.travis/travis.sh ] && source /home/paddy/.travis/travis.sh
+
 # Environment variables
 if [[ -f ~/.bash_variables ]]; then
 	source ~/.bash_variables
