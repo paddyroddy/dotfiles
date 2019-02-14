@@ -14,6 +14,11 @@ export SSHT=$HOME/PhD/project/src/ssht
 export SO3=$HOME/PhD/project/src/so3
 export S2LET=$HOME/PhD/project/src/s2let
 
+# sharkdp/fd for junegunn/fzf
+export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git --color=always'
+export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
+export FZF_DEFAULT_OPTS='--ansi'
+
 # detect operating system
 ################### DARWIN  ###################
 if [[ $(uname -s) == Darwin ]]; then
