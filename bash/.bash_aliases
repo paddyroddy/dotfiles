@@ -74,3 +74,6 @@ alias la='ls -lah'
 
 # matlab
 alias matlab='matlab -nodesktop'
+
+# rtyley/bfg-repo-cleaner
+alias bfg='java -jar $HOME/bfg/bfg.jar'
