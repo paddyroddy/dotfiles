@@ -11,9 +11,9 @@ if [[ $(uname -s) == Linux ]]; then
 
     # update
     if [[ -d ~/.linuxbrew ]]; then
-        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
+        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
     else
-        alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"'
+        alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
     fi
 ################### DARWIN ###################
 elif [[ $(uname -s) == Darwin ]]; then
@@ -24,7 +24,7 @@ elif [[ $(uname -s) == Darwin ]]; then
 	alias c++='c++-8'
 
 	# update
-	alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
+	alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
 fi
 
 # colour
