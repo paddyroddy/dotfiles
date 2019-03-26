@@ -77,3 +77,9 @@ alias matlab='matlab -nodesktop'
 
 # rtyley/bfg-repo-cleaner
 alias bfg='java -jar $HOME/bfg/bfg.jar'
+
+# tar files
+alias untar='tar -zxvf '
+
+# clear screen
+alias c='clear'
