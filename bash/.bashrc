@@ -51,5 +51,5 @@ conda activate py37
 
 # test if linuxbrew is installed i.e. cluster
 if [[ -d ~/.linuxbrew ]]; then
-    eval $(brew --prefix)/bin/brew shellenv
+    eval $(~/.linuxbrew/bin/brew shellenv)
 fi
