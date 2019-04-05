@@ -41,13 +41,6 @@ if [[ $(uname -s) == Darwin ]]; then
 	# tar
 	export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
 	export MANPATH=/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH
-elif [[ $(uname -s) == Linux ]]; then
-    # test if linuxbrew is installed i.e. cluster
-    if [[ -d ~/.linuxbrew ]]; then
-        export PATH=$PATH:$HOME/.linuxbrew/bin
-        export MANPATH=$HOME/.linuxbrew/share/man:$MANPATH
-        export INFOPATH=$HOME/.linuxbrew/share/info:$INFOPATH
-    fi
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

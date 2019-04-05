@@ -48,3 +48,8 @@ elif [[ $(uname -s) == Linux ]]; then
 	source $HOME/anaconda3/etc/profile.d/conda.sh
 fi
 conda activate py37
+
+# test if linuxbrew is installed i.e. cluster
+if [[ -d ~/.linuxbrew ]]; then
+    eval $(brew --prefix)/bin/brew shellenv
+fi
