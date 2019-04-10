@@ -1,3 +1,6 @@
+# PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [[ -n "$PS1" ]] && \
