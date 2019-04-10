@@ -20,7 +20,7 @@ export FZF_DEFAULT_OPTS='--ansi'
 ################### DARWIN  ###################
 if [[ $(uname -s) == Darwin ]]; then
     # matlab
-    export PATH=$PATH:/Applications/MATLAB_R2018b.app/bin
+    export PATH=$PATH:/Applications/MATLAB_R2019a.app/bin
 
 	# remove clang
 	export CC=/usr/local/bin/gcc-8
