@@ -3,68 +3,80 @@ clear
 
 echo "Installing dotfiles."
 
-# check stow & neovim are installed
-if ! command -v stow nvim thefuck > /dev/null; then
-    # install necessary programmes
-    echo "Install dependencies"
+# if mac
+if [[ $(uname -s) == Darwin ]]; then
+    echo "Mac detected"
+    conda_prefix=/usr/local/anaconda3
 
-    # if mac
-    if [[ $(uname -s) == Darwin ]]; then
-        echo "Mac detected"
-
-        # install homebrew
-        if ! command -v brew > /dev/null; then
-            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-        fi
-    # if linux
-    elif [[ $(uname -s) == Linux ]]; then
-        echo "Linux detected"
-
-        # install linuxbrew
-        if ! command -v brew > /dev/null; then
-            sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-
-            test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-            test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
-            test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
-            echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.profile
-        fi
+    # install homebrew
+    if ! command -v brew > /dev/null; then
+        echo "homebrew not detected, please install"
+	exit	
+    else
+        echo "homebrew detected"
+	brew update
     fi
 
-    # install stow dependencies
-    brew install stow
-    brew install neovim
-    brew install thefuck
+# if linux
+elif [[ $(uname -s) == Linux ]]; then
+    echo "Linux detected"
+    conda_prefix="$HOME/anaconda3"
+
+    sudo -n true
+    if [[ $? != 0 ]] ; then
+	echo "you don't have sudo rights"
+        
+	# install linuxbrew
+    	if ! command -v brew > /dev/null; then
+	    echo "homebrew not detected, please install"
+	    exit	
+        else
+	    echo "homebrew detected"
+	    brew update
+	fi
+    else
+	echo "sudo rights detected"
+    fi
 fi
 
 # anaconda
-if [[ $(uname -s) == Darwin ]]; then
-    brew cask install anaconda
-    conda_prefix="/usr/local/anaconda3"
-elif [[ $(uname -s) == Linux ]]; then
-    wget https://repo.continuum.io/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && bash ~/anaconda.sh -b -p ~/anaconda3 && rm ~/anaconda.sh
-    conda_prefix="$HOME/anaconda3"
+if ! command -v ${conda_prefix}/bin/conda > /dev/null; then
+    echo "anaconda not detected, please install"
+    exit	
+else
+    echo "anaconda detected"
+    
+    if ! command -v ${conda_prefix}/envs/py37/bin/python > /dev/null; then
+        echo "creating conda environment py37"
+	${conda_prefix}/bin/conda create -n py37 python=3.7 -y
+    fi
 fi
-# create conda env
-${conda_prefix}/bin/conda create -n py37 python=3.7 -y
+
+if ! command -v stow nvim thefuck  > /dev/null; then
+    echo "dependencies not detected:"
+    echo "stow nvim thefuck" 
+    exit	
+else
+    echo "dependencies detected"
+fi
 
 # Arrays containing list of dotfiles that will be in use.
 dotfile_array=( .bash_aliases .bash_profile .bashrc .bash_variables .condarc .gitconfig init.vim .tmux.conf .tmux.conf.local )
 # Check users home directory for existing dotfiles and create a backup version.
 for i in ${dotfile_array[*]}
 do
-	# check dotfile exists
-	if [ -f "$HOME/$i" ]; then
-		# create .backup dir if doesn't exist
-		if [ ! -d "$HOME/.backup" ]; then
-			mkdir $HOME/.backup
-		fi
-		# create backup
-		echo "Creating backup of existing" $i
-		mv $HOME/$i $HOME/.backup/
-	else
-		echo $i "not found"
+    # check dotfile exists
+    if [ -f "$HOME/$i" ]; then
+	# create .backup dir if doesn't exist
+	if [ ! -d "$HOME/.backup" ]; then
+	    mkdir $HOME/.backup
 	fi
+	# create backup
+	echo "Creating backup of existing" $i
+	mv $HOME/$i $HOME/.backup/
+    else
+    	echo $i "not found"
+    fi
 done
 
 # Remove .config/nvim directory
