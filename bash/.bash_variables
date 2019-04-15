@@ -38,6 +38,9 @@ if [[ $(uname -s) == Darwin ]]; then
 	# tar
 	export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
 	export MANPATH=/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH
+
+    # latex
+    export PATH=/Library/TeX/texbin:$PATH
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
