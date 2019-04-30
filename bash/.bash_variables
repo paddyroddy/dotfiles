@@ -7,9 +7,9 @@ export HEALPIX=$HOME/Healpix_3.50
 export CFITSIO=/usr
 export FFTW=/usr/local
 export LD_LIBRARY_PATH=$HOME/Healpix_3.50/lib:$LD_LIBRARY_PATH
-export SSHT=$HOME/PhD/project/src/ssht
-export SO3=$HOME/PhD/project/src/so3
-export S2LET=$HOME/PhD/project/src/s2let
+export SSHT=$HOME/project/src/ssht
+export SO3=$HOME/project/src/so3
+export S2LET=$HOME/project/src/s2let
 
 # sharkdp/fd for junegunn/fzf
 export FZF_DEFAULT_COMMAND='fd --type file --follow --exclude .git --color=always'
