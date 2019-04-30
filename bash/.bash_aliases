@@ -55,9 +55,6 @@ alias top='htop'
 alias du='ncdu'
 alias df='pydf'
 
-# the fuck
-eval $(thefuck --alias)
-
 # conda environments
 alias py27='conda activate py27'
 alias py37='conda activate py37'
