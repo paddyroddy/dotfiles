@@ -13,7 +13,7 @@ export SO3=$HOME/project/src/so3
 export S2LET=$HOME/project/src/s2let
 
 # sharkdp/fd for junegunn/fzf
-export FZF_DEFAULT_COMMAND='fd --type file --follow --exclude .git --color=always'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_DEFAULT_OPTS='--ansi'
 
