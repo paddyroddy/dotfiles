@@ -16,4 +16,4 @@
 	required = true
 	clean = git-lfs clean -- %f
 [pull]
-	rebase = preserve
+	rebase = true
