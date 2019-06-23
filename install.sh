@@ -52,9 +52,9 @@ else
     fi
 fi
 
-if ! command -v stow nvim thefuck  > /dev/null; then
+if ! command -v stow nvim  > /dev/null; then
     echo "dependencies not detected:"
-    echo "stow nvim thefuck" 
+    echo "stow nvim" 
     exit	
 else
     echo "dependencies detected"
