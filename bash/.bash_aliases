@@ -18,10 +18,10 @@ if [[ $(uname -s) == Linux ]]; then
 ################### DARWIN ###################
 elif [[ $(uname -s) == Darwin ]]; then
 	# remove clang
-	alias gcc='gcc-8'
-	alias cc='gcc-8'
-	alias g++='g++-8'
-	alias c++='c++-8'
+	alias gcc='gcc-9'
+	alias cc='gcc-9'
+	alias g++='g++-9'
+	alias c++='c++-9'
 
 	# update
 	alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
