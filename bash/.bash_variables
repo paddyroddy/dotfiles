@@ -20,6 +20,9 @@ export FZF_DEFAULT_OPTS='--ansi'
 # detect operating system
 ################### DARWIN  ###################
 if [[ $(uname -s) == Darwin ]]; then
+    # brew
+    export PATH=$PATH:/usr/local/sbin
+
     # matlab
     export PATH=$PATH:/Applications/MATLAB_R2019a.app/bin
 
