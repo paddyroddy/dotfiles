@@ -26,10 +26,6 @@ if [[ $(uname -s) == Darwin ]]; then
     # matlab
     export PATH=$PATH:/Applications/MATLAB_R2019a.app/bin
 
-	# remove clang
-	export CC=/usr/local/bin/gcc-9
-	export CXX=/usr/local/bin/g++-9
-
 	# allows Coreutils package to be used without 'g' prefix before each command.
 	export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 	export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
