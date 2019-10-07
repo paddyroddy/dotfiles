@@ -1,0 +1,67 @@
+# detect operating system
+case "$OSTYPE" in
+    darwin*)
+        # update
+        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
+    ;;
+    linux*)
+        # copy & paste
+        alias pbcopy='xclip -selection clipboard'
+        alias pbpaste='xclip -selection clipboard -o'
+        
+        # open pdfs
+        alias open='xdg-open'
+
+        # update
+        if [[ -d ~/.linuxbrew ]]; then
+            alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
+        else
+            alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
+        fi
+    ;;
+esac
+
+
+# colour
+alias ls='ls --color'
+alias grep='grep --color'
+
+# safety nets
+alias mkdir='mkdir -pv'
+alias wget='wget -c'
+alias rm='rm -iv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias ln='ln -iv'
+
+# fuzzy find
+alias f='fzf-tmux'
+alias vimf='vim `fzf-tmux`'
+
+# jupyter
+alias notebook='jupyter notebook'
+alias lab='jupyter lab'
+
+# visualisation
+alias top='htop'
+alias du='ncdu'
+alias df='pydf'
+
+# conda environments
+alias py37='conda activate py37'
+
+# neovim
+alias vim='nvim'
+
+# search history
+alias hs='history'
+alias hg='history | grep'
+
+# matlab
+alias matlab='matlab -nodesktop'
+
+# rtyley/bfg-repo-cleaner
+alias bfg='java -jar $HOME/bfg/bfg.jar'
+
+# clear screen
+alias c='clear'
