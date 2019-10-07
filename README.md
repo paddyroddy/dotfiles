@@ -1,9 +1,32 @@
 # dotfiles
 
-Tested on Linux & Mac  
-[![Build Status](https://travis-ci.com/paddyroddy/dotfiles.svg?branch=master)](https://travis-ci.com/paddyroddy/dotfiles)
+Clone dotfiles repo and tmux submodule
 
-To install, run
 ```bash
-bash -c "`curl -fsSL https://raw.githubusercontent.com/paddyroddy/dotfiles/master/install.sh`"
+git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/dotfiles
+```
+
+Symlink files using stow
+
+```
+cd $HOME/dotfiles && stow -v conda git neovim tmux zsh
+```
+
+Install vim-plug
+
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+Install plugins for vim
+
+```
+nvim +PlugInstall +qa
+```
+
+Source shell
+
+```
+source $HOME/.zshrc
 ```
