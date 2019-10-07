@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="agnoster"
-DEFAULT_USER="paddy"
+DEFAULT_USER="`whoami`"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -47,7 +47,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
 # added by travis gem
-[ -f /home/paddy/.travis/travis.sh ] && source /home/paddy/.travis/travis.sh
+[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 # Environment variables
 if [[ -f ~/.zsh_variables ]]; then
