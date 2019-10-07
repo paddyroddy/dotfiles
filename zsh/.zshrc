@@ -37,6 +37,8 @@ plugins=(
     tmux
 )
 
+source $ZSH/oh-my-zsh.sh
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [[ -n "$PS1" ]] && \
@@ -76,5 +78,3 @@ conda activate py37
 if [[ -d ~/.linuxbrew ]]; then
     eval $(~/.linuxbrew/bin/brew shellenv)
 fi
-
-source $ZSH/oh-my-zsh.sh
