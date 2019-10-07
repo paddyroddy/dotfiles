@@ -64,11 +64,6 @@ case "$OSTYPE" in
     darwin*)
         # anaconda
         source /usr/local/anaconda3/etc/profile.d/conda.sh
-        
-        # fix tmux conda activate issue
-        if ! [[ -z ${TMUX+x} ]]; then
-            conda deactivate
-        fi
     ;;
     linux*)
         # anaconda
