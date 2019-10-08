@@ -1,12 +1,15 @@
 # detect operating system
 case "$OSTYPE" in
     darwin*)
+        # brew
+        export PATH="/usr/local/sbin:$PATH"
+
         # matlab
-        export PATH=$PATH:/Applications/MATLAB_R2019a.app/bin
+        export PATH="$PATH:/Applications/MATLAB_R2019a.app/bin"
 
         # allows Coreutils package to be used without 'g' prefix before each command.
-        export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-        export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+        export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+        export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
         # binutils
         export PATH="/usr/local/opt/binutils/bin:$PATH"
@@ -14,26 +17,26 @@ case "$OSTYPE" in
         export CPPFLAGS="-I/usr/local/opt/binutils/include"
 
         # tar
-        export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
-        export MANPATH=/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH
+        export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+        export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
         # latex
-        export PATH=/Library/TeX/texbin:$PATH
+        export PATH="/Library/TeX/texbin:$PATH"
     ;;
     linux*)
         # snap
-        export PATH=$PATH:/snap/bin
+        export PATH="/snap/bin:$PATH"
     ;;
 esac
 
 # jason
-export HEALPIX=$HOME/Healpix_3.50
-export CFITSIO=/usr
-export FFTW=/usr/local
-export LD_LIBRARY_PATH=$HOME/Healpix_3.50/lib:$LD_LIBRARY_PATH
-export SSHT=$HOME/project/src/ssht
-export SO3=$HOME/project/src/so3
-export S2LET=$HOME/project/src/s2let
+export HEALPIX="$HOME/Healpix_3.50"
+export CFITSIO="/usr"
+export FFTW="/usr/local"
+export LD_LIBRARY_PATH="$HOME/Healpix_3.50/lib:$LD_LIBRARY_PATH"
+export SSHT="$HOME/project/src/ssht"
+export SO3="$HOME/project/src/so3"
+export S2LET="$HOME/project/src/s2let"
 
 # sharkdp/fd for junegunn/fzf
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
