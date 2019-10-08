@@ -133,9 +133,6 @@ Plug 'plasticboy/vim-markdown'
 " markdown preview
 Plug 'shime/vim-livedown'
 
-" auto complete
-Plug 'ycm-core/youcompleteme', { 'do': './install.py' }
-
 " Initialize plugin system
 call plug#end()
 " ---------------------------------------------------------------------------
