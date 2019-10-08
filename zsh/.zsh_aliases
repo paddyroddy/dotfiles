@@ -53,10 +53,6 @@ alias py37='conda activate py37'
 # neovim
 alias vim='nvim'
 
-# search history
-alias hs='history'
-alias hg='history | grep'
-
 # matlab
 alias matlab='matlab -nodesktop'
 
