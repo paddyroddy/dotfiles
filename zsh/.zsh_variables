@@ -4,6 +4,10 @@ case "$OSTYPE" in
         # brew
         export PATH="/usr/local/sbin:$PATH"
 
+        # nvim
+        export EDITOR="/usr/local/bin/nvim"
+        export VISUAL="/usr/local/bin/nvim"
+
         # matlab
         export PATH="$PATH:/Applications/MATLAB_R2019a.app/bin"
 
@@ -26,6 +30,10 @@ case "$OSTYPE" in
     linux*)
         # snap
         export PATH="/snap/bin:$PATH"
+
+        # nvim
+        export EDITOR="/usr/bin/nvim"
+        export VISUAL="/usr/bin/nvim"
     ;;
 esac
 
