@@ -50,3 +50,8 @@ export S2LET="$HOME/project/src/s2let"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_DEFAULT_OPTS='--ansi'
+
+# ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
