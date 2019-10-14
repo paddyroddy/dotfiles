@@ -41,6 +41,7 @@ plugins=(
     history
     sudo
     tmux
+    fast-syntax-highlighting
 )
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
