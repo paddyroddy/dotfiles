@@ -35,14 +35,11 @@ plugins=(
     aws
     common-aliases
     debian
-    command-not-found
-    docker
+    fast-syntax-highlighting
     git
-    gitfast
     history
     sudo
     tmux
-    fast-syntax-highlighting
 )
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
