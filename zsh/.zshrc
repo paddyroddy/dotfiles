@@ -38,7 +38,6 @@ plugins=(
     fast-syntax-highlighting
     git
     history
-    sudo
     tmux
 )
 
