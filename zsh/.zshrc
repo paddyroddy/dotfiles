@@ -34,7 +34,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
     aws
     common-aliases
-    debian
     fast-syntax-highlighting
     git
     history
