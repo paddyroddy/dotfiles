@@ -36,8 +36,6 @@ plugins=(
     common-aliases
     fast-syntax-highlighting
     git
-    history
-    tmux
 )
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
