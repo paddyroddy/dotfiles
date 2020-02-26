@@ -47,9 +47,6 @@ alias top='htop'
 alias du='ncdu'
 alias df='pydf'
 
-# conda environments
-alias py37='conda activate py37'
-
 # neovim
 alias vim='nvim'
 
