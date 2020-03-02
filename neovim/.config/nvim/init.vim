@@ -133,6 +133,9 @@ Plug 'plasticboy/vim-markdown'
 " markdown preview
 Plug 'shime/vim-livedown'
 
+" toml highlighting
+Plug 'cespare/vim-toml'
+
 " Initialize plugin system
 call plug#end()
 " ---------------------------------------------------------------------------
