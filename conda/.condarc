@@ -2,3 +2,4 @@ report_errors: true
 channels:
   - conda-forge
   - defaults
+ssl_verify: true
