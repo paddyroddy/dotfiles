@@ -26,6 +26,9 @@ case "$OSTYPE" in
 
         # latex
         export PATH="/Library/TeX/texbin:$PATH"
+
+        # perl
+        eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
     ;;
     linux*)
         # snap
