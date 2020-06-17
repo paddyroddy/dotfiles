@@ -55,3 +55,6 @@ alias matlab='matlab -nodesktop'
 
 # rtyley/bfg-repo-cleaner
 alias bfg='java -jar $HOME/bfg/bfg.jar'
+
+# textidote
+alias textidote='java -jar $HOME/textidote/textidote.jar'
