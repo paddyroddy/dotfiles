@@ -48,7 +48,7 @@ esac
 eval "$(rbenv init -)"
 
 # jason
-export HEALPIX="$HOME/Healpix_3.50"
+export HEALPIX="$HOME/Healpix"
 export CFITSIO="/usr"
 export FFTW="/usr/local"
 export LD_LIBRARY_PATH="$HOME/Healpix_3.50/lib:$LD_LIBRARY_PATH"
