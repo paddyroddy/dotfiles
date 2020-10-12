@@ -31,9 +31,6 @@ case "$OSTYPE" in
         eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
     ;;
     linux*)
-        # snap
-        export PATH="/snap/bin:$PATH"
-
         # nvim
         export EDITOR="/usr/bin/nvim"
         export VISUAL="/usr/bin/nvim"
@@ -46,15 +43,6 @@ esac
 
 # rbenv
 eval "$(rbenv init -)"
-
-# jason
-export HEALPIX="$HOME/Healpix"
-export CFITSIO="/usr"
-export FFTW="/usr/local"
-export LD_LIBRARY_PATH="$HOME/Healpix_3.50/lib:$LD_LIBRARY_PATH"
-export SSHT="$HOME/project/src/ssht"
-export SO3="$HOME/project/src/so3"
-export S2LET="$HOME/project/src/s2let"
 
 # sharkdp/fd for junegunn/fzf
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'

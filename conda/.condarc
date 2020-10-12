@@ -1,5 +1,5 @@
 report_errors: true
 channels:
-  - conda-forge
   - defaults
+  - conda-forge
 ssl_verify: true
