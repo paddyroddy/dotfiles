@@ -19,6 +19,10 @@ case "$OSTYPE" in
             alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
         fi
     ;;
+    linux*)
+        # fd
+        alias fd='fdfind'
+    ;;
 esac
 
 

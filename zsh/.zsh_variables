@@ -29,6 +29,9 @@ case "$OSTYPE" in
 
         # perl
         eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+        # sharkdp/fd for junegunn/fzf
+        export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
     ;;
     linux*)
         # nvim
@@ -38,6 +41,9 @@ case "$OSTYPE" in
         # rbenv
         export PATH="$HOME/.rbenv/bin:$PATH"
         export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+        # sharkdp/fd for junegunn/fzf
+        export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --color=always'
     ;;
 esac
 
@@ -45,6 +51,5 @@ esac
 eval "$(rbenv init -)"
 
 # sharkdp/fd for junegunn/fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_DEFAULT_OPTS='--ansi'
