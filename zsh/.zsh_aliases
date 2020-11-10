@@ -62,3 +62,6 @@ alias bfg='java -jar $HOME/bfg/bfg.jar'
 
 # textidote
 alias textidote='java -jar $HOME/textidote/textidote.jar'
+
+# R
+alias r="radian"
