@@ -65,3 +65,6 @@ alias textidote='java -jar $HOME/textidote/textidote.jar'
 
 # R
 alias r="radian"
+
+# python
+alias pip='noglob pip'
