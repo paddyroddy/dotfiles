@@ -51,9 +51,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # fuzzy find
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
-
 # Environment variables
 if [[ -f ~/.zsh_variables ]]; then
 	source ~/.zsh_variables
