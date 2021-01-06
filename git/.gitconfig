@@ -3,15 +3,8 @@
 	spush = push --recurse-submodules=on-demand
 	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
 	merge = merge --no-ff
-[color]
-    ui = always
-[color "diff-highlight"]
-    oldNormal = red bold
-    oldHighlight = red bold 52
-    newNormal = green bold
-    newHighlight = green bold 22
 [core]
-    pager = $(git --exec-path | sed 's/libexec/share/')/contrib/diff-highlight/diff-highlight | less
+    pager = diffr | less -R
 	editor = nvim
 [filter "lfs"]
 	required = true
@@ -19,7 +12,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 [interactive]
-	diffFilter = $(git --exec-path | sed 's/libexec/share/')/contrib/diff-highlight/diff-highlight
+	diffFilter = diffr
 [pull]
 	rebase = true
 [status]
