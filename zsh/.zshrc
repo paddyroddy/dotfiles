@@ -72,3 +72,6 @@ conda activate py38
 if [[ -d ~/.linuxbrew ]]; then
     eval $(~/.linuxbrew/bin/brew shellenv)
 fi
+
+# bitwarden
+eval "$(bw completion --shell zsh); compdef _bw bw;"
