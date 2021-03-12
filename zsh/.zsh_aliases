@@ -65,7 +65,7 @@ alias textidote='java -jar $HOME/textidote/textidote.jar'
 # python
 alias pip='noglob pip'
 
-untar() {
+x() {
     if [ -f $1 ]; then
         case $1 in
         *.tar.bz2) tar xvjf $1 ;;
