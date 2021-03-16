@@ -66,7 +66,7 @@ case "$OSTYPE" in
         source $HOME/anaconda3/etc/profile.d/conda.sh
     ;;
 esac
-conda activate py38
+conda activate py39
 
 # test if linuxbrew is installed i.e. cluster
 if [[ -d ~/.linuxbrew ]]; then
