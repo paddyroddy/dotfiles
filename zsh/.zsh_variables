@@ -42,17 +42,10 @@ case "$OSTYPE" in
         export EDITOR="/usr/bin/nvim"
         export VISUAL="/usr/bin/nvim"
 
-        # rbenv
-        export PATH="$HOME/.rbenv/bin:$PATH"
-        export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
         # sharkdp/fd for junegunn/fzf
         export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --color=always'
     ;;
 esac
-
-# rbenv
-eval "$(rbenv init -)"
 
 # sharkdp/fd for junegunn/fzf
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
