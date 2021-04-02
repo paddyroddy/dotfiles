@@ -34,7 +34,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(
     asdf
     common-aliases
-    fast-syntax-highlighting
     git
 )
 
