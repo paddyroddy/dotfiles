@@ -35,6 +35,7 @@ plugins=(
     asdf
     common-aliases
     git
+    zsh-syntax-highlighting
 )
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
