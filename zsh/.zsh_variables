@@ -36,6 +36,9 @@ case "$OSTYPE" in
 
         # sharkdp/fd for junegunn/fzf
         export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
+
+        # ruby
+        export PATH="/usr/local/opt/ruby/bin:$PATH"
     ;;
     linux*)
         # nvim
