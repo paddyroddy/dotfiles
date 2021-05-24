@@ -6,7 +6,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="powerlevel10k/powerlevel10k"
-DEFAULT_USER="`whoami`"
+DEFAULT_USER="$(whoami)"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -48,25 +48,16 @@ source $ZSH/oh-my-zsh.sh
 
 # Environment variables
 if [[ -f ~/.zsh_variables ]]; then
-	source ~/.zsh_variables
+    source ~/.zsh_variables
 fi
 
 # Alias definitions
 if [[ -f ~/.zsh_aliases ]]; then
-	source ~/.zsh_aliases
+    source ~/.zsh_aliases
 fi
 
-# detect operating system
-case "$OSTYPE" in
-    darwin*)
-        # anaconda
-        source /usr/local/anaconda3/etc/profile.d/conda.sh
-    ;;
-    linux*)
-        # anaconda
-        source $HOME/anaconda3/etc/profile.d/conda.sh
-    ;;
-esac
+# anaconda
+source $HOME/miniconda3/etc/profile.d/conda.sh
 conda activate py39
 
 # test if linuxbrew is installed i.e. cluster
