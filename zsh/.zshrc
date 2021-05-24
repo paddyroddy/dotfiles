@@ -56,11 +56,6 @@ if [[ -f ~/.zsh_aliases ]]; then
     source ~/.zsh_aliases
 fi
 
-# test if linuxbrew is installed i.e. cluster
-if [[ -d ~/.linuxbrew ]]; then
-    eval $(~/.linuxbrew/bin/brew shellenv)
-fi
-
 # anaconda
 source $HOME/miniconda3/etc/profile.d/conda.sh
 conda activate py39

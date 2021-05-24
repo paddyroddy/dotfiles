@@ -54,6 +54,5 @@ esac
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_DEFAULT_OPTS='--ansi'
 
-# if cluster has ancient git/curl then look in .local directory
-# https://joseph-long.com/writing/linuxbrew-with-ancient-git/
+# Install in .local directory
 export PATH="$HOME/.local/bin:$PATH"
