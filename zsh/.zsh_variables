@@ -57,4 +57,3 @@ export FZF_DEFAULT_OPTS='--ansi'
 # if cluster has ancient git/curl then look in .local directory
 # https://joseph-long.com/writing/linuxbrew-with-ancient-git/
 export PATH="$HOME/.local/bin:$PATH"
-export HOMEBREW_NO_ENV_FILTERING=1
