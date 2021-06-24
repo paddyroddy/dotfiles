@@ -3,6 +3,11 @@ case "$OSTYPE" in
 darwin*)
     # update
     alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
+
+    # bitwarden
+    pass() {
+        bw get password "$1" | pbcopy
+    }
     ;;
 linux*)
     # copy & paste
@@ -18,6 +23,11 @@ linux*)
     else
         alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
     fi
+
+    # bitwarden
+    pass() {
+        bw get password "$1" | xclip -se c
+    }
     ;;
 linux*)
     # fd
