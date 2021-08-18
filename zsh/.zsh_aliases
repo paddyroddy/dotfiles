@@ -38,6 +38,7 @@ esac
 # colour
 alias ls='ls --color'
 alias grep='grep --color'
+alias tree='tree -C'
 
 # safety nets
 alias mkdir='mkdir -pv'
