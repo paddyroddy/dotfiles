@@ -57,3 +57,6 @@ export FZF_DEFAULT_OPTS='--ansi'
 
 # Install in .local directory
 export PATH="$HOME/.local/bin:$PATH"
+
+# rust compiler
+export PATH="$HOME/.cargo/bin:$PATH"
