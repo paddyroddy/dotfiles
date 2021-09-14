@@ -21,7 +21,7 @@ linux*)
     if [[ -d ~/.linuxbrew ]]; then
         alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
     else
-        alias brewski='sudo sh -c "apt -y update;apt -y dist-upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
+        alias brewski='sudo sh -c "apt -y update;apt --allow-downgrades -y upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
     fi
 
     # bitwarden
