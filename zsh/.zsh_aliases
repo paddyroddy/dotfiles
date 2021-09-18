@@ -73,6 +73,7 @@ alias bfg='java -jar $HOME/bfg/bfg.jar'
 # python
 alias pip='noglob pip'
 
+# decompress all file types
 x() {
     if [ -f $1 ]; then
         case $1 in
