@@ -2,7 +2,8 @@
 case "$OSTYPE" in
 darwin*)
     # brew
-    export PATH="/opt/homebrew/bin:$PATH"
+    export BREWPATH="/opt/homebrew"
+    export PATH="$BREWPATH/bin:$PATH"
 
     # nvim
     export EDITOR="/usr/local/bin/nvim"
@@ -12,34 +13,34 @@ darwin*)
     export PATH="$PATH:/Applications/MATLAB_R2021b.app/bin"
 
     # allows Coreutils package to be used without 'g' prefix before each command.
-    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+    export PATH="$BREWPATH/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="$BREWPATH/opt/coreutils/libexec/gnuman:$MANPATH"
 
     # binutils
-    export PATH="/usr/local/opt/binutils/bin:$PATH"
-    export LDFLAGS="-L/usr/local/opt/binutils/lib"
-    export CPPFLAGS="-I/usr/local/opt/binutils/include"
+    export PATH="$BREWPATH/opt/binutils/bin:$PATH"
+    export LDFLAGS="-L$BREWPATH/opt/binutils/lib"
+    export CPPFLAGS="-I$BREWPATH/opt/binutils/include"
 
     # tar
-    export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
+    export PATH="$BREWPATH/opt/gnu-tar/libexec/gnubin:$PATH"
+    export MANPATH="$BREWPATH/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
     # sed
-    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-    export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$PATH"
+    export PATH="$BREWPATH/opt/gnu-sed/libexec/gnubin:$PATH"
+    export MANPATH="$BREWPATH/opt/gnu-sed/libexec/gnuman:$PATH"
 
     # latex
     export PATH="/Library/TeX/texbin:$PATH"
 
     # perl
     eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-    export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/System/Library/Perl/5.28/darwin-thread-multi-2level/CORE:$CPATH
+    export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Perl/5.30/darwin-thread-multi-2level/CORE:$CPATH
 
     # sharkdp/fd for junegunn/fzf
     export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
 
     # ruby
-    export PATH="/usr/local/opt/ruby/bin:$PATH"
+    export PATH="$BREWPATH/opt/ruby/bin:$PATH"
     ;;
 linux*)
     # nvim
