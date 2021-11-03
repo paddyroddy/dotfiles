@@ -1,3 +1,6 @@
+# create default path
+source /etc/environment
+
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 
