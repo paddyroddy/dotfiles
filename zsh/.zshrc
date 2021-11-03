@@ -57,5 +57,5 @@ if [[ -f ~/.zsh_aliases ]]; then
 fi
 
 # anaconda
-source $HOME/miniconda3/etc/profile.d/conda.sh
+source $HOME/miniforge3/etc/profile.d/conda.sh
 conda activate py39
