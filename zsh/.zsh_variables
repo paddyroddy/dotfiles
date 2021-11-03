@@ -2,8 +2,7 @@
 case "$OSTYPE" in
 darwin*)
     # brew
-    export BREWPATH="/opt/homebrew"
-    export PATH="$BREWPATH/bin:$PATH"
+    export PATH="/opt/homebrew/bin:$PATH"
 
     # nvim
     export EDITOR="/usr/local/bin/nvim"
@@ -13,21 +12,21 @@ darwin*)
     export PATH="$PATH:/Applications/MATLAB_R2021b.app/bin"
 
     # allows Coreutils package to be used without 'g' prefix before each command.
-    export PATH="$BREWPATH/opt/coreutils/libexec/gnubin:$PATH"
-    export MANPATH="$BREWPATH/opt/coreutils/libexec/gnuman:$MANPATH"
+    export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+    export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 
     # binutils
-    export PATH="$BREWPATH/opt/binutils/bin:$PATH"
-    export LDFLAGS="-L$BREWPATH/opt/binutils/lib"
-    export CPPFLAGS="-I$BREWPATH/opt/binutils/include"
+    export PATH="$(brew --prefix)/opt/binutils/bin:$PATH"
+    export LDFLAGS="-L$(brew --prefix)/opt/binutils/lib"
+    export CPPFLAGS="-I$(brew --prefix)/opt/binutils/include"
 
     # tar
-    export PATH="$BREWPATH/opt/gnu-tar/libexec/gnubin:$PATH"
-    export MANPATH="$BREWPATH/opt/gnu-tar/libexec/gnuman:$MANPATH"
+    export PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
+    export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
     # sed
-    export PATH="$BREWPATH/opt/gnu-sed/libexec/gnubin:$PATH"
-    export MANPATH="$BREWPATH/opt/gnu-sed/libexec/gnuman:$PATH"
+    export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+    export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$PATH"
 
     # latex
     export PATH="/Library/TeX/texbin:$PATH"
@@ -40,7 +39,7 @@ darwin*)
     export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
 
     # ruby
-    export PATH="$BREWPATH/opt/ruby/bin:$PATH"
+    export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
     ;;
 linux*)
     # nvim
