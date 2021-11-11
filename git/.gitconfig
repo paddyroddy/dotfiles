@@ -20,3 +20,7 @@
 [user]
 	name = paddyroddy
 	email = patrickjamesroddy@gmail.com
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
