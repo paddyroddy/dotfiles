@@ -51,14 +51,10 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
 # Environment variables
-if [[ -f ~/.zsh_variables ]]; then
-    source ~/.zsh_variables
-fi
+[[ -f ~/.zsh_variables ]] && source ~/.zsh_variables
 
 # Alias definitions
-if [[ -f ~/.zsh_aliases ]]; then
-    source ~/.zsh_aliases
-fi
+[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
 # anaconda
 source $HOME/mambaforge/etc/profile.d/conda.sh
