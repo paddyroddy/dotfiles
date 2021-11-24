@@ -33,7 +33,6 @@ darwin*)
 
     # perl
     eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-    export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Perl/5.30/darwin-thread-multi-2level/CORE:$CPATH
 
     # sharkdp/fd for junegunn/fzf
     export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
