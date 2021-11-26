@@ -4,20 +4,124 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>BootstrapDaemon</key>
 	<false/>
 	<key>Default Bookmark Guid</key>
-	<string>096E3C68-ED53-4A09-8C31-853A8EBD4515</string>
+	<string>79071E4F-E709-46DD-B8A1-D7CFBC21D575</string>
+	<key>EnterCopyModeAutomatically</key>
+	<true/>
+	<key>GlobalKeyMap</key>
+	<dict>
+		<key>0x19-0x60000</key>
+		<dict>
+			<key>Action</key>
+			<integer>39</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0x9-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>32</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xd-0x100000-0x24</key>
+		<dict>
+			<key>Action</key>
+			<integer>13</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
+		<key>0xf700-0x300000</key>
+		<dict>
+			<key>Action</key>
+			<integer>7</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf701-0x300000</key>
+		<dict>
+			<key>Action</key>
+			<integer>6</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf702-0x300000</key>
+		<dict>
+			<key>Action</key>
+			<integer>2</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf702-0x320000</key>
+		<dict>
+			<key>Action</key>
+			<integer>33</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf703-0x300000</key>
+		<dict>
+			<key>Action</key>
+			<integer>0</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf703-0x320000</key>
+		<dict>
+			<key>Action</key>
+			<integer>34</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf729-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>5</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72b-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>4</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72c-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>9</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72c-0x20000</key>
+		<dict>
+			<key>Action</key>
+			<integer>9</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72d-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>8</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72d-0x20000</key>
+		<dict>
+			<key>Action</key>
+			<integer>8</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideFromDockAndAppSwitcher</key>
@@ -31,6 +135,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -178,7 +284,7 @@
 				<real>1</real>
 			</dict>
 			<key>BM Growl</key>
-			<false/>
+			<true/>
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -203,10 +309,14 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Blend</key>
+			<real>0.5</real>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
-			<false/>
+			<true/>
+			<key>Blur Radius</key>
+			<real>2</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -279,7 +389,7 @@
 				<real>0.73333334922790527</real>
 			</dict>
 			<key>Guid</key>
-			<string>096E3C68-ED53-4A09-8C31-853A8EBD4515</string>
+			<string>79071E4F-E709-46DD-B8A1-D7CFBC21D575</string>
 			<key>Has Hotkey</key>
 			<true/>
 			<key>Horizontal Spacing</key>
@@ -308,8 +418,12 @@
 			<true/>
 			<key>HotKey Window Reopens On Activation</key>
 			<false/>
+			<key>Icon</key>
+			<integer>0</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
+			<key>Initial Use Transparency</key>
+			<true/>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -374,6 +488,17 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x7f</string>
+				</dict>
+				<key>0x74-0x100000-0x0</key>
+				<dict>
+					<key>Action</key>
+					<integer>27</integer>
+					<key>Label</key>
+					<string></string>
+					<key>Text</key>
+					<string>79071E4F-E709-46DD-B8A1-D7CFBC21D575</string>
+					<key>Version</key>
+					<integer>1</integer>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -614,13 +739,13 @@
 				<real>0.0</real>
 			</dict>
 			<key>Minimum Contrast</key>
-			<real>0.49921223958333327</real>
+			<real>0.50032552083333337</real>
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
 			<string>Hotkey</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>MesloLGS-NF-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -634,7 +759,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>65</integer>
 			<key>Screen</key>
 			<integer>0</integer>
 			<key>Scrollback Lines</key>
@@ -663,6 +788,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<true/>
+			<key>Space</key>
+			<integer>-1</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -670,7 +797,9 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.30301695478723412</real>
+			<real>0.29999999999999999</real>
+			<key>Unicode Version</key>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -691,6 +820,12 @@
 			<string>/Users/paddy</string>
 		</dict>
 	</array>
+	<key>OpenArrangementAtStartup</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
+	<true/>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -724,12 +859,10 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>PromptOnQuit</key>
-	<false/>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
-	<key>TabStyleWithAutomaticOption</key>
-	<integer>3</integer>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 </dict>
