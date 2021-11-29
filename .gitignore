@@ -1,3 +1,5 @@
+*.sqlite
 *.swp
 AppSupport
 plugged
+startup
