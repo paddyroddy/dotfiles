@@ -3,7 +3,7 @@
 Clone dotfiles repo and tmux submodule
 
 ```bash
-git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/dotfiles
+git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/.dotfiles
 ```
 
 Symlink files using stow
