@@ -37,6 +37,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    asdf
     common-aliases
     git
     zsh-syntax-highlighting
@@ -59,7 +60,3 @@ source $ZSH/oh-my-zsh.sh
 # conda initialize
 source "$HOME/mambaforge/etc/profile.d/conda.sh"
 conda activate py39
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

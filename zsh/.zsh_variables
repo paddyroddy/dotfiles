@@ -60,3 +60,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# asdf java
+source $HOME/.asdf/plugins/java/set-java-home.zsh
