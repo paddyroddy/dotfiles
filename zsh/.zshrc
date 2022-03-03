@@ -57,6 +57,7 @@ source $ZSH/oh-my-zsh.sh
 # Alias definitions
 [[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
-# conda initialize
-source "$HOME/mambaforge/etc/profile.d/conda.sh"
-conda activate py39
+# mamba initialize
+source "$HOME/mambaforge/etc/profile.d/mamba.sh"
+export MAMBA_NO_BANNER=1
+mamba activate py39
