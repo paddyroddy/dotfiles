@@ -55,4 +55,4 @@ export FZF_DEFAULT_OPTS='--ansi'
 export PATH="$HOME/.local/bin:$PATH"
 
 # asdf java
-source $HOME/.asdf/plugins/java/set-java-home.zsh
+[[ -f ~/.asdf ]] && source ~/.asdf/plugins/java/set-java-home.zsh
