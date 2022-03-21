@@ -9,7 +9,7 @@ darwin*)
     export VISUAL="/usr/local/bin/nvim"
 
     # matlab
-    export PATH="$PATH:/Applications/MATLAB_R2021b.app/bin"
+    export PATH="$PATH:/Applications/MATLAB_R2022a.app/bin"
 
     # allows Coreutils package to be used without 'g' prefix before each command.
     export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
