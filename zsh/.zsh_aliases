@@ -2,7 +2,7 @@
 case "$OSTYPE" in
 darwin*)
     # update
-    alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
+    alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; mamba update --all -y && mamba clean --all -y'
     ;;
 linux*)
     # copy & paste
@@ -14,9 +14,9 @@ linux*)
 
     # update
     if [[ -d ~/.linuxbrew ]]; then
-        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; conda update --all -y && conda clean --all -y'
+        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; mamba update --all -y && mamba clean --all -y'
     else
-        alias brewski='sudo sh -c "apt -y update;apt --allow-downgrades -y upgrade;apt -y autoremove;apt -y autoclean"; conda update --all -y && conda clean --all -y'
+        alias brewski='sudo sh -c "apt -y update;apt --allow-downgrades -y upgrade;apt -y autoremove;apt -y autoclean"; mamba update --all -y && mamba clean --all -y'
     fi
 
     # fd
