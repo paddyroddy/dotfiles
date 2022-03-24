@@ -78,5 +78,5 @@ if [ -f "$HOME/mambaforge/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 export MAMBA_NO_BANNER=1
-mamba activate py310
+conda activate
 
