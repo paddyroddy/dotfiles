@@ -56,6 +56,3 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # asdf java
 [[ -f ~/.asdf ]] && source ~/.asdf/plugins/java/set-java-home.zsh
-
-# silence direnv
-export DIRENV_LOG_FORMAT=
