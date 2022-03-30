@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
 # direnv
-eval "$(direnv hook zsh)"
+[[ -f ~/.direnv ]] && eval "$(direnv hook zsh)"
 
 # >>> conda initialize >>>
 __conda_setup="$('$HOME/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
