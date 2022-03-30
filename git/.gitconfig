@@ -4,7 +4,7 @@
 	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
 	merge = merge --no-ff
 [core]
-    pager = diffr | less -R
+        pager = diffr | less -R
 	editor = nvim
 [filter "lfs"]
 	required = true
