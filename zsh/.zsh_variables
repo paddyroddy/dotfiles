@@ -59,3 +59,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # asdf java
 [[ -f ~/.asdf ]] && source ~/.asdf/plugins/java/set-java-home.zsh
+
+# direnv
+[[ -f ~/.direnv ]] && eval "$(direnv hook zsh)"
+
+# gcloud
+source '$HOME/google-cloud-sdk/path.zsh.inc'
+source '$HOME/google-cloud-sdk/completion.zsh.inc'
