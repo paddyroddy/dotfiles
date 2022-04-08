@@ -64,5 +64,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 [[ -f ~/.direnv ]] && eval "$(direnv hook zsh)"
 
 # gcloud
-source '$HOME/google-cloud-sdk/path.zsh.inc'
-source '$HOME/google-cloud-sdk/completion.zsh.inc'
+source $HOME/google-cloud-sdk/path.zsh.inc
+source $HOME/google-cloud-sdk/completion.zsh.inc
