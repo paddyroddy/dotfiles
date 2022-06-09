@@ -1,5 +1,6 @@
 # create default path
 source /etc/environment
+export MANPATH=`cat /etc/environment | sed -e 's/export PATH=//'`
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"

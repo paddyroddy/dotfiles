@@ -20,13 +20,17 @@ darwin*)
     export LDFLAGS="-L$(brew --prefix)/opt/binutils/lib"
     export CPPFLAGS="-I$(brew --prefix)/opt/binutils/include"
 
+    # grep
+    export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+    export MANPATH="$(brew --prefix)/opt/grep/libexec/gnuman:$MANPATH"
+
     # tar
     export PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
     export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
     # sed
     export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
-    export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$PATH"
+    export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
     # latex
     export PATH="/Library/TeX/texbin:$PATH"
