@@ -10,14 +10,16 @@ layout_anaconda() {
     echo conda env: ${env_name} | lolcat
     source activate ${env_name}
 
-  elif (grep -q name: environment.yml); then
+  elif (grep -s name: environment.yml); then
     # Detect environment name from `environment.yml` file in `.envrc` directory
     local env_name=`grep name: environment.yml | sed -e 's/name: //'`
     echo conda env: ${env_name} | lolcat
     source activate ${env_name}
 
   else
-    (>&2 echo No environment specified);
-    exit 1;
+    # Create environment name from current directory.
+    local env_name=`basename ${PWD}`
+    echo conda env: ${env_name} | lolcat
+    source activate ${env_name}
   fi;
 }
