@@ -25,4 +25,6 @@
 [diff]
 	colorMoved = zebra
 [submodule]
-	recurse = true
+    recurse = true
+[push]
+    autoSetupRemote = true
