@@ -1,30 +1,34 @@
 [alias]
 	logg = log --graph --decorate --oneline --abbrev --all
-	spush = push --recurse-submodules=on-demand
-	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
 	merge = merge --no-ff
+	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
+	spush = push --recurse-submodules=on-demand
+[commit]
+	gpgsign = true
 [core]
-        pager = diffr | less -R
+    pager = diffr | less -R
 	editor = nvim
+[diff]
+	colorMoved = zebra
+[fetch]
+	prune = true
 [filter "lfs"]
-	required = true
 	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+[gpg]
+	format = ssh
 [interactive]
 	diffFilter = diffr
 [pull]
 	rebase = true
-[status]
-	submoduleSummary = true
-[user]
-	name = paddyroddy
-	email = patrickjamesroddy@gmail.com
-[fetch]
-	prune = true
-[diff]
-	colorMoved = zebra
-[submodule]
-    recurse = true
 [push]
     autoSetupRemote = true
+[status]
+	submoduleSummary = true
+[submodule]
+    recurse = true
+[user]
+	email = patrickjamesroddy@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZiA16jCzF7BCuTdJwk7+mCKzN0AoN3Wztgzs104lgt
