@@ -143,7 +143,7 @@ call plug#end()
 " Colors
 " ---------------------------------------------------------------------------
 syntax enable
-colorscheme catppuccin
+colorscheme catppuccin-latte
 lua << EOF
 require("catppuccin").setup({
     transparent_background = true,
