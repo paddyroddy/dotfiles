@@ -1,9 +1,5 @@
 # detect operating system
 case "$OSTYPE" in
-darwin*)
-    # update
-    alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; mamba update --all -y && mamba clean --all -y'
-    ;;
 linux*)
     # copy & paste
     alias pbcopy='xclip -selection clipboard'
@@ -11,13 +7,6 @@ linux*)
 
     # open pdfs
     alias open='xdg-open'
-
-    # update
-    if [[ -d ~/.linuxbrew ]]; then
-        alias brewski='brew update && brew upgrade && brew cleanup; brew doctor; mamba update --all -y && mamba clean --all -y'
-    else
-        alias brewski='sudo sh -c "apt -y update;apt --allow-downgrades -y upgrade;apt -y autoremove;apt -y autoclean"; mamba update --all -y && mamba clean --all -y'
-    fi
 
     # fd
     alias fd='fdfind'
