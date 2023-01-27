@@ -42,6 +42,11 @@ darwin*)
     export NVM_DIR="$HOME/.nvm"
     [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
     [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+
+    # latex
+    export PATH="$HOME/texlive/2022/bin/universal-darwin:$PATH"
+    export MANPATH="$HOME/texlive/2022/texmf-dist/doc/man:$MANPATH"
+    export INFOPATH="$HOME/texlive/2022/texmf-dist/doc/info:$INFOPATH"
     ;;
 linux*)
     # nvim
