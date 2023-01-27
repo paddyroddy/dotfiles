@@ -32,9 +32,6 @@ darwin*)
     export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
     export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
-    # latex
-    export PATH="/Library/TeX/texbin:$PATH"
-
     # perl
     eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
