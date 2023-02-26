@@ -81,6 +81,3 @@ export PATH="$PATH:$GEM_HOME/bin"
 # direnv
 [[ -f ~/.direnvrc ]] && eval "$(direnv hook zsh)"
 
-# gcloud
-source $HOME/google-cloud-sdk/path.zsh.inc
-source $HOME/google-cloud-sdk/completion.zsh.inc
