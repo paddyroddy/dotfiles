@@ -118,7 +118,7 @@ Plug 'tpope/vim-fugitive' " the ultimate git helper
 Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 
 " colorschemes
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'EdenEast/nightfox.nvim'
 
 " fuzzy find
 Plug '~/.fzf'
@@ -143,12 +143,14 @@ call plug#end()
 " Colors
 " ---------------------------------------------------------------------------
 syntax enable
-colorscheme catppuccin-latte
 lua << EOF
-require("catppuccin").setup({
-    transparent_background = true,
+require("nightfox").setup({
+    options = {
+        transparent = true,
+    }
 })
 EOF
+colorscheme carbonfox
 " ---------------------------------------------------------------------------
 
 " Plugins Settings
