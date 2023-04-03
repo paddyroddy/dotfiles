@@ -44,9 +44,9 @@ darwin*)
     [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
 
     # latex
-    export PATH="$HOME/texlive/2022/bin/universal-darwin:$PATH"
-    export MANPATH="$HOME/texlive/2022/texmf-dist/doc/man:$MANPATH"
-    export INFOPATH="$HOME/texlive/2022/texmf-dist/doc/info:$INFOPATH"
+    export PATH="$HOME/texlive/2023/bin/universal-darwin:$PATH"
+    export MANPATH="$HOME/texlive/2023/texmf-dist/doc/man:$MANPATH"
+    export INFOPATH="$HOME/texlive/2023/texmf-dist/doc/info:$INFOPATH"
 
     # parallel processing
     export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
