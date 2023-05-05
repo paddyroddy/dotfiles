@@ -6,7 +6,7 @@
 [commit]
 	gpgsign = true
 [core]
-        pager = diffr | less -R
+    pager = diffr | less -R
 	editor = nvim
 [diff]
 	colorMoved = zebra
@@ -24,7 +24,8 @@
 [pull]
 	rebase = true
 [push]
-        autoSetupRemote = true
+    autoSetupRemote = true
+    default = current
 [status]
 	submoduleSummary = true
 [submodule]
