@@ -28,5 +28,5 @@ nvim +PlugInstall +qa
 Source shell
 
 ```
-source $HOME/.zshrc
+exec zsh
 ```
