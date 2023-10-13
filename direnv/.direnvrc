@@ -1,7 +1,7 @@
 # https://humanscode.com/better-python-environment-management-for-anaconda
 # function integrates anaconda with direnv
 layout_anaconda() {
-  local ANACONDA_HOME="${HOME}/mambaforge"
+  local ANACONDA_HOME="${HOME}/miniforge3"
   PATH_add "$ANACONDA_HOME"/bin
 
   if [ -n "$1" ]; then

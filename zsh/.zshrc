@@ -60,20 +60,20 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
 
 # >>> conda initialize >>>
-__conda_setup="$('$HOME/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('$HOME/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "$HOME/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "$HOME/mambaforge/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="$HOME/mambaforge/bin:$PATH"
+        export PATH="$HOME/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "$HOME/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "$HOME/mambaforge/etc/profile.d/mamba.sh"
+if [ -f "$HOME/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "$HOME/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 export MAMBA_NO_BANNER=1
