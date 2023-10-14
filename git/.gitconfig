@@ -19,6 +19,8 @@
 	smudge = git-lfs smudge -- %f
 [gpg]
 	format = ssh
+[init]
+	defaultBranch = main
 [interactive]
 	diffFilter = diffr
 [pull]
