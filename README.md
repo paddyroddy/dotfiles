@@ -9,7 +9,7 @@ git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/
 Symlink files using stow
 
 ```
-cd $HOME/.dotfiles && stow -v asdf direnv git ipython iterm neovim r ruby tmux topgrade zsh
+cd $HOME/.dotfiles && stow -v asdf conda direnv git ipython iterm neovim r ruby tmux topgrade zsh
 ```
 
 Install vim-plug
