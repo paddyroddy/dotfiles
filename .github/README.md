@@ -1,15 +1,9 @@
 # dotfiles
 
-Clone dotfiles repo and tmux submodule
+[Install yadm](https://yadm.io/docs/install) & then run
 
 ```bash
-git clone --recurse-submodules https://github.com/paddyroddy/dotfiles.git $HOME/.dotfiles
-```
-
-Symlink files using stow
-
-```
-cd $HOME/.dotfiles && stow -v asdf conda direnv git ipython iterm neovim r ruby tmux topgrade zsh
+yadm clone git@github.com:paddyroddy/dotfiles.git
 ```
 
 Install vim-plug

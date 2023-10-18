@@ -1,3 +1,3 @@
-[submodule "tmux"]
-	path = tmux
-	url = https://github.com/paddyroddy/tmux.git
+[submodule ".config/tmux"]
+	path = .config/tmux
+	url = git@github.com:paddyroddy/tmux.git
