@@ -57,7 +57,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ~/.zsh_variables ]] && source ~/.zsh_variables
 
 # Alias definitions
-[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
+source ~/.zsh_aliases
 
 # >>> conda initialize >>>
 __conda_setup="$('$HOME/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
