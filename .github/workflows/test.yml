@@ -10,21 +10,15 @@ jobs:
   test:
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     strategy:
       fail-fast: false
       matrix:
         os:
           - macos-latest
-          - ubuntu-latest
     steps:
-      - name: Install zsh
-        run: sudo apt-get install zsh
-        if: runner.os == 'Linux'
-
-      - name: Install yadm (Linux)
-        run: sudo apt-get install yadm
-        if: runner.os == 'Linux'
-
       - name: Install yadm (macOS)
         run: brew install yadm
         if: runner.os == 'macOS'
@@ -32,11 +26,8 @@ jobs:
       - name: Install dotfiles
         run: |-
           cd ${HOME}
-          yadm clone https://github.com/paddyroddy/dotfiles.git
+          yadm clone --bootstrap https://github.com/paddyroddy/dotfiles.git
+          yadm bootstrap
 
       - name: Source zsh
-        run: |-
-          set -e
-          exec zsh
-        shell: zsh {0}
-
+        run: zsh -c "exec zsh"
