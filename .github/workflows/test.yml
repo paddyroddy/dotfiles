@@ -33,8 +33,8 @@ jobs:
         run: yadm clone https://github.com/paddyroddy/dotfiles.git
 
       - name: Source zsh
-        run: exec zsh
+        run: |-
+          set -e
+          exec zsh
         shell: zsh {0}
 
-      - name: List dotfiles
-        run: ls -lah ${HOME}
