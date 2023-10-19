@@ -11,6 +11,7 @@ jobs:
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os:
           - macos-latest
@@ -19,7 +20,7 @@ jobs:
       - name: Install yadm
         run: |-
           if [ "$RUNNER_OS" == "Linux" ]; then
-            apt install yadm
+            apt-get install yadm
           elif [ "$RUNNER_OS" == "macOS" ]; then
             brew install yadm
           else
