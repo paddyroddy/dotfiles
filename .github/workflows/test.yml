@@ -30,7 +30,7 @@ jobs:
         shell: bash
 
       - name: Install dotfiles
-        run: yadm clone git@github.com:paddyroddy/dotfiles.git
+        run: yadm clone https://github.com/paddyroddy/dotfiles.git
 
       - name: Source zsh
         run: exec zsh
