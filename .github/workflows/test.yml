@@ -23,12 +23,12 @@ jobs:
 
       - name: Install yadm
         run: |-
-          if [ "$RUNNER_OS" == "Linux" ]; then
+          if [ '$RUNNER_OS' == 'Linux' ]; then
             sudo apt-get install yadm
-          elif [ "$RUNNER_OS" == "macOS" ]; then
+          elif [ '$RUNNER_OS' == 'macOS' ]; then
             brew install yadm
           else
-            echo "$RUNNER_OS not supported"
+            echo '$RUNNER_OS not supported'
             exit 1
           fi
 
