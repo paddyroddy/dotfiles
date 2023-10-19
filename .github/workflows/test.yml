@@ -34,4 +34,4 @@ jobs:
 
       - name: Source zsh
         run: exec zsh
-        shell: zsh {0}
+        shell: /bin/zsh
