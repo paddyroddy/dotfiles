@@ -1,0 +1,36 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - macos-latest
+          - ubuntu-latest
+    steps:
+      - name: Install yadm
+        run: |-
+          if [ "$RUNNER_OS" == "Linux" ]; then
+            apt install yadm
+          elif [ "$RUNNER_OS" == "macOS" ]; then
+            brew install yadm
+          else
+            echo "$RUNNER_OS not supported"
+            exit 1
+          fi
+        shell: bash
+
+      - name: Install dotfiles
+        run: yadm clone git@github.com:paddyroddy/dotfiles.git
+
+      - name: Source zsh
+        run: exec zsh
+        shell: zsh {0}
