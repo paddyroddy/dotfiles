@@ -31,7 +31,7 @@
 [status]
 	submoduleSummary = true
 [submodule]
-        recurse = true
+    recurse = true
 [user]
 	email = patrickjamesroddy@gmail.com
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZiA16jCzF7BCuTdJwk7+mCKzN0AoN3Wztgzs104lgt
