@@ -10,9 +10,6 @@ jobs:
   test:
     name: ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: ${HOME}
     strategy:
       fail-fast: false
       matrix:
@@ -34,6 +31,7 @@ jobs:
 
       - name: Install dotfiles
         run: yadm clone https://github.com/paddyroddy/dotfiles.git
+        working-directory: ${HOME}
 
       - name: Source zsh
         run: |-
