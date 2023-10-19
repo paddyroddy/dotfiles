@@ -21,16 +21,13 @@ jobs:
         run: apt-get install zsh
         if: runner.os == 'Linux'
 
-      - name: Install yadm
-        run: |-
-          if [ '$RUNNER_OS' == 'Linux' ]; then
-            sudo apt-get install yadm
-          elif [ '$RUNNER_OS' == 'macOS' ]; then
-            brew install yadm
-          else
-            echo '$RUNNER_OS not supported'
-            exit 1
-          fi
+      - name: Install yadm (Linux)
+        run: apt-get install yadm
+        if: runner.os == 'Linux'
+
+      - name: Install yadm (macOS)
+        run: brew install yadm
+        if: runner.os == 'macOS'
 
       - name: Install dotfiles
         run: yadm clone https://github.com/paddyroddy/dotfiles.git
