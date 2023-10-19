@@ -13,4 +13,3 @@ if [ "$system_type" = "Darwin" ]; then
   fi
 
 fi
-
