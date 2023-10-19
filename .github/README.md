@@ -13,12 +13,6 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Install plugins for vim
-
-```
-nvim +PlugInstall +qa
-```
-
 Source shell
 
 ```
