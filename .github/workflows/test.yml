@@ -20,7 +20,7 @@ jobs:
       - name: Install yadm
         run: |-
           if [ "$RUNNER_OS" == "Linux" ]; then
-            apt-get install yadm
+            sudo apt-get install yadm
           elif [ "$RUNNER_OS" == "macOS" ]; then
             brew install yadm
           else
