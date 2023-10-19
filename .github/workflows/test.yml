@@ -35,3 +35,6 @@ jobs:
       - name: Source zsh
         run: exec zsh
         shell: zsh {0}
+
+      - name: List dotfiles
+        run: ls -lah
