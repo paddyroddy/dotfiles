@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Install zsh
         run: apt-get install zsh
-        if: runner.os == "Linux"
+        if: runner.os == 'Linux'
 
       - name: Install yadm
         run: |-
