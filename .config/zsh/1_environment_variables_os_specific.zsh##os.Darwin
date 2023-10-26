@@ -1,3 +1,6 @@
+# brew
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
 # nvim
 export EDITOR="/usr/local/bin/nvim"
 export VISUAL="/usr/local/bin/nvim"
