@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 [[ -f ./.fzf.zsh ]] && source ./.fzf.zsh
 
 # Environment variables
-[[ -f ./.config/zsh/.zsh_variables ]] && source ./.config/zsh/.zsh_variables
+[[ -f ./.config/zsh/.zsh_variables_general ]] && source ./.config/zsh/.zsh_variables_general
 
 # Alias definitions
 [[ -f ./.config/zsh/.zsh_aliases_general ]] && source ./.config/zsh/.zsh_aliases_general
