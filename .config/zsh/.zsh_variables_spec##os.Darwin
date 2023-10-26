@@ -1,0 +1,49 @@
+# brew
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# nvim
+export EDITOR="/usr/local/bin/nvim"
+export VISUAL="/usr/local/bin/nvim"
+
+# matlab
+export PATH="$PATH:/Applications/MATLAB_R2023a.app/bin"
+
+# allows Coreutils package to be used without 'g' prefix before each command.
+export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+
+# binutils
+export PATH="$(brew --prefix)/opt/binutils/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix)/opt/binutils/lib"
+export CPPFLAGS="-I$(brew --prefix)/opt/binutils/include"
+
+# grep
+export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix)/opt/grep/libexec/gnuman:$MANPATH"
+
+# tar
+export PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
+
+# sed
+export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
+
+# perl
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+
+# sharkdp/fd for junegunn/fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh"
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+
+# latex
+export PATH="$HOME/texlive/2023/bin/universal-darwin:$PATH"
+export MANPATH="$HOME/texlive/2023/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="$HOME/texlive/2023/texmf-dist/doc/info:$INFOPATH"
+
+# parallel processing
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES

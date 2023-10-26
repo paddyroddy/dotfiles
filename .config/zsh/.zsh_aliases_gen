@@ -1,17 +1,5 @@
-# detect operating system
-case "$OSTYPE" in
-linux*)
-    # copy & paste
-    alias pbcopy='xclip -selection clipboard'
-    alias pbpaste='xclip -selection clipboard -o'
-
-    # open pdfs
-    alias open='xdg-open'
-
-    # fd
-    alias fd='fdfind'
-    ;;
-esac
+# OS specific aliases
+[[ -f $HOME/.config/zsh/.zsh_aliases_spec ]] && source $HOME/.config/zsh/.zsh_aliases_spec
 
 # colour
 alias cat='bat'
