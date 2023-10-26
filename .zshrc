@@ -48,16 +48,16 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ./.p10k.zsh ]] && source ./.p10k.zsh
+[[ -f $HOME/.p10k.zsh ]] && source $HOME/.p10k.zsh
 
 # fuzzy find
-[[ -f ./.fzf.zsh ]] && source ./.fzf.zsh
+[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
 
 # Environment variables
-[[ -f ./.config/zsh/.zsh_variables_general ]] && source ./.config/zsh/.zsh_variables_general
+[[ -f $HOME/.config/zsh/.zsh_variables_general ]] && source $HOME/.config/zsh/.zsh_variables_general
 
 # Alias definitions
-[[ -f ./.config/zsh/.zsh_aliases_general ]] && source ./.config/zsh/.zsh_aliases_general
+[[ -f $HOME/.config/zsh/.zsh_aliases_general ]] && source $HOME/.config/zsh/.zsh_aliases_general
 
 # conda
-[[ -f ./.config/zsh/.zsh_conda ]] && source ./.config/zsh/.zsh_conda
+[[ -f $HOME/.config/zsh/.zsh_conda ]] && source $HOME/.config/zsh/.zsh_conda

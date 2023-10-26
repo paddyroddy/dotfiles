@@ -1,5 +1,5 @@
 # OS specific aliases
-[ -f ./.zsh_variables_specific ]] && source ./.zsh_variables_specific
+[[ -f $HOME/.config/zsh/.zsh_variables_specific ]] && source $HOME/.config/zsh/.zsh_variables_specific
 
 # sharkdp/fd for junegunn/fzf
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
