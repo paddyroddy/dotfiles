@@ -1,5 +1,5 @@
 # OS specific aliases
-[[ -f $HOME/.config/zsh/.zsh_aliases_specific ]] && source $HOME/.config/zsh/.zsh_aliases_specific
+[[ -f $HOME/.config/zsh/.zsh_aliases_spec ]] && source $HOME/.config/zsh/.zsh_aliases_spec
 
 # colour
 alias cat='bat'
