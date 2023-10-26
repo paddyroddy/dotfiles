@@ -109,7 +109,7 @@ augroup END
 
 " Automatic Installation of Vim-Plug
 " ---------------------------------------------------------------------------
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '$HOME/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
@@ -119,7 +119,7 @@ endif
 " Plugins
 " ---------------------------------------------------------------------------
 " Specify a idirectory for plugins
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
 
 " utilities
 Plug 'benmills/vimux' " vim plugin to interact with tmux
@@ -130,7 +130,7 @@ Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual m
 Plug 'EdenEast/nightfox.nvim'
 
 " fuzzy find
-Plug '~/.fzf'
+Plug '$HOME/.fzf'
 
 " ack the_silver_searcher
 Plug 'mileszs/ack.vim'
