@@ -1,6 +1,3 @@
-# OS specific aliases
-[[ -f $HOME/.config/zsh/.zsh_variables_spec ]] && source $HOME/.config/zsh/.zsh_variables_spec
-
 # sharkdp/fd for junegunn/fzf
 export FZF_CTRL_T_COMMAND='$FZF_DEFAULT_COMMAND'
 export FZF_DEFAULT_OPTS='--ansi'
@@ -15,8 +12,3 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
-# asdf java
-[[ -f $HOME/.asdf ]] && source $HOME/.asdf/plugins/java/set-java-home.zsh
-
-# direnv
-[[ -f $HOME/.direnvrc ]] && eval "$(direnv hook zsh)"
