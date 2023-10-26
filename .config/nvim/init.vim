@@ -119,7 +119,7 @@ endif
 " Plugins
 " ---------------------------------------------------------------------------
 " Specify a idirectory for plugins
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('$HOME/.config/nvim/plugged')
 
 " utilities
 Plug 'benmills/vimux' " vim plugin to interact with tmux
@@ -130,7 +130,7 @@ Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual m
 Plug 'EdenEast/nightfox.nvim'
 
 " fuzzy find
-Plug '~/.fzf'
+Plug '$HOME/.fzf'
 
 " ack the_silver_searcher
 Plug 'mileszs/ack.vim'
