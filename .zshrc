@@ -54,10 +54,10 @@ source $ZSH/oh-my-zsh.sh
 [[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
 
 # Environment variables
-[[ -f $HOME/.config/zsh/.zsh_variables_general ]] && source $HOME/.config/zsh/.zsh_variables_general
+[[ -f $HOME/.config/zsh/.zsh_variables_gen ]] && source $HOME/.config/zsh/.zsh_variables_gen
 
 # Alias definitions
-[[ -f $HOME/.config/zsh/.zsh_aliases_general ]] && source $HOME/.config/zsh/.zsh_aliases_general
+[[ -f $HOME/.config/zsh/.zsh_aliases_gen ]] && source $HOME/.config/zsh/.zsh_aliases_gen
 
 # conda
 [[ -f $HOME/.config/zsh/.zsh_conda ]] && source $HOME/.config/zsh/.zsh_conda
