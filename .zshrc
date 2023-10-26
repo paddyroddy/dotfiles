@@ -48,34 +48,16 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f ./.p10k.zsh ]] && source ./.p10k.zsh
 
 # fuzzy find
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
+[[ -f ./.fzf.zsh ]] && source ./.fzf.zsh
 
 # Environment variables
-[[ -f ~/.zsh_variables ]] && source ~/.zsh_variables
+[[ -f ./.config/zsh/.zsh_variables ]] && source ./.config/zsh/.zsh_variables
 
 # Alias definitions
-[[ -f ~/.zsh_aliases ]] && source ~/.zsh_aliases
+[[ -f ./.config/zsh/.zsh_aliases_general ]] && source ./.config/zsh/.zsh_aliases_general
 
-# >>> conda initialize >>>
-__conda_setup="$('$HOME/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-if [ -f "$HOME/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "$HOME/miniforge3/etc/profile.d/mamba.sh"
-fi
-# <<< conda initialize <<<
-export MAMBA_NO_BANNER=1
-conda activate
-
+# conda
+[[ -f ./.config/zsh/.zsh_conda ]] && source ./.config/zsh/.zsh_conda
