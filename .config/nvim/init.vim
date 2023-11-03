@@ -88,9 +88,9 @@ highlight ColorColumn ctermbg=DarkBlue
 set colorcolumn=80
 
 " specific filetypes
-filetype on           	" Enable filetype detection
-filetype indent on    	" Enable filetype-specific indenting
-filetype plugin on    	" Enable filetype-specific plugins
+filetype on             " Enable filetype detection
+filetype indent on      " Enable filetype-specific indenting
+filetype plugin on      " Enable filetype-specific plugins
 
 " spellcheck
 set spelllang=en

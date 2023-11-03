@@ -1,39 +1,39 @@
 [alias]
-	logg = log --graph --decorate --oneline --abbrev --all
-	merge = merge --no-ff
-	spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
-	spush = push --recurse-submodules=on-demand
+    logg = log --graph --decorate --oneline --abbrev --all
+    merge = merge --no-ff
+    spull = !git pull && git submodule sync --recursive && git submodule update --init --recursive
+    spush = push --recurse-submodules=on-demand
 [commit]
-	gpgsign = true
+    gpgsign = true
 [core]
     pager = diffr | less -R
-	editor = nvim
+    editor = nvim
 [diff]
-	colorMoved = zebra
+    colorMoved = zebra
 [fetch]
-	prune = true
+    prune = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	process = git-lfs filter-process
-	required = true
-	smudge = git-lfs smudge -- %f
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    required = true
+    smudge = git-lfs smudge -- %f
 [gpg]
-	format = ssh
+    format = ssh
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [interactive]
-	diffFilter = diffr
+    diffFilter = diffr
 [pull]
-	rebase = true
+    rebase = true
 [push]
     autoSetupRemote = true
     default = current
 [status]
-	submoduleSummary = true
+    submoduleSummary = true
 [submodule]
     recurse = true
 [user]
-	email = patrickjamesroddy@gmail.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZiA16jCzF7BCuTdJwk7+mCKzN0AoN3Wztgzs104lgt
+    email = patrickjamesroddy@gmail.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZiA16jCzF7BCuTdJwk7+mCKzN0AoN3Wztgzs104lgt
 [tag]
-	gpgsign = true
+    gpgsign = true
