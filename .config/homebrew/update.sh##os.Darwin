@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# update homebrew list
+brew bundle dump --describe --force --file $HOME/.Brewfile
+
+# remove the vscode lines
+sed --in-place --follow-symlinks '/^vscode/d' $HOME/.Brewfile
