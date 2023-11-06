@@ -2,8 +2,8 @@
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # nvim
-export EDITOR="/usr/local/bin/nvim"
-export VISUAL="/usr/local/bin/nvim"
+export EDITOR="$(brew --prefix)/bin/nvim"
+export VISUAL="$(brew --prefix)/bin/nvim"
 
 # matlab
 export PATH="$PATH:/Applications/MATLAB_R2023a.app/bin"
