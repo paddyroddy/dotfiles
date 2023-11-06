@@ -1,120 +1,254 @@
 tap "1xyz/pryrite"
 tap "homebrew/bundle"
+tap "homebrew/cask-drivers"
 tap "minio/stable"
 tap "reviewdog/tap"
+# Run your GitHub Actions locally
 brew "act"
+# Automatic configure script builder
 brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# ODBC 3 connectivity for UNIX
 brew "unixodbc"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
+# Platform built on V8 to build network applications
 brew "node"
+# AWS Cloud Development Kit - framework for defining AWS infra as code
 brew "aws-cdk"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Google's own build tool
 brew "bazel"
+# Check Java source against a coding standard
 brew "checkstyle"
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
+# Cross-platform make
 brew "cmake"
+# Get, unpack, build, and install modules from CPAN
 brew "cpanminus"
+# Static analysis of C and C++ code
 brew "cppcheck"
+# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# LCS based diff highlighting tool to ease code review from your terminal
 brew "diffr"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Isolated development environments using Docker
 brew "docker-compose"
+# Generate documentation for several programming languages
 brew "doxygen"
+# Classic UNIX line editor
 brew "ed"
+# C++ template library for linear algebra
 brew "eigen"
+# Modern replacement for 'ls'
+brew "exa"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Validating, recursive, caching DNS resolver
 brew "unbound"
+# GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# C routines to compute the Discrete Fourier Transform
 brew "fftw"
+# Collection of GNU find, xargs, and locate
 brew "findutils"
-brew "fzf"
-brew "gawk"
-brew "gh"
-brew "git"
-brew "git-lfs"
-brew "glpk"
-brew "gnu-sed"
-brew "gnu-tar"
-brew "gnupg"
-brew "gradle"
-brew "grep"
-brew "gsl"
-brew "libaec"
-brew "hdf5"
+# Text-based UI library
 brew "ncurses"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU awk utility
+brew "gawk"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Library for Linear and Mixed-Integer Programming
+brew "glpk"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Numerical library for C and C++
+brew "gsl"
+# Adaptive Entropy Coding implementing Golomb-Rice algorithm
+brew "libaec"
+# File format designed to store large amounts of data
+brew "hdf5"
+# Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
+# Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Tool to analyze #includes in C and C++ source files
 brew "include-what-you-use"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Next-gen compiler infrastructure
 brew "llvm"
+# Rainbows and unicorns in your console!
+brew "lolcat"
+# Utility for directing compilation
 brew "make"
+# Mac App Store command-line interface
 brew "mas"
+# NCurses Disk Usage
 brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Optimized BLAS library
 brew "openblas"
+# Highly capable, feature-rich programming language
 brew "perl"
+# General-purpose scripting language
 brew "php"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
+# Official PostgreSQL ODBC driver
 brew "psqlodbc"
+# Cross-platform application and UI framework
 brew "qt"
+# Python bindings for v6 of Qt
 brew "pyqt"
+# Software environment for statistical computing
 brew "r"
+# Install various Ruby versions and implementations
 brew "ruby-build"
+# Ruby version manager
 brew "rbenv"
+# Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
+# Perl-powered file rename script with many helpful built-ins
 brew "rename"
+# Utility that provides fast incremental file transfer
 brew "rsync"
+# Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Safe, concurrent, practical language
 brew "rust"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Suite of Sparse Matrix Software
 brew "suite-sparse"
+# Generate scripting interfaces to C/C++ code
 brew "swig"
+# Code-search similar to ack
 brew "the_silver_searcher"
+# Simplified and community-driven man pages
 brew "tldr"
+# Terminal multiplexer
 brew "tmux"
+# Upgrade all the things
 brew "topgrade"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Source code beautifier
 brew "uncrustify"
+# Syntax-aware linter for prose
 brew "vale"
+# Internet file retriever
 brew "wget"
+# Command-line interface for WordPress
 brew "wp-cli"
+# Yet Another Dotfiles Manager
 brew "yadm"
+# General-purpose lossless data-compression library
 brew "zlib"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# pryrite is a markdown executor program
 brew "1xyz/pryrite/pryrite"
+# MinIO Client for object storage and filesystems
+brew "minio/stable/mc"
+# Automated code review tool integrated with any code analysis tools regardless of programming language.
 brew "reviewdog/tap/reviewdog"
+# Application launcher and productivity software
 cask "alfred"
+# Managed desktop virtualization solution
 cask "citrix-workspace"
+# Voice and text chat software
 cask "discord"
+# Tool to hide status bar icons
 cask "dozer"
+# Client for the Dropbox cloud storage service
 cask "dropbox"
+# Matrix collaboration client
 cask "element"
+# Open-source image processing package
 cask "fiji"
+# Update maps and software, sync with Garmin Connect and register your device
 cask "garmin-express"
+# Client for the Google Drive storage service
 cask "google-drive"
+# Time tracking application
+cask "harvest"
+# Vector graphics editor
 cask "inkscape"
+# Full TeX Live distribution without GUI applications
 cask "mactex-no-gui"
+# Research management tool
+cask "mendeley"
+# Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
+# Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# Email client
 cask "microsoft-outlook"
+# Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
+# App to write, plan, collaborate, and get organized
+cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Static source code analysis tool
 cask "oclint"
+# Replacement for Docker Desktop
 cask "orbstack"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 cask "runescape"
+# Tool to reverse the direction of scrolling
 cask "scroll-reverser"
+# Instant messaging application focusing on security
 cask "signal"
+# PDF reader and note-taking application
 cask "skim"
+# Team communication and collaboration software
 cask "slack"
+# Open-source code editor
 cask "visual-studio-code"
+# Native desktop client for WhatsApp
 cask "whatsapp"
+# Video communication and virtual meeting platform
 cask "zoom"
 mas "Be Focused", id: 973134470
 mas "GarageBand", id: 682658836
