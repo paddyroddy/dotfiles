@@ -35,6 +35,7 @@
     recurse = true
 [user]
     email = patrickjamesroddy@gmail.com
+    name = Patrick J. Roddy
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZiA16jCzF7BCuTdJwk7+mCKzN0AoN3Wztgzs104lgt
 [tag]
     gpgsign = true
