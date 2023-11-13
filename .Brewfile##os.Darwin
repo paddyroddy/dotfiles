@@ -1,10 +1,13 @@
 tap "1xyz/pryrite"
+tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-drivers"
+tap "minamijoyo/hcledit"
 tap "minio/stable"
 tap "reviewdog/tap"
 # Run your GitHub Actions locally
 brew "act"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -13,6 +16,8 @@ brew "automake"
 brew "coreutils"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
+# YAML Parser
+brew "libyaml"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Platform built on V8 to build network applications
@@ -27,6 +32,8 @@ brew "bash"
 brew "bat"
 # Google's own build tool
 brew "bazel"
+# Prevent cloud misconfigurations during build-time for IaC tools
+brew "checkov"
 # Check Java source against a coding standard
 brew "checkstyle"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
@@ -53,8 +60,6 @@ brew "doxygen"
 brew "ed"
 # C++ template library for linear algebra
 brew "eigen"
-# Modern replacement for 'ls'
-brew "exa"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Validating, recursive, caching DNS resolver
@@ -69,12 +74,12 @@ brew "fftw"
 brew "findutils"
 # Text-based UI library
 brew "ncurses"
-# User-friendly command-line shell for UNIX-like operating systems
-brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU awk utility
 brew "gawk"
+# Geospatial Data Abstraction Library
+brew "gdal"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -99,6 +104,8 @@ brew "gsl"
 brew "libaec"
 # File format designed to store large amounts of data
 brew "hdf5"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -109,16 +116,24 @@ brew "libheif"
 brew "imagemagick"
 # Tool to analyze #includes in C and C++ source files
 brew "include-what-you-use"
+# Cost estimates for Terraform
+brew "infracost"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Next-gen compiler infrastructure
 brew "llvm"
+# Portable Foreign Function Interface library
+brew "libffi", link: true
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Utility for directing compilation
 brew "make"
 # Mac App Store command-line interface
 brew "mas"
+# Replacement for the old crypt package and crypt(1) command
+brew "mcrypt"
+# Free (GNU) replacement for the Pico text editor
+brew "nano"
 # NCurses Disk Usage
 brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -129,6 +144,8 @@ brew "openblas"
 brew "perl"
 # General-purpose scripting language
 brew "php"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Official PostgreSQL ODBC driver
@@ -153,14 +170,28 @@ brew "rsync"
 brew "ruby"
 # Safe, concurrent, practical language
 brew "rust"
+# Spherical Harmonic Tools
+brew "shtools"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Suite of Sparse Matrix Software
 brew "suite-sparse"
 # Generate scripting interfaces to C/C++ code
 brew "swig"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
+# Detect compliance and security violations across Infrastructure as Code
+brew "terrascan"
+# Linter for Terraform files
+brew "tflint"
+# Static analysis security scanner for your terraform code
+brew "tfsec"
+# Update version constraints in your Terraform configurations
+brew "tfupdate"
 # Code-search similar to ack
 brew "the_silver_searcher"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -169,10 +200,14 @@ brew "tmux"
 brew "topgrade"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Unidata unit conversion library
+brew "udunits"
 # Source code beautifier
 brew "uncrustify"
 # Syntax-aware linter for prose
 brew "vale"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
 # Command-line interface for WordPress
@@ -187,6 +222,10 @@ brew "zsh"
 brew "zsh-syntax-highlighting"
 # pryrite is a markdown executor program
 brew "1xyz/pryrite/pryrite"
+# Terraform
+brew "hashicorp/tap/terraform"
+# A command line editor for HCL
+brew "minamijoyo/hcledit/hcledit"
 # MinIO Client for object storage and filesystems
 brew "minio/stable/mc"
 # Automated code review tool integrated with any code analysis tools regardless of programming language.
@@ -209,14 +248,12 @@ cask "fiji"
 cask "garmin-express"
 # Client for the Google Drive storage service
 cask "google-drive"
-# Time tracking application
-cask "harvest"
+# Development environment
+cask "hashicorp-vagrant"
 # Vector graphics editor
 cask "inkscape"
 # Full TeX Live distribution without GUI applications
 cask "mactex-no-gui"
-# Research management tool
-cask "mendeley"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
 # Provides updates to various Microsoft products
@@ -225,10 +262,6 @@ cask "microsoft-auto-update"
 cask "microsoft-outlook"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# App to write, plan, collaborate, and get organized
-cask "notion"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Static source code analysis tool
 cask "oclint"
 # Replacement for Docker Desktop
