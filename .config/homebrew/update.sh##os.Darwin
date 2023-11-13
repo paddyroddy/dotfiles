@@ -1,6 +1,25 @@
 #!/usr/bin/env bash
+BREW_FILE=$HOME/.Brewfile
+BREW_TYPES=(
+    tap
+    brew
+    cask
+    mas
+)
+TMP_FILE=/tmp/.Brewfile_unsorted
+
 # update homebrew list
-brew bundle dump --force --file $HOME/.Brewfile
+brew bundle dump --force --file $TMP_FILE
 
 # remove the vscode lines
-sed --in-place --follow-symlinks '/^vscode/d' $HOME/.Brewfile
+sed --in-place --follow-symlinks '/^vscode/d' $TMP_FILE
+
+# sort the final output
+## clear current contents
+> $BREW_FILE
+for type in ${BREW_TYPES[@]}; do
+    ## extract lines starting with "type" and sort them
+    grep -R "^${type}" $TMP_FILE | sort >> $BREW_FILE
+done
+## remove temporary file
+rm $TMP_FILE
