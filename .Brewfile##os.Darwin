@@ -154,8 +154,6 @@ brew "psqlodbc"
 brew "qt"
 # Python bindings for v6 of Qt
 brew "pyqt"
-# Python bindings for v5 of Qt
-brew "pyqt@5"
 # Software environment for statistical computing
 brew "r"
 # Install various Ruby versions and implementations
