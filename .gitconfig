@@ -7,7 +7,7 @@
     gpgsign = true
 [core]
     editor = nvim
-    excludesfile = $HOME/.config/git/ignore
+    excludesfile = ~/.config/git/ignore
     pager = diffr | less -R
 [diff]
     colorMoved = zebra
