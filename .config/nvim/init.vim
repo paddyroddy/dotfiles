@@ -140,7 +140,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " markdown preview
-Plug 'shime/vim-livedown'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
 " toml highlighting
 Plug 'cespare/vim-toml'
@@ -176,9 +176,6 @@ let g:vim_markdown_conceal = 0
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_math = 1
 let g:vim_markdown_frontmatter = 1
-
-" shime/vim-livedown
-let g:livedown_autorun = 0
 " ---------------------------------------------------------------------------
 
 " Mappings
@@ -199,8 +196,5 @@ augroup mappings
     autocmd!
     " reformat JSON
     :autocmd FileType json nnoremap <buffer> <leader>j :%!python -m json.tool<CR>
-
-    " shime/vim-livedown
-    :autocmd FileType markdown nnoremap <buffer> <leader>md :LivedownToggle<CR>
 augroup END
 " ---------------------------------------------------------------------------
