@@ -40,6 +40,9 @@ alias pip='noglob python -m pip'
 # fix TERM issues over ssh
 alias ssh='TERM=xterm-256color ssh'
 
+# YAML visualisation
+alias yless='jless --yaml'
+
 # decompress all file types
 x() {
     if [ -f $1 ]; then
