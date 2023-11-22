@@ -37,7 +37,7 @@ set noswapfile
 let g:netrw_dirhistmax = 0
 
 " line numbers
-set number 
+set number
 
 " number of lines offset when jumping
 set scrolloff=2
@@ -45,7 +45,7 @@ set scrolloff=2
 " Tab key enters 4 spaces
 " To enter a TAB character when `expandtab` is in effect,
 " CTRL-v-TAB
-set expandtab tabstop=4 shiftwidth=4 softtabstop=4 
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " Indent new line the same as the preceding line
 set autoindent
@@ -103,7 +103,7 @@ augroup spellCheck
     autocmd FileType gitcommit setlocal spell
     " turn off spellcheck for CMakeLists.txt
     autocmd Filetype cmake setlocal nospell
-    " Set files with extention of .md as markdown type.
+    " Set files with extension of .md as markdown type.
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 augroup END
 
