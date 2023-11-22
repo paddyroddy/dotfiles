@@ -14,7 +14,7 @@ exec zsh
 
 ## Licence
 
-```
+```text
 BSD 3-Clause Licence
 
 Copyright (c) 2018-2023, Patrick Roddy

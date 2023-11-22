@@ -103,7 +103,7 @@ augroup spellCheck
     autocmd FileType gitcommit setlocal spell
     " turn off spellcheck for CMakeLists.txt
     autocmd Filetype cmake setlocal nospell
-    " Set files with extention of .md as markdown type.
+    " Set files with extension of .md as markdown type.
     autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 augroup END
 

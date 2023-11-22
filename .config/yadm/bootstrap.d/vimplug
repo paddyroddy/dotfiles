@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 if command -v nvim >/dev/null 2>&1; then
-  echo "Bootstraping Neovim"
+  echo "Bootstrapping Neovim"
   nvim +PlugInstall +qa
 fi
