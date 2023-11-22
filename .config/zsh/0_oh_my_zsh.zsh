@@ -1,3 +1,4 @@
+# shellcheck disable=SC2034
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
@@ -40,4 +41,4 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"

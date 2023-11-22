@@ -4,6 +4,6 @@ export MANPATH=$(cat /etc/environment | sed -e 's/export PATH=//')
 
 # Load separated config files
 for conf in "$HOME/.config/zsh/"*.zsh; do
-  source "${conf}"
+  source "$conf"
 done
 unset conf

@@ -16,10 +16,10 @@ sed --in-place --follow-symlinks '/^vscode/d' $TMP_FILE
 
 # sort the final output
 ## clear current contents
-> "$BREW_FILE"
+echo "" > "$BREW_FILE"
 for type in "${BREW_TYPES[@]}"; do
     ## extract lines starting with "type" and sort them
-    grep --dereference-recursive "^${type}" $TMP_FILE | sort >> "$BREW_FILE"
+    grep --dereference-recursive "^$type" $TMP_FILE | sort >> "$BREW_FILE"
 done
 ## remove temporary file
 rm $TMP_FILE
