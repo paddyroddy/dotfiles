@@ -16,7 +16,7 @@ sed --in-place --follow-symlinks '/^vscode/d' $TMP_FILE
 
 # sort the final output
 ## clear current contents
-echo "" > "$BREW_FILE"
+: > "$BREW_FILE"
 for type in "${BREW_TYPES[@]}"; do
     ## extract lines starting with "type" and sort them
     grep --dereference-recursive "^$type" $TMP_FILE | sort >> "$BREW_FILE"
