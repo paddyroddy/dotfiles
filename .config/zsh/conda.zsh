@@ -1,5 +1,5 @@
 # >>> conda initialize >>>
-__conda_setup="$("$HOME/miniforge3/bin/conda" shell.zsh hook 2> /dev/null)"
+__conda_setup=$("$HOME/miniforge3/bin/conda" shell.zsh hook 2> /dev/null)
 # shellcheck disable=SC2181
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"

@@ -3,7 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 ZSH_THEME="powerlevel10k/powerlevel10k"
-DEFAULT_USER="$(whoami)"
+DEFAULT_USER=$(whoami)
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
