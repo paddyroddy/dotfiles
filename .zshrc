@@ -1,9 +1,11 @@
 # create default path
 source /etc/environment
-export MANPATH=$(cat /etc/environment | sed -e 's/export PATH=//')
+MANPATH=$(sed -e 's/export PATH=//' < /etc/environment)
+export MANPATH=$MANPATH
 
 # Load separated config files
 for conf in "$HOME/.config/zsh/"*.zsh; do
-  source "$conf"
+    # shellcheck source=/dev/null
+    source "$conf"
 done
 unset conf

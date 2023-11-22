@@ -9,5 +9,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # ruby
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+GEM_HOME=$(ruby -e 'puts Gem.user_dir')
+export GEM_HOME=$GEM_HOME
 export PATH="$PATH:$GEM_HOME/bin"
