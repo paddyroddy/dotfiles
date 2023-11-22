@@ -17,7 +17,7 @@ exec zsh
 ```
 BSD 3-Clause Licence
 
-Copyright (c) 2023, Patrick Roddy
+Copyright (c) 2022, Patrick Roddy
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
