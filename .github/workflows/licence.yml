@@ -1,0 +1,17 @@
+---
+name: Update Copyright
+
+# yamllint disable-line rule:truthy
+on:
+  schedule:
+    - cron: "0 3 1 1 *"
+
+jobs:
+  update-licence-year:
+    runs-on: ubuntu-latest
+    steps:
+      # yamllint disable-line rule:line-length
+      - uses: paddyroddy/.github/actions/licence@931cbf5aea2aceae87072826c7053fa2c6491911 # v0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          licence-file: ./LICENCE.txt
