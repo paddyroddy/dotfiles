@@ -19,7 +19,6 @@ au FocusGained,BufEnter * :silent! !
 " use Unicode
 set encoding=utf-8
 set fenc=utf-8
-set fencs=iso-2022-jp,euc-jp,cp932
 
 " errors flash screen rather than emit beep
 set visualbell
