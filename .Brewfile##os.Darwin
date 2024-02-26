@@ -1,6 +1,8 @@
 tap "1xyz/pryrite"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
 tap "minamijoyo/hcledit"
 tap "minio/stable"
 tap "reviewdog/tap"
