@@ -1,4 +1,2 @@
-[default]
-extend-words = [
-    "iTerm",
-]
+[default.extend-words]
+iTerm = "iTerm"
