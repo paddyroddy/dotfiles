@@ -105,6 +105,7 @@ brew "ruff"
 brew "rust"
 brew "shellcheck"
 brew "shtools"
+brew "starship"
 brew "stow"
 brew "suite-sparse"
 brew "swig"
@@ -137,6 +138,7 @@ brew "yamllint"
 brew "zlib"
 brew "zsh"
 brew "zsh-syntax-highlighting"
+cask "alacritty"
 cask "amazon-chime"
 cask "citrix-workspace"
 cask "discord"
@@ -172,4 +174,5 @@ mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "SonicWall Mobile Connect", id: 822514576
+mas "Time Out", id: 402592703
 mas "iMovie", id: 408981434
