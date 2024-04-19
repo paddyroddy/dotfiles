@@ -1,4 +1,6 @@
-import = ["~/.config/alacritty-theme/themes/catppuccin.toml"]
+import = [
+    "~/.config/alacritty-theme/themes/nightfox.toml",
+]
 
 [font]
 normal = {family = "MesloLGS NF", style = "Regular"}
@@ -7,4 +9,3 @@ size = 13
 [window]
 decorations = "none"
 opacity = 0.5
-startup_mode = "maximized"
