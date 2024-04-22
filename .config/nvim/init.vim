@@ -138,9 +138,6 @@ Plug 'mileszs/ack.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
-" markdown preview
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-
 " toml highlighting
 Plug 'cespare/vim-toml'
 
