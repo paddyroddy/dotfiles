@@ -13,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-
       - name: Check links
         uses: paddyroddy/.github/actions/links@v0
         with:
