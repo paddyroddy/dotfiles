@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Check links
-        uses: paddyroddy/.github/actions/links@v0
+      # yamllint disable-line rule:line-length
+      - uses: paddyroddy/.github/actions/links@57ebd0e81973380b950e8d9083458a3c260d10ac # v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
