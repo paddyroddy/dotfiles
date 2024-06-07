@@ -1,1 +1,1 @@
-[[ -f $HOME/.direnvrc ]] && eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
