@@ -1,4 +1,4 @@
-source $(brew --prefix)/opt/zinit/zinit.zsh
+source "$(brew --prefix)"/opt/zinit/zinit.zsh
 
 # zsh plugins
 zinit light zsh-users/zsh-autosuggestions
