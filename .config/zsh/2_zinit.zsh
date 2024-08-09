@@ -1,3 +1,4 @@
+# shellcheck disable=SC1091
 source "$(brew --prefix)"/opt/zinit/zinit.zsh
 
 # zsh plugins
