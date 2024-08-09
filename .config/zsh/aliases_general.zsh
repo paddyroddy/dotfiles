@@ -43,6 +43,9 @@ alias ssh='TERM=xterm-256color ssh'
 # YAML visualisation
 alias yless='jless --yaml'
 
+# list directories
+alias la='eza --icons --group-directories-first -ahl'
+
 # decompress all file types
 x() {
     if [ -f "$1" ]; then
