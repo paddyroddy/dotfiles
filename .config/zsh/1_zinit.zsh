@@ -7,6 +7,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-syntax-highlighting
 
 # zsh snippets
+zinit snippet OMZP::asdf
 zinit snippet OMZP::git
 
 # load completions
