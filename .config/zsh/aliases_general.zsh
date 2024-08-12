@@ -45,6 +45,7 @@ alias yless='jless --yaml'
 
 # list directories
 alias la='eza --icons --group-directories-first -ahl'
+alias ls='eza --icons --group-directories-first'
 
 # decompress all file types
 x() {
