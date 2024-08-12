@@ -1,4 +1,4 @@
-# Path to your Oh My Zsh installation.
+# shellcheck disable=SC2034
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -76,4 +76,5 @@ plugins=(
     zsh-syntax-highlightin
 )
 
-source $ZSH/oh-my-zsh.sh
+# shellcheck source=/dev/null
+source "$ZSH/oh-my-zsh.sh"
