@@ -73,7 +73,7 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-completions
-    zsh-syntax-highlightin
+    zsh-syntax-highlighting
 )
 
 # shellcheck source=/dev/null
