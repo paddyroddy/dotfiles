@@ -71,7 +71,6 @@ plugins=(
     aws
     asdf
     git
-    zsh-autocomplete
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
