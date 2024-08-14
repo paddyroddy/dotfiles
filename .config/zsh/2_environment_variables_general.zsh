@@ -14,4 +14,5 @@ export GEM_HOME=$GEM_HOME
 export PATH="$PATH:$GEM_HOME/bin"
 
 # zsh-autosuggestions
+# shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
