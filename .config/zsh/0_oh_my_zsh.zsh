@@ -69,7 +69,6 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     aws
-    asdf
     git
     zsh-autocomplete
     zsh-autosuggestions
