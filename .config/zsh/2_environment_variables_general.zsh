@@ -8,11 +8,6 @@ export PATH="$HOME/.local/bin:$PATH"
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# ruby
-GEM_HOME=$(ruby -e 'puts Gem.user_dir')
-export GEM_HOME=$GEM_HOME
-export PATH="$PATH:$GEM_HOME/bin"
-
 # zsh-autosuggestions
 # shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
