@@ -11,3 +11,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # zsh-autosuggestions
 # shellcheck disable=SC2034
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
+
+# rust
+source "$HOME/.cargo/env"
