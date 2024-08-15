@@ -155,7 +155,7 @@ require("nightfox").setup({
     }
 })
 EOF
-colorscheme carbonfox
+colorscheme terafox
 " ---------------------------------------------------------------------------
 
 " Plugins Settings
