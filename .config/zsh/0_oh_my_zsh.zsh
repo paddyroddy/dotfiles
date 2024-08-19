@@ -70,6 +70,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     aws
     git
+    rust
     zsh-autocomplete
     zsh-autosuggestions
     zsh-syntax-highlighting
