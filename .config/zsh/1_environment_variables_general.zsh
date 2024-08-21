@@ -17,4 +17,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
 source "$HOME/.cargo/env"
 
 # tmux plugin
+# shellcheck disable=SC2034
 ZSH_TMUX_AUTOSTART=true
