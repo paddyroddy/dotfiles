@@ -44,9 +44,12 @@ alias ssh='TERM=xterm-256color ssh'
 alias yless='jless --yaml'
 
 # list directories
-alias la='lsd --group-directories-first -al'
+alias l='lsd --group-directories-first -lah'
+alias la='lsd --group-directories-first -lAh'
+alias ll='lsd --group-directories-first -lh'
 alias ls='lsd --group-directories-first'
-alias lt='lsd --group-directories-first -alrt'
+alias lsa='lsd --group-directories-firstlsd -lah'
+alias lt='lsd --group-directories-first -lAhrt'
 
 # decompress all file types
 x() {
