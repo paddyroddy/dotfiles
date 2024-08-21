@@ -6,7 +6,7 @@ export EDITOR="$(brew --prefix)/bin/nvim"
 export VISUAL="$(brew --prefix)/bin/nvim"
 
 # matlab
-export PATH="$PATH:/Applications/MATLAB_R2023a.app/bin"
+export PATH="$PATH:/Applications/MATLAB_R2024a.app/bin"
 
 # allows Coreutils package to be used without 'g' prefix before each command.
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
