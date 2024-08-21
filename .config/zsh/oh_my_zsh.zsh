@@ -71,6 +71,7 @@ plugins=(
     aws
     git
     rust
+    tmux
     zsh-autocomplete
     zsh-autosuggestions
     zsh-syntax-highlighting

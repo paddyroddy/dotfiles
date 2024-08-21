@@ -15,3 +15,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan"
 # rust
 # shellcheck disable=SC1091
 source "$HOME/.cargo/env"
+
+# tmux plugin
+ZSH_TMUX_AUTOSTART=true

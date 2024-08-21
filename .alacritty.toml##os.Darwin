@@ -6,9 +6,6 @@ import = [
 normal = {family = "MesloLGS NF", style = "Regular"}
 size = 13
 
-[shell]
-program = "/opt/homebrew/bin/tmux"
-
 [window]
 decorations = "None"
 opacity = 0.7
