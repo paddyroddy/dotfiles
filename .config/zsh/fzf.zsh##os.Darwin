@@ -1,0 +1,4 @@
+source <(fzf --zsh)
+
+# sharkdp/fd for junegunn/fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'

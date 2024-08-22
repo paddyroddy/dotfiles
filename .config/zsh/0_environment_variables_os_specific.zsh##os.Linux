@@ -1,6 +1,3 @@
 # nvim
 export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/nvim"
-
-# sharkdp/fd for junegunn/fzf
-export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git --color=always'

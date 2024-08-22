@@ -29,9 +29,6 @@ export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
 export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
-# sharkdp/fd for junegunn/fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
-
 # latex
 export PATH="$HOME/texlive/2024/bin/universal-darwin:$PATH"
 export MANPATH="$HOME/texlive/2024/texmf-dist/doc/man:$MANPATH"
