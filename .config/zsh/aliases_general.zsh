@@ -1,7 +1,6 @@
 # colour
 alias cat='bat'
 alias grep='grep --color'
-alias ls='ls --color'
 alias tree='tree -C'
 
 # safety nets
