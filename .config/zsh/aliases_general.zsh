@@ -44,7 +44,7 @@ alias l='lsd --group-directories-first -lah'
 alias la='lsd --group-directories-first -lAh'
 alias ll='lsd --group-directories-first -lh'
 alias ls='lsd --group-directories-first'
-alias lsa='lsd --group-directories-firstlsd -lah'
+alias lsa='lsd --group-directories-first -lah'
 alias lt='lsd --group-directories-first -lAhrt'
 
 # decompress all file types
