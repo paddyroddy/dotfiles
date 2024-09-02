@@ -125,7 +125,7 @@ Plug 'benmills/vimux' " vim plugin to interact with tmux
 Plug 'tpope/vim-fugitive' " the ultimate git helper
 Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 
-" colorschemes
+" colourschemes
 Plug 'EdenEast/nightfox.nvim'
 
 " fuzzy find
@@ -141,11 +141,11 @@ Plug 'plasticboy/vim-markdown'
 " toml highlighting
 Plug 'cespare/vim-toml'
 
-" Initialize plugin system
+" Initialise plugin system
 call plug#end()
 " ---------------------------------------------------------------------------
 
-" Colors
+" Colours
 " ---------------------------------------------------------------------------
 syntax enable
 lua << EOF
