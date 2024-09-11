@@ -5,7 +5,7 @@ extend-glob = [
 extend-ignore-re = [
     "--color",
     "\"Maximized\"",
-    "_INITIALIZE",
+    "_INITIALIZE_",
 ]
 
 [type.py]
@@ -14,6 +14,9 @@ extend-ignore-re = [
 ]
 
 [type.vim]
+extend-glob = [
+    "*.vim",
+]
 extend-ignore-re = [
     "vim_markdown_math",
 ]
