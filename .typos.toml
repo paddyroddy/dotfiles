@@ -3,7 +3,9 @@ extend-glob = [
     "*.os.",
 ]
 extend-ignore-re = [
-    "_COLORS",
+    "--color",
+    "\"Maximized\"",
+    "_INITIALIZE",
 ]
 
 [type.py]
