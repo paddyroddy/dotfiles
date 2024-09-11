@@ -8,6 +8,14 @@ extend-ignore-re = [
     "_INITIALIZE_",
 ]
 
+[type.gitconfig]
+extend-glob = [
+    "*.gitconfig",
+]
+extend-ignore-re = [
+    "colorMoved",
+]
+
 [type.Linux]
 extend-glob = [
     "*.Linux",
@@ -26,12 +34,13 @@ extend-glob = [
     "*.vim",
 ]
 extend-ignore-re = [
-    "_COLORS",
+    "ColorColumn",
     "vim_markdown_math",
 ]
 
 [type.zsh]
 extend-ignore-re = [
     "--color",
+    "_COLORS",
     "xterm-256color",
 ]
