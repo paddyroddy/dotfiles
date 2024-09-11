@@ -1,11 +1,19 @@
-[type.os]
+[type.Darwin]
 extend-glob = [
-    "*.os.*",
+    "*.Darwin*",
 ]
 extend-ignore-re = [
     "--color",
     "\"Maximized\"",
     "_INITIALIZE_",
+]
+
+[type.Linux]
+extend-glob = [
+    "*.Linux",
+]
+extend-ignore-re = [
+    "--color",
 ]
 
 [type.py]
