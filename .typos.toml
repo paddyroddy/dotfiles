@@ -13,6 +13,11 @@ extend-ignore-re = [
     "true_color",
 ]
 
+[type.vim]
+extend-ignore-re = [
+    "vim_markdown_math",
+]
+
 [type.zsh]
 extend-ignore-re = [
     "--color",
