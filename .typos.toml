@@ -1,3 +1,8 @@
+[type.os.Linux]
+extend-ignore-re = [
+    "_COLORS",
+]
+
 [type.py]
 extend-ignore-re = [
     "true_color",
