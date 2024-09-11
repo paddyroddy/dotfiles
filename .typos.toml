@@ -8,20 +8,20 @@ extend-ignore-re = [
     "_INITIALIZE_",
 ]
 
-[type.gitconfig]
-extend-glob = [
-    "*.gitconfig",
-]
-extend-ignore-re = [
-    "colorMoved",
-]
-
 [type.Linux]
 extend-glob = [
     "*.Linux",
 ]
 extend-ignore-re = [
     "--color",
+]
+
+[type.gitconfig]
+extend-glob = [
+    "*.gitconfig",
+]
+extend-ignore-re = [
+    "colorMoved",
 ]
 
 [type.py]
