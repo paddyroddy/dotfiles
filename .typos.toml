@@ -24,4 +24,5 @@ extend-ignore-re = [
 [type.zsh]
 extend-ignore-re = [
     "--color",
+    "xterm-256color",
 ]
