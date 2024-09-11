@@ -1,6 +1,6 @@
 [type.os]
 extend-glob = [
-    "*.os.",
+    "*.os.*",
 ]
 extend-ignore-re = [
     "--color",
