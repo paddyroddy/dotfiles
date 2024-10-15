@@ -180,7 +180,6 @@ cask "slack"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "zoom"
-mas "Be Focused", id: 973134470
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
