@@ -3,5 +3,6 @@
 .RData
 .Rhistory
 .envrc
+.ipynb_checkpoints
 .vscode
 node_modules
