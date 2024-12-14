@@ -179,7 +179,6 @@ cask "slack"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "zoom"
-mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
@@ -187,4 +186,3 @@ mas "Say No to Notch", id: 1639306886
 mas "SonicWall Mobile Connect", id: 822514576
 mas "Time Out", id: 402592703
 mas "Windows App", id: 1295203466
-mas "iMovie", id: 408981434
