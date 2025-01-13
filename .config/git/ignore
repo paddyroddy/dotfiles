@@ -4,5 +4,7 @@
 .Rhistory
 .envrc
 .ipynb_checkpoints
+.nox
+.tox
 .vscode
 node_modules
