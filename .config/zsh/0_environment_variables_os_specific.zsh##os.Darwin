@@ -30,9 +30,9 @@ export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 # latex
-export PATH="$HOME/texlive/2024/bin/universal-darwin:$PATH"
-export MANPATH="$HOME/texlive/2024/texmf-dist/doc/man:$MANPATH"
-export INFOPATH="$HOME/texlive/2024/texmf-dist/doc/info:$INFOPATH"
+export PATH="$HOME/texlive/2025/bin/universal-darwin:$PATH"
+export MANPATH="$HOME/texlive/2025/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="$HOME/texlive/2025/texmf-dist/doc/info:$INFOPATH"
 
 # parallel processing
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
