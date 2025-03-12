@@ -1,6 +1,7 @@
 tap "1xyz/pryrite"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
+tap "homebrew/services"
 tap "minamijoyo/hcledit"
 tap "minio/stable"
 tap "reviewdog/tap"
@@ -85,6 +86,8 @@ brew "nano"
 brew "ncdu"
 brew "ncurses"
 brew "neovim"
+brew "nox"
+brew "ollama", restart_service: :changed
 brew "open-mpi"
 brew "openblas"
 brew "openssl@1.1"
@@ -163,7 +166,6 @@ cask "garmin-express"
 cask "google-drive"
 cask "hiddenbar"
 cask "inkscape"
-cask "mactex-no-gui"
 cask "messenger"
 cask "microsoft-auto-update"
 cask "microsoft-outlook"
@@ -184,5 +186,6 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Say No to Notch", id: 1639306886
+mas "SonicWall Mobile Connect", id: 822514576
 mas "Time Out", id: 402592703
 mas "Windows App", id: 1295203466
