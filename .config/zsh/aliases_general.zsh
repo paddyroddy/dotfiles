@@ -47,6 +47,9 @@ alias ls='lsd --group-directories-first'
 alias lsa='lsd --group-directories-first -lah'
 alias lt='lsd --group-directories-first -lAhrt'
 
+# kubernetes
+alias k='kubectl'
+
 # decompress all file types
 x() {
     if [ -f "$1" ]; then
