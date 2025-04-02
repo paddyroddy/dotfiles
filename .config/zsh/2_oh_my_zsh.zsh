@@ -70,6 +70,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
     aws
     git
+    kubectl
     rust
     tmux
     zsh-autocomplete
