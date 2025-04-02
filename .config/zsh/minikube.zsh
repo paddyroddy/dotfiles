@@ -1,2 +1,2 @@
-# shellcheck disable=SC1091
+# shellcheck disable=SC1090
 source <(kubectl completion zsh)
