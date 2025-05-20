@@ -4,7 +4,7 @@ mouse-hide-while-typing = true
 
 # font
 font-family = "Maple Mono NF"
-font-size = 15
+font-size = 14
 
 # macos
 macos-option-as-alt = true
