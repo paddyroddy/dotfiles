@@ -1,0 +1,15 @@
+# cursor
+cursor-style-blink = true
+mouse-hide-while-typing = true
+
+# font
+font-family = "Maple Mono NF"
+font-size = 15
+
+# macos
+macos-option-as-alt = true
+macos-titlebar-style = hidden
+
+# theme
+background-opacity = 0.7
+theme = carbonfox
