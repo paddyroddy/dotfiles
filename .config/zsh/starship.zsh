@@ -1,3 +1,4 @@
+# shellcheck disable=SC2034
 eval "$(starship init zsh)"
 
 SPACESHIP_PROMPT_ASYNC=true
