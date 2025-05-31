@@ -1,3 +1,6 @@
+# TODO: uncomment to profile
+# zmodload zsh/zprof
+
 # create default path
 source /etc/environment
 MANPATH=$(sed -e 's/export PATH=//' < /etc/environment)
@@ -9,3 +12,6 @@ for conf in "$HOME/.config/zsh/"*.zsh; do
     source "$conf"
 done
 unset conf
+
+# TODO: uncomment to profile
+# zprof
