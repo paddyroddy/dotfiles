@@ -1,5 +1,5 @@
 # shellcheck disable=SC2034
-# Initialize completion system FIRST
+# Initialize completion system first
 autoload -Uz compinit
 compinit
 
