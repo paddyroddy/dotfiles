@@ -15,12 +15,21 @@ autoload -Uz _zinit
 # shellcheck disable=SC2154
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# plugins
+# plugins that don't need to be immediately available
+zinit ice wait lucid light-mode
 zinit snippet OMZP::git
+zinit ice wait lucid light-mode
 zinit snippet OMZP::tmux
+zinit ice wait lucid light-mode
 zinit light Aloxaf/fzf-tab
+zinit ice wait lucid light-mode
 zinit light zsh-users/zsh-autosuggestions
+zinit ice wait lucid light-mode
 zinit light zsh-users/zsh-completions
+
+
+# Note: zsh-syntax-highlighting often needs to be loaded without 'wait'
+zinit ice blockf
 zinit light zsh-users/zsh-syntax-highlighting
 
 # Replay cached completions
