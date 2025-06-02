@@ -27,7 +27,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid light-mode
 zinit light zsh-users/zsh-completions
 
-
 # Note: zsh-syntax-highlighting often needs to be loaded without 'wait'
 zinit ice blockf
 zinit light zsh-users/zsh-syntax-highlighting
