@@ -12,11 +12,8 @@ else
 fi
 
 # plugins
-zinit for \
-    wait lucid light-mode \
+zinit for wait lucid light-mode \
     as"light" Aloxaf/fzf-tab \
     as"light" zdharma-continuum/fast-syntax-highlighting \
     as"light" zsh-users/zsh-autosuggestions \
-    as"snippet" OMZP::git \
-    as"snippet" OMZP::tmux \
     as"light" atinit"zicompinit; zicdreplay -q" zsh-users/zsh-completions
