@@ -1,3 +1,4 @@
+# shellcheck disable=SC2034
 HISTDUP=erase
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
