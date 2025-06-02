@@ -5,6 +5,7 @@ if [[ ! -f "${ZINIT_HOME}/zinit.zsh" ]]; then
     print -P "%F{red}Installing Zinit...%f"
     mkdir -p "$(dirname "$ZINIT_HOME")"
     git clone https://github.com/zdharma-continuum/zinit.git \
+    # shellcheck disable=SC1091
     "$ZINIT_HOME" && source "${ZINIT_HOME}/zinit.zsh"
 else
     # shellcheck disable=SC1091
