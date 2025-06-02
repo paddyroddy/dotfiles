@@ -17,6 +17,7 @@ autoload -Uz _zinit
 
 # plugins
 zinit snippet OMZP::git
+zinit snippet OMZP::tmux
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
