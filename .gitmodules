@@ -1,0 +1,3 @@
+[submodule ".config/tmux"]
+    path = .config/tmux
+    url = https://github.com/paddyroddy/tmux.git
