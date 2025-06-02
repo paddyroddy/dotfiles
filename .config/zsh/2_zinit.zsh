@@ -1,14 +1,14 @@
 # shellcheck disable=SC2034
 # https://github.com/zdharma-continuum/zinit#manual
-ZINIT_DEFAULT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-if [[ ! -f "${ZINIT_DEFAULT_HOME}/zinit.zsh" ]]; then
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [[ ! -f "${ZINIT_HOME}/zinit.zsh" ]]; then
     print -P "%F{red}Installing Zinit...%f"
-    mkdir -p "$(dirname "$ZINIT_DEFAULT_HOME")"
+    mkdir -p "$(dirname "$ZINIT_HOME")"
     git clone https://github.com/zdharma-continuum/zinit.git \
-    "$ZINIT_DEFAULT_HOME" && source "${ZINIT_DEFAULT_HOME}/zinit.zsh"
+    "$ZINIT_HOME" && source "${ZINIT_HOME}/zinit.zsh"
 else
     # shellcheck disable=SC1091
-    source "${ZINIT_DEFAULT_HOME}/zinit.zsh"
+    source "${ZINIT_HOME}/zinit.zsh"
 fi
 
 # plugins
