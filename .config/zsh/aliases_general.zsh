@@ -47,6 +47,13 @@ alias ls='lsd --group-directories-first'
 alias lsa='lsd --group-directories-first -lah'
 alias lt='lsd --group-directories-first -lAhrt'
 
+# navigation
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+alias -- -='cd -'
+
 # decompress all file types
 x() {
     if [ -f "$1" ]; then
