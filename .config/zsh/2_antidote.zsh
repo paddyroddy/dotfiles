@@ -9,8 +9,8 @@ fpath=($(brew --prefix)/opt/antidote/share/antidote/functions $fpath)
 autoload -Uz antidote
 
 # Generate a new static file whenever .zsh_plugins.txt is updated.
-if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
-  antidote bundle <${zsh_plugins}.txt >|${zsh_plugins}.zsh
+if [[ ! "${zsh_plugins}.zsh" -nt "${zsh_plugins}.txt" ]]; then
+  antidote bundle <"${zsh_plugins}.txt" >|"${zsh_plugins}.zsh"
 fi
 
 # Source your static plugins file.
