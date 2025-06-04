@@ -2,7 +2,7 @@
 zsh_plugins=${ZDOTDIR:-~}/.config/zsh_plugins
 
 # Ensure the .zsh_plugins.txt file exists so you can add plugins.
-[[ -f ${zsh_plugins}.txt ]] || touch ${zsh_plugins}.txt
+[[ -f ${zsh_plugins}.txt ]] || touch "${zsh_plugins}".txt
 
 # Lazy-load antidote from its functions directory.
 fpath=($(brew --prefix)/opt/antidote/share/antidote/functions $fpath)
@@ -14,4 +14,4 @@ if [[ ! "${zsh_plugins}.zsh" -nt "${zsh_plugins}.txt" ]]; then
 fi
 
 # Source your static plugins file.
-source ${zsh_plugins}.zsh
+ source "${zsh_plugins}".zsh
