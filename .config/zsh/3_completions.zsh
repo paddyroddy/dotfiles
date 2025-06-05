@@ -3,16 +3,19 @@
 
 autoload -Uz compinit
 
-# Regenerate compdump if it doesn't exist or is older than 24 hours.
-# Subsequent shell starts will skip security checks for speed.
-# IMPORTANT: Ensure your fpath contains only trusted directories when skipping compaudit.
-if [[ ! -s ~/.zcompdump ]] || [[ -n ~/.zcompdump(#qNmh+24) ]]; then
+# More aggressive caching - regenerate only weekly instead of daily
+# and skip security checks entirely for trusted environment
+if [[ ! -s ~/.zcompdump ]] || [[ -n ~/.zcompdump(#qNmw+1) ]]; then
+    # Only run full compinit weekly
     compinit -d ~/.zcompdump
+    # Touch .zcompdump to reset timer
+    touch ~/.zcompdump
 else
+    # Skip security checks for faster startup
     compinit -C -d ~/.zcompdump
 fi
 
-# Completion caching and performance optimizations
+# Enhanced completion caching and performance optimizations
 zstyle ':completion:*' use-cache yes
 zstyle ':completion:*' cache-path ~/.zsh/cache
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
@@ -22,3 +25,7 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' menu select=2
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# Disable slow git completions for large repos
+zstyle ':completion:*:*:git:*' script-path ~/.zsh/cache/git-completion.zsh
+zstyle ':completion:*:*:git*:*' disabled-patterns '(remote-*|reflog|show-*)'
