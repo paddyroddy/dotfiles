@@ -1,4 +1,4 @@
-Aloxaf/fzf-tab kind:defer
+Aloxaf/fzf-tab
 zsh-users/zsh-completions kind:fpath path:src
-zdharma-continuum/fast-syntax-highlighting kind:defer defer:3
-zsh-users/zsh-autosuggestions kind:defer defer:3
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-autosuggestions
