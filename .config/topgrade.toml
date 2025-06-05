@@ -11,7 +11,7 @@ cleanup = true
 disable = [
     "containers",
     "gem",
-    "rubygems",
+    "ruby_gems",
     "uv",
 ]
 # Skip sending a notification at the end of a run (default: false)
