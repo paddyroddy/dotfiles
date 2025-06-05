@@ -1,3 +1,4 @@
+# shellcheck disable=SC2034
 # Skip global zsh config files for faster startup
 unsetopt GLOBAL_RCS
 

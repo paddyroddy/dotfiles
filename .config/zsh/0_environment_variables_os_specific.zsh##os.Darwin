@@ -1,6 +1,6 @@
 # Cache Homebrew prefix to avoid repeated calls
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-local HOMEBREW_PREFIX="$(brew --prefix)"
+HOMEBREW_PREFIX="$(brew --prefix)"
 
 # nvim as default editor
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
