@@ -1,9 +1,9 @@
-# colour
+# Colour aliases
 alias cat='bat'
 alias grep='grep --color'
 alias tree='tree -C'
 
-# safety nets
+# Safety aliases for common commands
 alias cp='cp -iv'
 alias ln='ln -iv'
 alias mkdir='mkdir -pv'
@@ -11,35 +11,35 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 alias wget='wget -c'
 
-# fuzzy find
+# Fuzzy find aliases
 alias f='fzf-tmux'
 alias vf='nvim `fzf-tmux`'
 
-# jupyter
+# Jupyter aliases
 alias lab='jupyter lab'
 alias notebook='jupyter notebook'
 
-# visualisation
+# System visualization tools
 alias df='pydf'
 alias du='ncdu'
 alias top='htop'
 
-# neovim
+# Neovim alias
 alias vim='nvim'
 
-# matlab
+# Matlab alias for nodesktop mode
 alias matlab='matlab -nodesktop'
 
-# rtyley/bfg-repo-cleaner
+# BFG Repo Cleaner alias
 alias bfg='java -jar $HOME/bfg/bfg.jar'
 
-# fix TERM issues over ssh
+# Fix TERM issues over SSH
 alias ssh='TERM=xterm-256color ssh'
 
-# YAML visualisation
+# YAML visualization with jless
 alias yless='jless --yaml'
 
-# list directories
+# lsd aliases for directory listing
 alias l='lsd --group-directories-first -lah'
 alias la='lsd --group-directories-first -lAh'
 alias ll='lsd --group-directories-first -lh'
@@ -47,14 +47,14 @@ alias ls='lsd --group-directories-first'
 alias lsa='lsd --group-directories-first -lah'
 alias lt='lsd --group-directories-first -lAhrt'
 
-# navigation
+# Navigation aliases
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
 alias -g ......='../../../../..'
 alias -- -='cd -'
 
-# decompress all file types
+# Universal file decompressor function
 x() {
     if [ -f "$1" ]; then
         case "$1" in

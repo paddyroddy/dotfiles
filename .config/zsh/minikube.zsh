@@ -1,3 +1,4 @@
+# Lazy load kubectl completion
 kubectl() {
     if ! command -v kubectl >/dev/null 2>&1; then
         echo "kubectl not found"

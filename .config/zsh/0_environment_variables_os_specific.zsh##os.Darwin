@@ -1,41 +1,38 @@
-# brew
+# Cache Homebrew prefix to avoid repeated calls
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+local HOMEBREW_PREFIX="$(brew --prefix)"
 
-# Cache brew prefix to avoid repeated calls
-export HOMEBREW_PREFIX="$(brew --prefix)"
-
-# nvim
+# nvim as default editor
 export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
 export VISUAL="$HOMEBREW_PREFIX/bin/nvim"
 
 # matlab
 export PATH="$PATH:/Applications/MATLAB_R2024a.app/bin"
 
-# allows Coreutils package to be used without 'g' prefix before each command.
-export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
+# Homebrew GNU utilities
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:\
+$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:\
+$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:\
+$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:\
+$PATH"
+export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:\
+$HOMEBREW_PREFIX/opt/grep/libexec/gnuman:\
+$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman:\
+$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman:\
+$MANPATH"
+
 
 # binutils
+
 export PATH="$HOMEBREW_PREFIX/opt/binutils/bin:$PATH"
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
 
-# grep
-export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
-export MANPATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnuman:$MANPATH"
-
-# tar
-export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
-export MANPATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman:$MANPATH"
-
-# sed
-export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
-export MANPATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 # latex
 export PATH="$HOME/texlive/2025/bin/universal-darwin:$PATH"
 export MANPATH="$HOME/texlive/2025/texmf-dist/doc/man:$MANPATH"
 export INFOPATH="$HOME/texlive/2025/texmf-dist/doc/info:$INFOPATH"
 
-# parallel processing
+# Enable parallel processing for some applications
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES

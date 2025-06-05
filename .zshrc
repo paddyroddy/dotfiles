@@ -1,3 +1,6 @@
+## PROFILE
+# time ZSH_DEBUGRC=1 zsh -i -c exit
+
 # profiling
 if [[ -n "$ZSH_DEBUGRC" ]]; then
   zmodload zsh/zprof

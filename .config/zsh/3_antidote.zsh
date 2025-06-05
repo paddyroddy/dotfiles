@@ -1,21 +1,19 @@
-# Optimise antidote performance
+# Optimise Antidote performance
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 zstyle ':antidote:static' enabled 'yes'
 zstyle ':antidote:defer' enabled 'yes'
 
-# Cache antidote bundles for faster loading
+# Cache Antidote bundles for faster loading
 export ANTIDOTE_HOME="$HOME/.cache/antidote"
 
 # shellcheck disable=SC1091
-source "$HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh"
+source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 
-# Only regenerate if plugins file is newer than the cache
+# Regenerate antidote bundle cache if plugin file is newer
 zsh_plugins="$HOME/.zsh_plugins.txt"
 zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 
-# Use more efficient cache checking
 if [[ ! -s "$zsh_plugins_cache" ]] || [[ "$zsh_plugins" -nt "$zsh_plugins_cache" ]]; then
-    # Use static mode for better performance
     antidote bundle < "$zsh_plugins" > "$zsh_plugins_cache"
 fi
 
