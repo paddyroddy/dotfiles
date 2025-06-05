@@ -1,33 +1,38 @@
+# Cache brew prefix to avoid repeated calls
+if [[ -z "$HOMEBREW_PREFIX" ]]; then
+    export HOMEBREW_PREFIX="$(brew --prefix)"
+fi
+
 # brew
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 
 # nvim
-export EDITOR="$(brew --prefix)/bin/nvim"
-export VISUAL="$(brew --prefix)/bin/nvim"
+export EDITOR="$HOMEBREW_PREFIX/bin/nvim"
+export VISUAL="$HOMEBREW_PREFIX/bin/nvim"
 
 # matlab
 export PATH="$PATH:/Applications/MATLAB_R2024a.app/bin"
 
 # allows Coreutils package to be used without 'g' prefix before each command.
-export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="$HOMEBREW_PREFIX/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # binutils
-export PATH="$(brew --prefix)/opt/binutils/bin:$PATH"
-export LDFLAGS="-L$(brew --prefix)/opt/binutils/lib"
-export CPPFLAGS="-I$(brew --prefix)/opt/binutils/include"
+export PATH="$HOMEBREW_PREFIX/opt/binutils/bin:$PATH"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
 
 # grep
-export PATH="$(brew --prefix)/opt/grep/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix)/opt/grep/libexec/gnuman:$MANPATH"
+export PATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnubin:$PATH"
+export MANPATH="$HOMEBREW_PREFIX/opt/grep/libexec/gnuman:$MANPATH"
 
 # tar
-export PATH="$(brew --prefix)/opt/gnu-tar/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix)/opt/gnu-tar/libexec/gnuman:$MANPATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnubin:$PATH"
+export MANPATH="$HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
 # sed
-export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix)/opt/gnu-sed/libexec/gnuman:$MANPATH"
+export PATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin:$PATH"
+export MANPATH="$HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 # latex
 export PATH="$HOME/texlive/2025/bin/universal-darwin:$PATH"
