@@ -5,6 +5,7 @@ autoload -Uz compinit
 
 # More aggressive caching - regenerate only weekly instead of daily
 # and skip security checks entirely for trusted environment
+# shellcheck disable=SC1009,SC1036,SC1072,SC1073
 if [[ ! -s ~/.zcompdump ]] || [[ -n ~/.zcompdump(#qNmw+1) ]]; then
     # Only run full compinit weekly
     compinit -d ~/.zcompdump
