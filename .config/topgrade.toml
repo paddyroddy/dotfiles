@@ -10,6 +10,8 @@ cleanup = true
 # Disable specific steps - same options as the command line flag
 disable = [
     "containers",
+    "gem",
+    "rubygems",
     "uv",
 ]
 # Skip sending a notification at the end of a run (default: false)
