@@ -19,6 +19,7 @@ _antidote_lazy_load() {
 zsh_plugins="$HOME/.zsh_plugins.txt"
 zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 
+# shellcheck disable=SC1009,SC1036,SC1072,SC1073
 if [[ -s "$zsh_plugins_cache" ]] && [[ "$zsh_plugins_cache" -nt "$zsh_plugins" ]]; then
     # Plugins are up to date, just source the cache
     # shellcheck disable=SC1090
@@ -37,5 +38,6 @@ else
         source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
         antidote bundle < "$zsh_plugins" > "$zsh_plugins_cache.tmp" && \
         mv "$zsh_plugins_cache.tmp" "$zsh_plugins_cache"
+    # shellcheck disable=SC1035,SC1072
     } &!
 fi
