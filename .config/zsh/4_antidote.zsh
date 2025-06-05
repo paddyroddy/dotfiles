@@ -17,7 +17,7 @@ _antidote_lazy_load() {
 }
 
 # Only initialize antidote if plugins need updating
-zsh_plugins="$HOME/.zsh_plugins.txt"
+zsh_plugins="$HOME/.config/zsh/plugins.txt"
 zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 
 if [[ -s "$zsh_plugins_cache" ]] && [[ "$zsh_plugins_cache" -nt "$zsh_plugins" ]]; then
