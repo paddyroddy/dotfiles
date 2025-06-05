@@ -1,5 +1,7 @@
-# TODO: uncomment to profile
-# zmodload zsh/zprof
+# profiling
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zmodload zsh/zprof
+fi
 
 # create default path
 source /etc/environment
@@ -13,5 +15,7 @@ for conf in "$HOME/.config/zsh/"*.zsh; do
 done
 unset conf
 
-# TODO: uncomment to profile
-# zprof
+# profiling
+if [[ -n "$ZSH_DEBUGRC" ]]; then
+  zprof
+fi
