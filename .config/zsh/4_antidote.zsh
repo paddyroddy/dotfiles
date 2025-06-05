@@ -2,7 +2,7 @@
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 zstyle ':antidote:static' enabled 'yes' 
 zstyle ':antidote:defer' enabled 'yes'
-zstyle ':antidote:compile' enabled 'yes'  # Enable compilation for faster loading
+zstyle ':antidote:compile' enabled 'yes'
 
 # Cache Antidote bundles for faster loading
 export ANTIDOTE_HOME="$HOME/.cache/antidote"
