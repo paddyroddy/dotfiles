@@ -10,5 +10,5 @@ zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 if [[ ! -f "$zsh_plugins_cache" || "$zsh_plugins" -nt "$zsh_plugins_cache" ]]; then
     antidote bundle < "$zsh_plugins" > "$zsh_plugins_cache"
 fi
-# shellcheck disable=SC1091
+# shellcheck disable=SC1090
 source "$zsh_plugins_cache"
