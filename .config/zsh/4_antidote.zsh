@@ -1,3 +1,4 @@
+# shellcheck disable=SC1035,SC1072
 # Enhanced Antidote performance settings
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 zstyle ':antidote:static' enabled 'yes' 
@@ -32,7 +33,6 @@ else
     fi
 
     # Regenerate in background
-    # shellcheck disable=SC1035,SC1072
     {
         # shellcheck disable=SC1091
         source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
