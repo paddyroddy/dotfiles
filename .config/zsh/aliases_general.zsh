@@ -1,3 +1,11 @@
+# git aliases
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
+alias gl='git pull'
+alias gp='git push'
+alias gst='git status'
+
 # Colour aliases
 alias cat='bat'
 alias grep='grep --color'
