@@ -1,14 +1,9 @@
-getantidote/use-omz
-ohmyzsh/ohmyzsh path:lib
-ohmyzsh/ohmyzsh path:plugins/git
-
+# Essential only - no OMZ
 zsh-users/zsh-completions kind:fpath path:src
 belak/zsh-utils path:completion
 belak/zsh-utils path:history
-belak/zsh-utils path:utility
 
-Aloxaf/fzf-tab
-joshskidmore/zsh-fzf-history-search
+# Defer everything else
+Aloxaf/fzf-tab kind:defer
 zdharma-continuum/fast-syntax-highlighting kind:defer
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions kind:defer
