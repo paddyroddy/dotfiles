@@ -21,13 +21,10 @@ $HOMEBREW_PREFIX/opt/gnu-tar/libexec/gnuman:\
 $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnuman:\
 $MANPATH"
 
-
 # binutils
-
 export PATH="$HOMEBREW_PREFIX/opt/binutils/bin:$PATH"
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
-
 
 # latex
 export PATH="$HOME/texlive/2025/bin/universal-darwin:$PATH"
