@@ -1,4 +1,4 @@
-# shellcheck disable=SC1035,SC1072
+# shellcheck disable=SC1009,SC1073
 # Enhanced Antidote performance settings
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 zstyle ':antidote:static' enabled 'yes' 
