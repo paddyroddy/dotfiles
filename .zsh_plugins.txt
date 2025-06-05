@@ -7,8 +7,9 @@ belak/zsh-utils path:completion
 belak/zsh-utils path:history
 belak/zsh-utils path:utility
 
-Aloxaf/fzf-tab
-joshskidmore/zsh-fzf-history-search
+# defer these plugins
+Aloxaf/fzf-tab kind:defer
+joshskidmore/zsh-fzf-history-search kind:defer
 zdharma-continuum/fast-syntax-highlighting kind:defer
-zsh-users/zsh-autosuggestions
-zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search kind:defer
