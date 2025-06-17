@@ -8,6 +8,7 @@ alias gl='git pull'
 alias gp='git push'
 alias gst='git status'
 alias gsta='git stash push'
+alias gstp='git stash pop'
 
 # Colour aliases
 alias cat='bat'
