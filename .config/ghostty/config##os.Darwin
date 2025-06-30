@@ -7,7 +7,6 @@ font-family = "Maple Mono NF"
 font-size = 14
 
 # macos
-macos-hidden = always
 macos-titlebar-style = hidden
 
 # theme
