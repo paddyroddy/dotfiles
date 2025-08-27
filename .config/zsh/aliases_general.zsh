@@ -32,9 +32,9 @@ alias lab='jupyter lab'
 alias notebook='jupyter notebook'
 
 # System visualization tools
-alias df='pydf'
-alias du='ncdu'
-alias top='htop'
+alias df='duf'
+alias du='dust'
+alias top='glances'
 
 # Neovim alias
 alias vim='nvim'
