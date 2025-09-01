@@ -7,4 +7,5 @@
 .nox
 .tox
 .vscode
+__pycache__
 node_modules
