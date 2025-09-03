@@ -4,6 +4,7 @@
 .Rhistory
 .envrc
 .ipynb_checkpoints
+.jupyter_cache
 .nox
 .tox
 .vscode
