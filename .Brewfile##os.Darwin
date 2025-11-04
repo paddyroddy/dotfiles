@@ -20,6 +20,7 @@ brew "checkov"
 brew "checkstyle"
 brew "clang-format"
 brew "cmake"
+brew "container"
 brew "coreutils"
 brew "cpanminus"
 brew "cppcheck"
@@ -197,4 +198,3 @@ cask "whatsapp"
 cask "zoom"
 mas "Say No to Notch", id: 1639306886
 mas "Time Out", id: 402592703
-mas "Windows App", id: 1295203466
