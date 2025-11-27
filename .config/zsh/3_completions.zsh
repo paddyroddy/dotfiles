@@ -6,7 +6,7 @@ autoload -Uz compinit
 # More aggressive caching - regenerate only weekly instead of daily
 # and skip security checks entirely for trusted environment
 # shellcheck disable=SC1009,SC1036,SC1072,SC1073
-if [[ ! -s ~/.zcompdump ]] || [[ -n ~/.zcompdump(#qNmw+1) ]]; then
+if [[ ! -f ~/.zcompdump || -n $(find ~/.zcompdump -mtime +7) ]]; then
     # Only run full compinit weekly
     compinit -d ~/.zcompdump
     # Touch .zcompdump to reset timer
@@ -25,7 +25,8 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' menu select=2
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# shellcheck disable=SC2296
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
 
 # Disable slow git completions for large repos
 zstyle ':completion:*:*:git:*' script-path ~/.zsh/cache/git-completion.zsh
