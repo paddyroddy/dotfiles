@@ -25,6 +25,7 @@ zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' menu select=2
+# shellcheck disable=SC2296
 zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
 
 # Disable slow git completions for large repos
