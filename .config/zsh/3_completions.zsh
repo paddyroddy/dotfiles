@@ -7,7 +7,7 @@ autoload -Uz compinit
 # and skip security checks entirely for trusted environment
 # shellcheck disable=SC1009,SC1036,SC1072,SC1073
 autoload -Uz compinit
-if [[ ! -f ~/.zcompdump || $(find ~/.zcompdump -mtime +7) ]]; then
+if [[ ! -f ~/.zcompdump || -n $(find ~/.zcompdump -mtime +7) ]]; then
     # Only run full compinit weekly
     compinit -d ~/.zcompdump
     # Touch .zcompdump to reset timer
