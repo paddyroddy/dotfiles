@@ -25,6 +25,7 @@ if [[ -s "$zsh_plugins_cache" ]]; then
 fi
 
 # Regenerate cache in background if outdated
+# typos: ignore-next-line
 if [[ ! -s "$zsh_plugins_cache" || "$zsh_plugins_cache" -ot "$zsh_plugins" ]]; then
     {
         source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
