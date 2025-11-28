@@ -19,7 +19,7 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' menu select=2
 
-# zsh-specific expansion; ShellCheck complains—safe to ignore in zsh
+# zsh-specific expansion
 # shellcheck disable=SC2296
 zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
 
