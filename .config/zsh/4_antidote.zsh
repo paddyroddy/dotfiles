@@ -20,7 +20,6 @@ zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 # Source existing cache NOW so that `kind:fpath` (zsh-completions)
 # changes $fpath before compinit
 if [[ -s "$zsh_plugins_cache" ]]; then
-
     source "$zsh_plugins_cache"
 fi
 
