@@ -1,14 +1,13 @@
 # shellcheck disable=SC1009,SC1035,SC1072,SC1073
-# Enhanced Antidote performance settings
+# Antidote configuration
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 zstyle ':antidote:static' enabled 'yes'
 zstyle ':antidote:defer' enabled 'yes'
 zstyle ':antidote:compile' enabled 'yes'
 
-# Cache Antidote bundles for faster loading
 export ANTIDOTE_HOME="$HOME/.cache/antidote"
 
-# Lazy load antidote to avoid blocking shell startup
+# Lazy-load antidote only when regenerating; otherwise source the cache immediately
 _antidote_lazy_load() {
     unfunction antidote
     # shellcheck disable=SC1091
@@ -16,23 +15,18 @@ _antidote_lazy_load() {
     antidote "$@"
 }
 
-# Only initialize antidote if plugins need updating
 zsh_plugins="$HOME/.config/zsh/plugins.txt"
 zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 
-if [[ -s "$zsh_plugins_cache" ]] && [[ "$zsh_plugins_cache" -nt "$zsh_plugins" ]]; then
-    # Plugins are up to date, just source the cache
+# Source existing cache NOW so that `kind:fpath` (zsh-completions)
+# changes $fpath before compinit
+if [[ -s "$zsh_plugins_cache" ]]; then
     # shellcheck disable=SC1090
     source "$zsh_plugins_cache"
-else
-    # Need to regenerate - do this in background after shell loads
-    if [[ -s "$zsh_plugins_cache" ]]; then
-        # Source existing cache first for immediate functionality
-        # shellcheck disable=SC1090
-        source "$zsh_plugins_cache"
-    fi
+fi
 
-    # Regenerate in background
+# Regenerate cache in background if outdated
+if [[ ! -s "$zsh_plugins_cache" || "$zsh_plugins_cache" -ot "$zsh_plugins" ]]; then
     {
         # shellcheck disable=SC1091
         source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
