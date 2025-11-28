@@ -10,7 +10,6 @@ export ANTIDOTE_HOME="$HOME/.cache/antidote"
 # Lazy-load antidote only when regenerating; otherwise source the cache immediately
 _antidote_lazy_load() {
     unfunction antidote
-    # shellcheck disable=SC1091
     source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
     antidote "$@"
 }
@@ -21,14 +20,13 @@ zsh_plugins_cache="$ANTIDOTE_HOME/plugins.zsh"
 # Source existing cache NOW so that `kind:fpath` (zsh-completions)
 # changes $fpath before compinit
 if [[ -s "$zsh_plugins_cache" ]]; then
-    # shellcheck disable=SC1090
+
     source "$zsh_plugins_cache"
 fi
 
 # Regenerate cache in background if outdated
 if [[ ! -s "$zsh_plugins_cache" || "$zsh_plugins_cache" -ot "$zsh_plugins" ]]; then
     {
-        # shellcheck disable=SC1091
         source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
         antidote bundle < "$zsh_plugins" > "$zsh_plugins_cache.tmp" && \
         mv "$zsh_plugins_cache.tmp" "$zsh_plugins_cache"
