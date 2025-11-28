@@ -1,3 +1,6 @@
+# fzf keybindings for Ctrl-R history and Ctrl-T file search
+source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+
 # Initialize fzf if available
 if command -v fzf >/dev/null 2>&1; then
     { source <(fzf --zsh) } &!
