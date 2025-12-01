@@ -6,6 +6,14 @@ mouse-hide-while-typing = true
 font-family = "Maple Mono NF"
 font-size = 14
 
+# keybinds
+keybind = alt+-=new_split:down
+keybind = alt+\=new_split:right
+keybind = alt+down=goto_split:down
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+keybind = alt+up=goto_split:up
+
 # macos
 macos-titlebar-style = hidden
 
