@@ -1,3 +1,7 @@
+# clipboard
+copy-on-select = clipboard
+selection-background = #419eff
+
 # cursor
 cursor-style-blink = true
 mouse-hide-while-typing = true
