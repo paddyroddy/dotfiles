@@ -14,7 +14,7 @@ if command -v fzf >/dev/null 2>&1; then
     } &!
     
     # Configure fzf to use fd
-    export FZF_CTRL_T_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
-    export FZF_DEFAULT_COMMAND=$FZF_CTRL_T_COMMAND
+    export FZF_CTRL_T_COMMAND="fd --type f --hidden --follow --exclude .git --color=always"
+    export FZF_DEFAULT_COMMAND="$FZF_CTRL_T_COMMAND"
     export FZF_DEFAULT_OPTS="--ansi"
 fi
