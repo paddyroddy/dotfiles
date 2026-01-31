@@ -1,4 +1,4 @@
-Load fzf completely in background
+# Load fzf completely in background
 if command -v fzf >/dev/null 2>&1; then
     {
         # Load fzf with all integrations
