@@ -16,7 +16,7 @@ fi
 unset _comp_files
 
 # Precompile for faster subsequent loads (do in background to avoid blocking)
-# shellcheck disable=SC1035,SC1072,SC1083
+# shellcheck disable=SC1035,SC1072,SC1073,SC1083
 { zcompile ~/.zcompdump 2>/dev/null } &!
 
 # Enhanced completion caching and performance optimizations
