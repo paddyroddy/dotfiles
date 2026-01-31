@@ -1,12 +1,19 @@
-# Load fzf completely in background
 if command -v fzf >/dev/null 2>&1; then
+    # Load FZF shell integration immediately (it's fast enough)
+    # The keybindings need to be loaded synchronously to work properly
+    if [[ -f "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh" ]]; then
+        source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+    fi
+    
+    # Load completion in background (this can be deferred)
     {
-        # Load fzf with all integrations
-        source <(fzf --zsh)
-
-        # Configure fzf to use fd
-        export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-        export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
-        export FZF_DEFAULT_OPTS="--ansi"
+        if [[ -f "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" ]]; then
+            source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"
+        fi
     } &!
+    
+    # Configure fzf to use fd
+    export FZF_CTRL_T_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
+    export FZF_DEFAULT_COMMAND=$FZF_CTRL_T_COMMAND
+    export FZF_DEFAULT_OPTS="--ansi"
 fi
