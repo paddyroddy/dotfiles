@@ -40,7 +40,7 @@ alias vim="nvim"
 alias matlab="matlab -nodesktop"
 
 # BFG Repo Cleaner alias
-alias bfg="java -jar $HOME/bfg/bfg.jar"
+alias bfg="java -jar ${HOME}/bfg/bfg.jar"
 
 # Fix TERM issues over SSH
 alias ssh="TERM=xterm-256color ssh"
