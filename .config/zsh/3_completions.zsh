@@ -4,6 +4,7 @@
 autoload -Uz compinit
 
 # Only regenerate completion dump once per day (instead of checking on every startup)
+# shellcheck disable=SC1036
 _comp_files=($HOME/.zcompdump(Nm-20))
 if (( $#_comp_files )); then
     # Dump is recent enough, skip security checks
@@ -15,6 +16,7 @@ fi
 unset _comp_files
 
 # Precompile for faster subsequent loads (do in background to avoid blocking)
+# shellcheck disable=SC1035,SC1072,SC1083
 { zcompile ~/.zcompdump 2>/dev/null } &!
 
 # Enhanced completion caching and performance optimizations
