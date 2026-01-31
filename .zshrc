@@ -6,10 +6,10 @@ if [[ -n "$ZSH_DEBUGRC" ]]; then
   zmodload zsh/zprof
 fi
 
-# create default path
-source /etc/environment
-MANPATH=$(sed -e 's/export PATH=//' < /etc/environment)
-export MANPATH=$MANPATH
+# Only source /etc/environment if it exists and is needed
+if [[ -f /etc/environment ]]; then
+    source /etc/environment
+fi
 
 # Load separated config files
 for conf in "$HOME/.config/zsh/"*.zsh; do

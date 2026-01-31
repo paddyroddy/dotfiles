@@ -40,7 +40,7 @@ alias vim='nvim'
 alias matlab='matlab -nodesktop'
 
 # BFG Repo Cleaner alias
-alias bfg='java -jar $HOME/bfg/bfg.jar'
+alias bfg='java -jar ${HOME}/bfg/bfg.jar'
 
 # Fix TERM issues over SSH
 alias ssh='TERM=xterm-256color ssh'
@@ -49,12 +49,9 @@ alias ssh='TERM=xterm-256color ssh'
 alias yless='jless --yaml'
 
 # lsd aliases
-alias l='lsd --group-directories-first -lah'
-alias la='lsd --group-directories-first -lAh'
-alias ll='lsd --group-directories-first -lh'
-alias ls='lsd --group-directories-first'
-alias lsa='lsd --group-directories-first -lah'
-alias lt='lsd --group-directories-first -lAhrt'
+alias ls='eza --all --group-directories-first --header --icons'
+alias la='eza --all --group-directories-first --header --icons --long'
+alias lt='eza --all --group-directories-first --header --icons --reverse --sort=mod'
 
 # Navigation aliases
 alias -g ...='../..'

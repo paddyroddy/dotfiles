@@ -1,12 +1,21 @@
-# fzf keybindings for Ctrl-R history and Ctrl-T file search
-source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
-
-# Initialize fzf if available
+# Initialise fzf if available
 if command -v fzf >/dev/null 2>&1; then
-    { source <(fzf --zsh) } &!
+    # Load FZF shell integration immediately (it's fast enough)
+    # The keybindings need to be loaded synchronously to work properly
+    if [[ -f "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh" ]]; then
+        source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+    fi
+
+    # Load completion in background (this can be deferred)
+    {
+        if [[ -f "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" ]]; then
+            source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"
+        fi
+    } &!
 
     # Configure fzf to use fd
-    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-    export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --color=always'
+    FZF_FD_COMMAND="fd --type f --hidden --follow --exclude .git --color=always"
+    export FZF_CTRL_T_COMMAND="$FZF_FD_COMMAND"
+    export FZF_DEFAULT_COMMAND="$FZF_FD_COMMAND"
     export FZF_DEFAULT_OPTS="--ansi"
 fi

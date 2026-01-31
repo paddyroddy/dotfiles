@@ -10,7 +10,7 @@ export ANTIDOTE_HOME="$HOME/.cache/antidote"
 # Lazy-load antidote only when regenerating; otherwise source the cache immediately
 _antidote_lazy_load() {
     unfunction antidote
-    source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
+    source "$HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh"
     antidote "$@"
 }
 
@@ -27,7 +27,7 @@ fi
 # typos: ignore-next-line
 if [[ ! -s "$zsh_plugins_cache" || "$zsh_plugins_cache" -ot "$zsh_plugins" ]]; then
     {
-        source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
+        source "$HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh"
         antidote bundle < "$zsh_plugins" > "$zsh_plugins_cache.tmp" && \
         mv "$zsh_plugins_cache.tmp" "$zsh_plugins_cache"
     } &!
