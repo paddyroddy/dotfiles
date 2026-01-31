@@ -35,10 +35,6 @@
 [push]
     autoSetupRemote = true
     default = current
-[status]
-    submoduleSummary = true
-[submodule]
-    recurse = true
 [user]
     email = patrickjamesroddy@gmail.com
     name = Patrick J. Roddy
