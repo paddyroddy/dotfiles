@@ -121,7 +121,6 @@ endif
 call plug#begin('$HOME/.config/nvim/plugged')
 
 " utilities
-Plug 'benmills/vimux' " vim plugin to interact with tmux
 Plug 'tpope/vim-fugitive' " the ultimate git helper
 Plug 'tpope/vim-commentary' " comment/uncomment lines with gcc or gc in visual mode
 

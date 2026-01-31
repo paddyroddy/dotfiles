@@ -24,10 +24,6 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 alias wget='wget -c'
 
-# Fuzzy find aliases
-alias f='fzf-tmux'
-alias vf='nvim `fzf-tmux`'
-
 # Jupyter aliases
 alias lab='jupyter lab'
 alias notebook='jupyter notebook'
