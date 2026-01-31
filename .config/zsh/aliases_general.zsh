@@ -24,6 +24,9 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 alias wget='wget -c'
 
+# Fuzzy find aliases
+alias f='fzf'
+
 # Jupyter aliases
 alias lab='jupyter lab'
 alias notebook='jupyter notebook'
