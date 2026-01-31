@@ -1,4 +1,4 @@
-# Initialize fzf if available
+# Initialise fzf if available
 if command -v fzf >/dev/null 2>&1; then
     # Load FZF shell integration immediately (it's fast enough)
     # The keybindings need to be loaded synchronously to work properly
