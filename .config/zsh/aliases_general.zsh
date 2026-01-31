@@ -49,12 +49,12 @@ alias ssh='TERM=xterm-256color ssh'
 alias yless='jless --yaml'
 
 # lsd aliases
-alias l='lsd --group-directories-first -lah'
-alias la='lsd --group-directories-first -lAh'
-alias ll='lsd --group-directories-first -lh'
-alias ls='lsd --group-directories-first'
-alias lsa='lsd --group-directories-first -lah'
-alias lt='lsd --group-directories-first -lAhrt'
+alias ls='eza --group-directories-first'
+alias l='eza --group-directories-first -lah'
+alias la='eza --group-directories-first -lAh'
+alias ll='eza --group-directories-first -lh'
+alias lsa='eza --group-directories-first -lah'
+alias lt='eza --group-directories-first -lAhrt'
 
 # Navigation aliases
 alias -g ...='../..'
