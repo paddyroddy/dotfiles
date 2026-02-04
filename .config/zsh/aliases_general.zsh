@@ -54,7 +54,7 @@ alias yless='jless --yaml'
 # lsd aliases
 alias ls='eza --all --group-directories-first --header --icons'
 alias la='eza --all --group-directories-first --header --icons --long'
-alias lt='eza --all --group-directories-first --header --icons --long --reverse --sort=mod'
+alias lt='eza --all --group-directories-first --header --icons --long --sort=mod'
 
 # Navigation aliases
 alias -g ...='../..'
