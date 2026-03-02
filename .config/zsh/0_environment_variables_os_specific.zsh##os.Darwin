@@ -36,9 +36,9 @@ export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
 
 # latex
-export PATH="$HOME/texlive/2025/bin/universal-darwin:$PATH"
-export MANPATH="$HOME/texlive/2025/texmf-dist/doc/man:$MANPATH"
-export INFOPATH="$HOME/texlive/2025/texmf-dist/doc/info:$INFOPATH"
+export PATH="$HOME/texlive/2026/bin/universal-darwin:$PATH"
+export MANPATH="$HOME/texlive/2026/texmf-dist/doc/man:$MANPATH"
+export INFOPATH="$HOME/texlive/2026/texmf-dist/doc/info:$INFOPATH"
 
 # Enable parallel processing for some applications
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
