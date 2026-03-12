@@ -15,7 +15,7 @@ brew "bat"
 brew "bazel"
 brew "binutils"
 brew "btop"
-brew "certifi" # typos: ignore
+brew "certifi"
 brew "checkov"
 brew "checkstyle"
 brew "clang-format"
