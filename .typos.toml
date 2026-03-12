@@ -5,3 +5,8 @@ extend-ignore-re = [
     ".*(?:#|--|//|/*).*(?:typos):\\s?ignore[^\\n]*\\n",
     ".*(?:typos):\\s?ignore-next-line[^\\n]*\\n[^\\n]*",
 ]
+
+[files]
+extend-exclude = [
+    ".Brewfile##os.Darwin",
+]
