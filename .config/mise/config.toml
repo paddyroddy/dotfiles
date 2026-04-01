@@ -4,6 +4,6 @@ compile = false
 [tools]
 java = "zulu-17.64.17.0"
 maven = "3.9.5"
-node = "25.8.1"
+node = "25.8.2"
 ruby = "4.0.2"
 usage = "3.0.0"
