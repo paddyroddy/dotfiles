@@ -2,7 +2,7 @@
 compile = false
 
 [tools]
-java = "zulu-17.64.17.0"
+java = "zulu-25.0.2+10.0.LTS"
 maven = "3.9.5"
 node = "25.8.1"
 ruby = "4.0.1"
