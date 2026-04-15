@@ -7,10 +7,12 @@ on:
 
 jobs:
   update-licence-year:
+    permissions:
+      contents: read
     runs-on: ubuntu-slim
     steps:
       # yamllint disable-line rule:line-length
       - uses: paddyroddy/.github/actions/licence@0a54f965cd2ff530f3313bbbaf384cf54bbb7374 # v0
         with:
           licence-file: ./.github/README.md
-          licence-token: ${{ secrets.LICENCE_PAT }}
+          licence-token: ${{ secrets.LICENCE_PAT }} # zizmor: ignore[secrets-outside-env]
