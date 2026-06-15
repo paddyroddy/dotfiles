@@ -1,4 +1,5 @@
 tap "1xyz/pryrite", trusted: true
+tap "git-pkgs/git-pkgs"
 tap "hashicorp/tap", trusted: true
 tap "homebrew/services"
 tap "minamijoyo/hcledit", trusted: true
@@ -48,7 +49,7 @@ brew "gh"
 brew "ghostscript"
 brew "git-delta"
 brew "git-lfs"
-brew "git-pkgs/git-pkgs/brief"
+brew "git-pkgs/git-pkgs/brief", trusted: true
 brew "git"
 brew "glances"
 brew "glow"
