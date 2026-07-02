@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/licence@a6fcadb1b99b38060e784a2b628bff0acb3fc0fe # v0
+      - uses: paddyroddy/.github/actions/licence@d7ef1ce76b6d02d7e81fe9bb3c22885c6376f986 # v0
         with:
           licence-file: ./.github/README.md
           # yamllint disable-line rule:line-length
