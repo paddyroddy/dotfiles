@@ -12,8 +12,9 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/licence@2a7ba19ffbeb4ef996c2adb4f060d498981fb4f0 # v0
+      - uses: paddyroddy/.github/actions/licence@a6fcadb1b99b38060e784a2b628bff0acb3fc0fe # v0
+        env:
+          LICENCE_TOKEN: ${{ secrets.LICENCE_PAT }}
         with:
           licence-file: ./.github/README.md
-          # yamllint disable-line rule:line-length
-          licence-token: ${{ secrets.LICENCE_PAT }} # zizmor: ignore[secrets-outside-env]
+          licence-token: ${{ env.LICENCE_TOKEN }}
