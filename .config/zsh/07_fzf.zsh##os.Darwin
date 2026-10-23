@@ -6,12 +6,10 @@ if command -v fzf >/dev/null 2>&1; then
         source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
     fi
 
-    # Load completion in background (this can be deferred)
-    {
-        if [[ -f "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" ]]; then
-            source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"
-        fi
-    } &!
+    # Completion definitions must be loaded before the prompt is ready.
+    if [[ -f "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" ]]; then
+        source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh"
+    fi
 
     # Configure fzf to use fd
     FZF_FD_COMMAND="fd --type f --hidden --follow --exclude .git --color=always"

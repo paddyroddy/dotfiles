@@ -11,8 +11,9 @@ if [[ -f /etc/environment ]]; then
     source /etc/environment
 fi
 
-# Load separated config files
+# Load separated config files in filename order.
 for conf in "$HOME/.config/zsh/"*.zsh; do
+    [[ -f "$conf" ]] || continue
     # shellcheck source=/dev/null
     source "$conf"
 done

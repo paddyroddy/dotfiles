@@ -1,4 +1,8 @@
-{ source <(fzf --zsh) } &!
+# Load keybindings and completion synchronously so they are ready in the first
+# interactive prompt.
+if command -v fzf >/dev/null 2>&1; then
+    source <(fzf --zsh)
+fi
 
 # sharkdp/fd for junegunn/fzf
 FZF_FD_COMMAND="fdfind --type f --hidden --follow --exclude .git --color=always"
