@@ -35,6 +35,9 @@ export PATH="$HOMEBREW_PREFIX/opt/binutils/bin:$PATH"
 export LDFLAGS="-L$HOMEBREW_PREFIX/opt/binutils/lib"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/binutils/include"
 
+# curl
+export PATH="$HOMEBREW_PREFIX/opt/curl/bin:$PATH"
+
 # latex
 export PATH="$HOME/texlive/2026/bin/universal-darwin:$PATH"
 export MANPATH="$HOME/texlive/2026/texmf-dist/doc/man:$MANPATH"
