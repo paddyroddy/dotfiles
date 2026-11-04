@@ -38,7 +38,5 @@
   "toolbar": {
     "breadcrumbs": false
   },
-  "wrap_guides": [
-    80
-  ]
+  "wrap_guides": [80]
 }
