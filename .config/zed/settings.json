@@ -36,7 +36,7 @@
   },
   "theme": {
     "dark": "One Dark Pro",
-    "light": "One Light",
+    "light": "One Light"
   },
   "toolbar": {
     "breadcrumbs": false
