@@ -1,4 +1,8 @@
 {
+  "auto_install_extensions": {
+    "material-icon-theme": true,
+    "one-dark-pro": true
+  },
   "autosave": {
     "after_delay": {
       "milliseconds": 5000
@@ -33,7 +37,6 @@
   "theme": {
     "dark": "One Dark Pro",
     "light": "One Light",
-    "mode": "dark"
   },
   "toolbar": {
     "breadcrumbs": false
