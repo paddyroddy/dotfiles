@@ -15,6 +15,19 @@
     "words": "disabled"
   },
   "diff_view_style": "unified",
+  "file_scan_exclusions": [
+    "**/*.egg-info",
+    "**/.git",
+    "**/.hypothesis",
+    "**/.mypy_cache",
+    "**/.pytest_cache",
+    "**/.ruff_cache",
+    "**/.tox",
+    "**/.venv",
+    "**/__pycache__",
+    "**/coverage.*",
+    "**/dist"
+  ],
   "git": {
     "inline_blame": {
       "enabled": false
