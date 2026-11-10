@@ -1,7 +1,9 @@
 {
   "auto_install_extensions": {
+    "latex": true,
     "material-icon-theme": true,
-    "one-dark-pro": true
+    "one-dark-pro": true,
+    "toml": true
   },
   "autosave": {
     "after_delay": {
