@@ -11,9 +11,6 @@ TMP_FILE=/tmp/.Brewfile_unsorted
 # update homebrew list
 brew bundle dump --force --file $TMP_FILE
 
-# remove the vscode lines
-sed --in-place --follow-symlinks '/^vscode/d' $TMP_FILE
-
 # sort the final output
 ## clear current contents
 : > "$BREW_FILE"
