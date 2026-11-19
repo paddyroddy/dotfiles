@@ -26,6 +26,7 @@
     "**/.ruff_cache",
     "**/.tox",
     "**/.venv",
+    "**/.vscode",
     "**/__pycache__",
     "**/coverage.*",
     "**/dist"
