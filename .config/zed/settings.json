@@ -1,5 +1,6 @@
 {
   "auto_install_extensions": {
+    "dockerfile": true,
     "latex": true,
     "material-icon-theme": true,
     "one-dark-pro": true,
