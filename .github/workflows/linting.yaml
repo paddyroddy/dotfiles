@@ -21,6 +21,6 @@ jobs:
           pre-commit-config: ./.pre-commit-config.yaml
 
       # yamllint disable-line rule:line-length
-      - uses: paddyroddy/.github/actions/vale@569f59706b5f20ef51804f3bda9ccf85ca0f7c7e # v0
+      - uses: paddyroddy/.github/actions/vale@54237793f17fb3c287e5def4db21c93df2fd30e7 # v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
